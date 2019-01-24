@@ -1,0 +1,1393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="artist_name.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="artist_name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Devanagari, 12pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="artist_name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="artist_name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 19</value>
+  </data>
+  <data name="artist_name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 19</value>
+  </data>
+  <data name="artist_name.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="artist_name.Text" xml:space="preserve">
+    <value>artist</value>
+  </data>
+  <data name="artist_name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;artist_name.Name" xml:space="preserve">
+    <value>artist_name</value>
+  </data>
+  <data name="&gt;&gt;artist_name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;artist_name.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;artist_name.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="title_name.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="title_name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Devanagari, 12pt, style=Bold</value>
+  </data>
+  <data name="title_name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="title_name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 40</value>
+  </data>
+  <data name="title_name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 19</value>
+  </data>
+  <data name="title_name.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="title_name.Text" xml:space="preserve">
+    <value>title</value>
+  </data>
+  <data name="title_name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;title_name.Name" xml:space="preserve">
+    <value>title_name</value>
+  </data>
+  <data name="&gt;&gt;title_name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;title_name.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;title_name.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="volume.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="volume.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="volume.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="volume.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 0</value>
+  </data>
+  <data name="volume.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="volume.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 109</value>
+  </data>
+  <data name="volume.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;volume.Name" xml:space="preserve">
+    <value>volume</value>
+  </data>
+  <data name="&gt;&gt;volume.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;volume.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;volume.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="duration_bar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="duration_bar.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="duration_bar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="duration_bar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 103</value>
+  </data>
+  <data name="duration_bar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 23</value>
+  </data>
+  <data name="duration_bar.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;duration_bar.Name" xml:space="preserve">
+    <value>duration_bar</value>
+  </data>
+  <data name="&gt;&gt;duration_bar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;duration_bar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;duration_bar.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <metadata name="duration_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="timerForRefresh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>148, 17</value>
+  </metadata>
+  <metadata name="NextSongTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>286, 17</value>
+  </metadata>
+  <data name="colorLime_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorLime_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 96</value>
+  </data>
+  <data name="colorLime_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorLime_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorLime_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorLime_btn.Name" xml:space="preserve">
+    <value>colorLime_btn</value>
+  </data>
+  <data name="&gt;&gt;colorLime_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorLime_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorLime_btn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="colorCyan_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorCyan_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 96</value>
+  </data>
+  <data name="colorCyan_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorCyan_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorCyan_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorCyan_btn.Name" xml:space="preserve">
+    <value>colorCyan_btn</value>
+  </data>
+  <data name="&gt;&gt;colorCyan_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorCyan_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorCyan_btn.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="colorDeepPurple_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorDeepPurple_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 96</value>
+  </data>
+  <data name="colorDeepPurple_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorDeepPurple_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorDeepPurple_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorDeepPurple_btn.Name" xml:space="preserve">
+    <value>colorDeepPurple_btn</value>
+  </data>
+  <data name="&gt;&gt;colorDeepPurple_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorDeepPurple_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorDeepPurple_btn.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="colorGreen_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorGreen_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 77</value>
+  </data>
+  <data name="colorGreen_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorGreen_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorGreen_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorGreen_btn.Name" xml:space="preserve">
+    <value>colorGreen_btn</value>
+  </data>
+  <data name="&gt;&gt;colorGreen_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorGreen_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorGreen_btn.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="colorTeal_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorTeal_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 58</value>
+  </data>
+  <data name="colorTeal_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorTeal_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorTeal_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorTeal_btn.Name" xml:space="preserve">
+    <value>colorTeal_btn</value>
+  </data>
+  <data name="&gt;&gt;colorTeal_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorTeal_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorTeal_btn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="colorBlue_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorBlue_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 77</value>
+  </data>
+  <data name="colorBlue_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorBlue_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorBlue_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorBlue_btn.Name" xml:space="preserve">
+    <value>colorBlue_btn</value>
+  </data>
+  <data name="&gt;&gt;colorBlue_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorBlue_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorBlue_btn.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="colorIndigo_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorIndigo_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 58</value>
+  </data>
+  <data name="colorIndigo_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorIndigo_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorIndigo_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorIndigo_btn.Name" xml:space="preserve">
+    <value>colorIndigo_btn</value>
+  </data>
+  <data name="&gt;&gt;colorIndigo_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorIndigo_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorIndigo_btn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="colorPurple_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorPurple_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 77</value>
+  </data>
+  <data name="colorPurple_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorPurple_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorPurple_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorPurple_btn.Name" xml:space="preserve">
+    <value>colorPurple_btn</value>
+  </data>
+  <data name="&gt;&gt;colorPurple_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorPurple_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorPurple_btn.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="ColorRed_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ColorRed_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 58</value>
+  </data>
+  <data name="ColorRed_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="ColorRed_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="ColorRed_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ColorRed_btn.Name" xml:space="preserve">
+    <value>ColorRed_btn</value>
+  </data>
+  <data name="&gt;&gt;ColorRed_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorRed_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ColorRed_btn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SelectColor_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="SelectColor_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 40</value>
+  </data>
+  <data name="SelectColor_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="SelectColor_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;SelectColor_btn.Name" xml:space="preserve">
+    <value>SelectColor_btn</value>
+  </data>
+  <data name="&gt;&gt;SelectColor_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectColor_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SelectColor_btn.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="mute_unmute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mute_unmute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 103</value>
+  </data>
+  <data name="mute_unmute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="mute_unmute.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;mute_unmute.Name" xml:space="preserve">
+    <value>mute_unmute</value>
+  </data>
+  <data name="&gt;&gt;mute_unmute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mute_unmute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mute_unmute.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="random_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="random_radio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 103</value>
+  </data>
+  <data name="random_radio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="random_radio.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;random_radio.Name" xml:space="preserve">
+    <value>random_radio</value>
+  </data>
+  <data name="&gt;&gt;random_radio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;random_radio.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;random_radio.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="repeat_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="repeat_radio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 103</value>
+  </data>
+  <data name="repeat_radio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="repeat_radio.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;repeat_radio.Name" xml:space="preserve">
+    <value>repeat_radio</value>
+  </data>
+  <data name="&gt;&gt;repeat_radio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;repeat_radio.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;repeat_radio.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="Logout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Logout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 9</value>
+  </data>
+  <data name="Logout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 24</value>
+  </data>
+  <data name="Logout.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Logout.Name" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="&gt;&gt;Logout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Logout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Logout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="next_btn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="next_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="next_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 67</value>
+  </data>
+  <data name="next_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 27</value>
+  </data>
+  <data name="next_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;next_btn.Name" xml:space="preserve">
+    <value>next_btn</value>
+  </data>
+  <data name="&gt;&gt;next_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;next_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;next_btn.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="back_btn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="back_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAVZJREFUWEfN1zFKA1EUheEUFnY2ugFxDVpr6wIEKwNai0vQRgvBfdhqYcSIlahY
+        WrkEbS3sxv9BHlwuBxMTM3MOfBBO5r13CUwy6TVNY02WTmTpRJZOZOlElk5k6USWTmTpRJYZOccj7ka2
+        MUt20VdnZbLMyCvKi+oI02YVL7hWZ2WyzMgt4oAHmCblk39D2eNBnZXJMiOD0abVPv6SJZziG3WPG3VW
+        JsuMzDLgBu4R1xcDdVYmy6xsFjYuJhlwEYf4RFxbdTrgGi4R12SdDbiDd8TrldYHXMEF4o3wm1YH3MIz
+        4jXjtDLgAo7xhfj+JFob8AS2A9Zs4gnxmnFav0mWYXuTxNh+zcRYf1HX1J+6D8S1VecD1qxjiLi+sBmw
+        pDxunWFuj1v2D6z//chffhav1FmZLDMyjz9Ne+qsTJZOZOlElk5k6USWTmTpRJZOZOlElj6a3g+86/2z
+        V7xZVQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="back_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="back_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 67</value>
+  </data>
+  <data name="back_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 27</value>
+  </data>
+  <data name="back_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;back_btn.Name" xml:space="preserve">
+    <value>back_btn</value>
+  </data>
+  <data name="&gt;&gt;back_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;back_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="play_pause_btn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="play_pause_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAABERJREFUaEPdmcmyFEUUhjtwLQ5sRMRhgyGioAQP4bBGhQhDAnQp4iOIgMMbwAZH
+        EHTj8AQyqAEE815QccQAhSXX/7vVde/p/LO7s7rrXqL8I764HacrM/+8XVl58lRvZmbmf0E22EWywS6S
+        DXYRD0ynx8WLYo/4QhwVZ/rw+XPBd1zDtRPLfFuguR4SO8Rx8Y+gkxK49ph4QzwoGsl8W6Bcy8V74jcR
+        DU7Cr+IdcZ8okvm2QJleFT+JaKYNLoutYqzMtwVG627xsYiDp/wovhJviW1iYx8+7xR8xzW5tjUfirvE
+        UJlvCwzXw+J7EQesuSE+Es+IkQb64ppnBW1om+uTNcf6y8p8WyAvJnFOxIFqPhXrxKSi7QGR6/usyE7G
+        fFvAda/4QcQB4BfxgmhLL4krIh3nO3GPGJD5toDrExE7Bn6dNaJtPSHOi3Q8bsEBmW8LDGqLiB0CA3Gr
+        LZTo+4JIx31FzMl8W2Be94v0p2bPWC0WWuz6v4s4Nrcye9eszLcF5vW+iB3dEjxGx4kn0rLq41QijWHM
+        6OFdMSvzbYFKD4g/RezkoCjRenGq/3daHRLRwx9ihXDfFqj0pogd/CtKbykWLG3IpcgAphF9pfsMuZn7
+        tkCvd4fgkRcb8+QqVT2Rmn2iZJMcJvap2B+J5hLzbYFe7zHBL1A35D5lxy5VOhE4ISa91Z4Tca3wSz9q
+        vi1QLbK6EVwSS0WpchOBv0VRQpiI/C5NUDeabwtUB5/Y6EvRRMMmUrNX3Cma6GsR+9htvi1QnexiI7LY
+        Jho3ETgpNohSvS1i+8Pm2wLVkTQ2Iv1uopKJwFVR2vdrIrb91nxboDpfx0Ylm2BU6URqON+wDkYJD7HN
+        afNtgdszkXGP54kmkt5aTTe10on8JRb01qJkExtxPG2ixVjsh8y3Bbrx+N1lvi2Q3xCbpBjDJrLoG2IX
+        UpRV5tsCSsgEFYy6IdzOpDEtTPAwKkoaESXQ2JhUurRWW0/kupg2jX9S3BTRy3bhvi1QKXew4pBTojYP
+        VukTtPHBClHXjZ1wn/IgGCcy5TaOuptEHB+oD8/KfFtgXhz0OfDHjigITPU6oFDcnvz349g/i7kit/m2
+        wKAowcTOgFLNQpaDHhEXRTruy2JO5tsCLopjsUOgtsVCbFtrRa6m9YEYkPm2gItyZXqGB2pelDnb0mbB
+        e5J0HLaCVkqmiEIyBeU4QA1loqfEpHpafCZyfZOJZ99mmW8LDBfrIvfLAPsM6Ti7sP33MuKa5wUbbbpP
+        1LDxDX0lZ74tMFrs0LyEiQOmkJuR5JGxkn5zlgA+E/tGcE2ubc1+MbLgYb4tUCaSP16TxcHbgAlSOB8r
+        822BcvFMZ4PKvdNoCn1wfFj0l6FRKwX5DxVA8qtocBTXBOvgdUEfjWS+LTCdqA/zFmuXOCyOiNN9+Ey+
+        xnesGY4LE8t8p4Gukg12kWywi2SD3WOm9x8tOPZCQzOvXwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="play_pause_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="play_pause_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 54</value>
+  </data>
+  <data name="play_pause_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 55</value>
+  </data>
+  <data name="play_pause_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;play_pause_btn.Name" xml:space="preserve">
+    <value>play_pause_btn</value>
+  </data>
+  <data name="&gt;&gt;play_pause_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;play_pause_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;play_pause_btn.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="colorYellow_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorYellow_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 58</value>
+  </data>
+  <data name="colorYellow_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorYellow_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorYellow_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorYellow_btn.Name" xml:space="preserve">
+    <value>colorYellow_btn</value>
+  </data>
+  <data name="&gt;&gt;colorYellow_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorYellow_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorYellow_btn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="colorAmber_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorAmber_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 77</value>
+  </data>
+  <data name="colorAmber_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorAmber_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorAmber_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorAmber_btn.Name" xml:space="preserve">
+    <value>colorAmber_btn</value>
+  </data>
+  <data name="&gt;&gt;colorAmber_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorAmber_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorAmber_btn.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="colorOrange_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorOrange_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 96</value>
+  </data>
+  <data name="colorOrange_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorOrange_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorOrange_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorOrange_btn.Name" xml:space="preserve">
+    <value>colorOrange_btn</value>
+  </data>
+  <data name="&gt;&gt;colorOrange_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorOrange_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorOrange_btn.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="colorDeepOrange_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorDeepOrange_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 58</value>
+  </data>
+  <data name="colorDeepOrange_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorDeepOrange_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorDeepOrange_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorDeepOrange_btn.Name" xml:space="preserve">
+    <value>colorDeepOrange_btn</value>
+  </data>
+  <data name="&gt;&gt;colorDeepOrange_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorDeepOrange_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorDeepOrange_btn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="colorBrown_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorBrown_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 77</value>
+  </data>
+  <data name="colorBrown_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorBrown_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorBrown_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorBrown_btn.Name" xml:space="preserve">
+    <value>colorBrown_btn</value>
+  </data>
+  <data name="&gt;&gt;colorBrown_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorBrown_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorBrown_btn.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="colorBlueGrey_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="colorBlueGrey_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 96</value>
+  </data>
+  <data name="colorBlueGrey_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="colorBlueGrey_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colorBlueGrey_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colorBlueGrey_btn.Name" xml:space="preserve">
+    <value>colorBlueGrey_btn</value>
+  </data>
+  <data name="&gt;&gt;colorBlueGrey_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorBlueGrey_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colorBlueGrey_btn.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>352, 131</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAUFAAAAEAIADoZwAAFgAAACgAAABQAAAAoAAAAAEAIAAAAAAAAGQAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAEQAAADcAAABKAAAAQwAAAD0AAAAWAAAAIgAAABcAAAAJAAAAGwAAABoAAAAUAAAAEgAA
+        AA8AAAAJAAAABQAAAAQAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAoAAABPAAAAmAAAANoAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADYAAAAlgAAAE0AAAAJAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAEcAAACnAAAA9AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAPMAAAClAAAARQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAHAAAADfAAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA3gAAAG4AAAALAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAHcAAADsAAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAOsAAAB0AAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AFoAAADjAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADgAAAAVgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAACEAAAC6AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAAtgAAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeAAAA8gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA8AAAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAngAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AJgAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwAA
+        AMkAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAMYAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAACQAAADfAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANwAAAAhAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAA5gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAOQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAOYAAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAOUAAAAhAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ABYAAADeAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        ANwAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAIAAAAyQAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAMYAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ0AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAJkAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGt5AApZZADDXWkA/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/1JdAP8nLAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/EhUA/1JdAP9reQD/a3kA/2t5AP9reQD/a3kA/2t5
+        AP9reQD/a3kA/2t5AP9daQD/REwA/wQFAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/xIVAP9SXQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5
+        AP9reQD/Ul0A/0JLAJYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAY3AArWt5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5
+        AP8nLAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/xIUAP9qeAD/a3kA/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/REwA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8SFAD/angA/2t5AP9reQD/a3kA/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/1llAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABhbQD2a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/SVMA4gAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWl1pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/11pAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAAVgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAoAAADjXWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/XWkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAADhAAAACQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAeQAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0AAADtAAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/11pAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAOsAAAALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcgAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/XWkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAG4AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAIAAADgAAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA3gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAASQAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/11pAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAARgAAAAAAAAAAAAAAAAAAAAAAAACqAAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/XWkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAClAAAAAAAA
+        AAAAAAAAAAAACwAAAPUAAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAPMAAAAJAAAAAAAAAAAAAABSAAAA/wAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/11pAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAE0AAAAAAAAAAAAAAJsAAAD/AAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/XWkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAAlgAA
+        AAAAAAAAAAAA3AAAAP8AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAP8AAADZAAAAAAAAAAQAAAD/AAAA/wAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/15qAP4AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAVAAAADQAAAP8AAAD/AAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/aHYA5AAAANUAAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AEcAAAAUAAAA/wAAAP8AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9reQDeAAAACgAAAKAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAAYAAAABsAAAD/AAAA/wAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/a3kA/2t5AP9reQD/a3kA/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/2t5AN7///8A////AAAAAGAAAAD1AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAABCAAAAIAAAAP8AAAD/AAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/a3kA3v///wD///8A////AAAA
+        ACsAAADVAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AEcAAAAkAAAA/wAAAP8AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////7/Dp/2t5
+        AP9reQDe////AP///wD///8A////AAAAAAoAAACgAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAAUQAAACgAAAD/AAAA/wAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////v8On/a3kA/2t5AN7///8A////AP///wD///8A////AP///wAAAABgAAAA9QAA
+        AP8AAAD/AAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAABYAAAAKgAAAP8AAAD/AAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////+/w6f9reQD/a3kA3v///wD///8A////AP//
+        /wD///8A////AP///wAAAAArAAAA1QAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AF0AAAArAAAA/wAAAP8AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////7/Dp/2t5
+        AP9reQDe////AP///wD///8A////AP///wD///8A////AP///wAAAAAKAAAAoAAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAAYAAAACsAAAD/AAAA/wAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////v8On/a3kA/2t5AN7///8A////AP///wD///8A////AP///wD///8A////AAAA
+        AAoAAACgAAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAABgAAAAKgAAAP8AAAD/AAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////+/w6f9reQD/a3kA3v///wD///8A////AP//
+        /wD///8A////AP///wAAAAAqAAAA1QAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AF0AAAAnAAAA/wAAAP8AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////7/Dp/2t5
+        AP9reQDe////AP///wD///8A////AP///wD///8AAAAAYAAAAPUAAAD/AAAA/wAAAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAAWQAAADYAAAD/AAAA/wAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////v8On/a3kA/2t5AN7///8A////AP///wD///8AAAAACgAAAKAAAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAABRAAAAPQAAAP8AAAD/AAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/a3kA3v///wD///8A////AAAA
+        ACoAAADVDxEA/yQpAP8KDAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AEgAAAAzAAAA/wAAAP8AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5
+        AP9reQD/a3kA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9reQDe////AP///wAAAABgAAAA9U1XAP9reQD/a3kA/2t5AP9WYQD/PEQA/xkcAP8AAAD/AAAA/ysw
+        AP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAAOwAAADEAAAD/AAAA/wAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/2t5AN4AAAAKAAAAoAAAAP8PEQD/a3kA/4SPQv+lrX3/a3kA/2t5
+        AP9reQD/a3kA/2RxAP9LVAD/KzAA/2t5AP+vto3/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAtAAAAKAAAAP8AAAD/AAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/aHYA4wAAANUAAAD/AAAA/x0h
+        AP9reQD/m6Nr////////////5ujd/7m/nP94hCb/a3kA/2t5AP9reQD/a3kA/6+2jf//////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        ABsAAAAYAAAA/wAAAP8AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9eagD+AAAA/wAAAP8AAAD/HSEA/2t5AP+bo2v////////////////////////////3+PT/zNC4/5CZ
+        WP9reQD/r7aN/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAACAAAAAAAAADeAAAA/wAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/11pAP8AAAD/AAAA/wAAAP8dIQD/a3kA/5uja///////////////
+        //////////////////////////////f49P/v8On/////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAANkAAAAAAAAAAAAAAFkAAAD/AAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/XWkA/wAAAP8AAAD/AAAA/x0h
+        AP9reQD/m6Nr////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAAmAAA
+        AAAAAAAAAAAAHQAAAP8AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/HSEA/2t5AP+bo2v/////////////////////////////////////////
+        /////////////////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAAXAAAAAAAAAAAAAAAHAAAA9gAAAP8AAAD/AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/11pAP8AAAD/AAAA/wAAAP8dIQD/a3kA/5uja///////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAAD/AAAA9AAAAAQAAAAAAAAAAAAAAAAAAACsAAAA/wAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/XWkA/wAAAP8AAAD/AAAA/x0h
+        AP9reQD/m6Nr////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAACnAAAAAAAA
+        AAAAAAAAAAAAAAAAAB0AAAD/AAAA/wAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/AwQA/1tnAP9reQD/m6Nr/97g0f//////////////////////////////
+        /////////////////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAAD/AAAA5gAAABsAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAOEAAAD/AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/11pAP8AAAD/AAAA/wAAAP8AAAD/EhUA/1tnAP9reQD/a3kA/2t5
+        AP+vto3/7/Dp////////////////////////////////////////////////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAP8AAADPAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA
+        AP8AAAD/XWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/XWkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AwQA/zU8AP9SXQD/a3kA/2t5AP9reQD/eIQm/8zQuP/3+PT/////////////////////////
+        ///////////////////////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAHAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAMAAAA7gAAAP9daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8SFAD/REwA/11pAP9reQD/a3kA/2t5
+        AP+bo2v/3uDR/////////////////////////////////////////////////8zQuP9reQD/QUkA/wAA
+        AP8AAADsAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AAAA/11pAP9reQD/7/Dp////
+        /////////////////////////////////////////////8zQuP9reQD/QUkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8rMAD/a3kA/6+2jf//////////////////////////////
+        ///////////////////v8On/a3kA/11pAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/ycsAP9LVAD/ZHEA/2t5AP9reQD/a3kA/6+2jf/m6N3/////////////////////////
+        ////////zNC4/2t5AP9BSQD/AAAA/wAAAHYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAsAAADlXWkA/2t5AP/v8On/////////////////////////////////////////////////zNC4/2t5
+        AP9BSQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/yswAP9reQD/r7aN////
+        /////////////////////////////////////////////+/w6f9reQD/XWkA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8DBAD/NTwA/1JdAP9reQD/a3kA/2t5
+        AP94hCb/zNC4//f49P/////////////////M0Lj/a3kA/0FJAP8AAADjAAAACgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF1daQD/a3kA/+/w6f//////////////////////////////
+        ///////////////////M0Lj/a3kA/0FJAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/KzAA/2t5AP+vto3/////////////////////////////////////////////////7/Dp/2t5
+        AP9daQD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/xIUAP88RAD/VmEA/2t5AP9reQD/a3kA/5uja//e4NH//////8zQuP9reQD/QUkA/wAA
+        AFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEtUAOdreQD/a3kA/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/JywA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8SFAD/angA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/0RMAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/JywA/0tUAP9kcQD/a3kA/2t5
+        AP9reQD/a3kA/2t5AP8vNQDTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAGRwAK0VOAPtdaQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/Ul0A/ycs
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8SFQD/Ul0A/2t5
+        AP9reQD/a3kA/2t5AP9reQD/a3kA/2t5AP9reQD/a3kA/11pAP9ETAD/BAUA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wMEAP81PAD/Ul0A/2t5AP9SXQD/KC4A9wAAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYQAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAABeAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoQAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAAnQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAJAAAAzAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAMkAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZAAAA4QAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADeAAAAFgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAmAAAA6AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA5gAA
+        ACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArAAAA6AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAOYAAAApAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmAAAA4QAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADeAAAAIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAYAAAAzAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAyAAAABYAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAogAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AJwAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAYQAAAPMAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAPEAAABdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgAAAL0AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAC6AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AF0AAADlAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADjAAAAWgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAAB8AAAA7wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADtAAAAeQAA
+        AAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAdAAA
+        AOEAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAADgAAAAcgAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAEsAAACsAAAA9gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAPUAAACqAAAASQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAVAAA
+        AJwAAADeAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA3AAAAJsAAABSAAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAAAAJAAAADkAAABIAAAATwAAAFYAAABeAAAAMAAA
+        ABsAAAAbAAAAIAAAACoAAAA6AAAAYQAAAG4AAABNAAAAHwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////gAAf////wAA////4AAA
+        B////wAA////AAAAAP///wAA///8AAAAAD///wAA///wAAAAAA///wAA///gAAAAAAf//wAA//+AAAAA
+        AAH//wAA//8AAAAAAAD//wAA//wAAAAAAAA//wAA//gAAAAAAAAf/wAA//AAAAAAAAAP/wAA/+AAAAAA
+        AAAH/wAA/8AAAAAAAAAD/wAA/4AAAAAAAAAB/wAA/wAAAAAAAAAA/wAA/wAAAAAAAAAA/wAA/AAAAAAA
+        AAAAfwAA/AAAAAAAAAAAPwAA/AAAAAAAAAAAPwAA+AAAAAAAAAAAHwAA8AAAAAAAAAAADwAA8AAAAAAA
+        AAAADwAA4AAAAAAAAAAABwAA4AAAAAAAAAAABwAAwAAAAAAAAAAAAwAAwAAAAAAAAAAAAwAAwAAAAAAA
+        AAAAAwAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAD
+        wAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAD+AAAAAAAAAAAAAAD/AAAAAAAAAAAAAAD/AAAAAAAAAAAAAAD
+        +AAAAAAAAAAAAAAD8AAAAAAAAAAAAAADwAAAAAAAAAAAAAADgAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAgAAAAAAA
+        AAAAAQAAgAAAAAAAAAAAAQAAwAAAAAAAAAAAAwAAwAAAAAAAAAAAAwAAwAAAAAAAAAAAAwAA4AAAAAAA
+        AAAABwAA4AAAAAAAAAAABwAA8AAAAAAAAAAADwAA8AAAAAAAAAAADwAA+AAAAAAAAAAAHwAA/AAAAAAA
+        AAAAPwAA/AAAAAAAAAAAPwAA/gAAAAAAAAAAfwAA/wAAAAAAAAAA/wAA/wAAAAAAAAAA/wAA/4AAAAAA
+        AAAB/wAA/8AAAAAAAAAD/wAA/+AAAAAAAAAH/wAA//AAAAAAAAAP/wAA//gAAAAAAAAf/wAA//wAAAAA
+        AAA//wAA//8AAAAAAAD//wAA//+AAAAAAAH//wAA///gAAAAAAf//wAA///wAAAAAA///wAA///8AAAA
+        AD///wAA////AAAAAP///wAA////4AAAB////wAA/////gAAf////wAA
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>VkPlayer</value>
+  </data>
+  <data name="&gt;&gt;duration_timer.Name" xml:space="preserve">
+    <value>duration_timer</value>
+  </data>
+  <data name="&gt;&gt;duration_timer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerForRefresh.Name" xml:space="preserve">
+    <value>timerForRefresh</value>
+  </data>
+  <data name="&gt;&gt;timerForRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NextSongTimer.Name" xml:space="preserve">
+    <value>NextSongTimer</value>
+  </data>
+  <data name="&gt;&gt;NextSongTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
