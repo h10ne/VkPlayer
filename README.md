@@ -33,6 +33,4 @@
 <li>При пролистывании треков стрелками изменяется ползунок громоксти</li>
 </ul>
 <hr>
-<h1>Скриншоты</h1>
-<img src="https://vk.com/photo270509637_456245376">
 <h1>Ссылка на Я.диск - <a href ="https://yadi.sk/d/ozXtfY03VUMa_w">https://yadi.sk/d/ozXtfY03VUMa_w</a></h1>
