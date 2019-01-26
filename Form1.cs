@@ -26,6 +26,7 @@ namespace VkPlayer
         public Font Roboto_thin;
         private Color MainColor;
         private Color addColor;
+        public string code = null;
         private int countAudio;
         Random rnd;
         private bool repeat = false;
@@ -54,6 +55,14 @@ namespace VkPlayer
             title_name.Font = Roboto_thin;
             MainColor = Color.FromArgb(255, 63, 81, 181);
             addColor = Color.FromArgb(255, 48, 63, 159);
+            try
+            {
+                string[]  vs = File.ReadAllText("user_color.dat").Split(' ');
+                MainColor = Color.FromArgb(255, byte.Parse(vs[0]), byte.Parse(vs[1]), byte.Parse(vs[2]));
+                addColor = Color.FromArgb(255, byte.Parse(vs[3]), byte.Parse(vs[4]), byte.Parse(vs[5]));
+            }
+            catch
+            {  }            
             BackColor = MainColor;
             KeyPreview = true;
 
@@ -83,35 +92,73 @@ namespace VkPlayer
             title_name.Enabled = true;
         }
 
-        public void GetAuth()
+        private void AuthLogPass()
+        {
+            api.Authorize(new ApiAuthParams
+            {
+                Login = _Login,
+                Password = _Password,
+            });
+            user_id = api.UserId.GetHashCode();
+            File.WriteAllText("user_id.dat", user_id.ToString());
+            Show();
+        }
+
+        private void AuthToken()
+        {
+            api.Authorize(new ApiAuthParams
+            {
+                AccessToken = Token
+            });
+            user_id = long.Parse(File.ReadAllText("user_id.dat"));
+        }
+
+        private void Auth2Fact()
+        {
+            api.Authorize(new ApiAuthParams
+            {
+                Login = _Login,
+                Password = _Password,
+                TwoFactorAuthorization = () =>
+                {
+                    AuthForm2 f = new AuthForm2();
+                    f.ShowDialog();
+                    while(code==null)
+                    {
+                        code = File.ReadAllText("someFile.tempdat");
+                    }
+                    System.IO.File.Delete("someFile.tempdat");
+                    return code;
+                }
+            });
+            user_id = api.UserId.GetHashCode();
+            File.WriteAllText("user_id.dat", user_id.ToString());
+            Show();
+        }
+
+        public void GetAuth(string twoFactoringCode)
         {
             service = new ServiceCollection();
             service.AddAudioBypass();
             api = new VkApi(service);
-            if (Token == null)
+            if (Token == null && twoFactoringCode == null)
             {
-                api.Authorize(new ApiAuthParams
-                {
-                    Login = _Login,
-                    Password = _Password,
-                });
-                user_id = api.UserId.GetHashCode();
-                File.WriteAllText("user_id.dat", user_id.ToString());
-                Show();
+                AuthLogPass();
+            }
+            else if (twoFactoringCode != null)
+            {
+                Auth2Fact();
             }
             else
             {
-                api.Authorize(new ApiAuthParams
-                {
-                    AccessToken = Token
-                });
-                user_id = long.Parse (File.ReadAllText("user_id.dat"));
+                AuthToken();
             }
             rnd = new Random();
             countAudio = (int)api.Audio.GetCount(user_id);
             File.WriteAllText("auth.dat", api.Token);
             GetAllEnabled();
         }
+
 
         public void TryAuth()
         {
@@ -124,7 +171,7 @@ namespace VkPlayer
                 f.ShowDialog();
             }
             else
-                GetAuth();
+                GetAuth(null);
         }
         private void SetInfo()
         {            
@@ -245,6 +292,8 @@ namespace VkPlayer
         private void Logout_Click(object sender, EventArgs e)
         {
             System.IO.File.Delete("auth.dat");
+            System.IO.File.Delete("user_id.dat");
+            System.IO.File.Delete("user_color.dat");
             System.Windows.Forms.Application.Restart();
             Close();
         }
@@ -403,9 +452,17 @@ namespace VkPlayer
             {
                 repeat_radio.BackColor = addColor;
             }
+            else
+            {
+                repeat_radio.BackColor = mainColor;
+            }
             if (random)
             {
                 random_radio.BackColor = addColor;
+            }
+            else
+            {
+                random_radio.BackColor = mainColor;
             }
         }
 
@@ -569,6 +626,11 @@ namespace VkPlayer
             title_name.ForeColor = Color.White;
             SetColors(main, add);
             HideColors();
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            File.WriteAllText("user_color.dat", $"{MainColor.R} {MainColor.G} {MainColor.B} {addColor.A} {addColor.B} {addColor.B}");
         }
     }
 }

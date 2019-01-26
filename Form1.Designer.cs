@@ -349,6 +349,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.duration_bar)).EndInit();

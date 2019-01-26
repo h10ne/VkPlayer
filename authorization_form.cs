@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace VkPlayer
 {
     public partial class authorization_form : Form
@@ -24,6 +24,12 @@ namespace VkPlayer
                 label2.Font = main.Roboto_thin;
             }
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Width = 327;
+            Height = 143;
+            twoFact_check.Location = new Point(7, 74);
+            auth_btn.Location = new Point(176, 66);
+            auth_btn.FlatAppearance.BorderSize = 0;
+            auth_btn.FlatStyle = FlatStyle.Flat;
         }
 
         private void auth_btn_Click(object sender, EventArgs e)
@@ -31,11 +37,23 @@ namespace VkPlayer
             if (this.Owner is Main main)
             {
                 try
-                 {
-                    main._Login = login.Text;
-                    main._Password =password.Text;
-                    main.GetAuth();
-                    Close();                    
+                {
+                     if (!twoFact_check.Checked)
+                     {
+                         main._Login = login.Text;
+                         main._Password = password.Text;
+                         main.GetAuth(null);
+                         Close();
+                     }
+                     else
+                     {
+                        main._Login = login.Text;
+                        main._Password = password.Text;
+                        File.WriteAllText("someFile.tempdat", "");
+                        Close();
+                        main.GetAuth("code");
+                    }
+                                      
                 }
                 catch
                 {
@@ -46,5 +64,6 @@ namespace VkPlayer
                 }
             }
         }
+       
     }
 }
