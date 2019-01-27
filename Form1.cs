@@ -16,8 +16,6 @@ namespace VkPlayer
     public partial class Main : Form
     {
         WMPLib.WindowsMediaPlayer player;
-        public string _Login;
-        public string _Password;
         private long user_id;
         public string Token = null;
         private static IVkApi api;
@@ -27,26 +25,30 @@ namespace VkPlayer
         private Color MainColor;
         private Color addColor;
         public string code = null;
-        private int countAudio;
         Random rnd;
+        private int clr;
         private bool repeat = false;
         private bool random = false;
         private int _offset = 0;
-        private string _URL;
         private bool isPlay = false;
         private bool mute = false;
         public Main()
         {
             InitializeComponent();
-            try
+
+            if (File.Exists("auth.dat"))
             {
                 Token = File.ReadAllText("auth.dat");
-                TryAuth();
+                GetAuth(false);
             }
-            catch { }
-            if (_Login == null && _Password == null && Token == null)
-                TryAuth();
-
+            else
+            {
+                authorization_form f = new authorization_form
+                {
+                    Owner = this
+                };
+                f.ShowDialog();
+            }
             player = new WindowsMediaPlayer();
             duration_timer.Stop();
             SetInfo();
@@ -55,17 +57,25 @@ namespace VkPlayer
             title_name.Font = Roboto_thin;
             MainColor = Color.FromArgb(255, 63, 81, 181);
             addColor = Color.FromArgb(255, 48, 63, 159);
-            try
+            if (File.Exists("user_color.dat"))
             {
-                string[]  vs = File.ReadAllText("user_color.dat").Split(' ');
+                string[] vs = File.ReadAllText("user_color.dat").Split(' ');
                 MainColor = Color.FromArgb(255, byte.Parse(vs[0]), byte.Parse(vs[1]), byte.Parse(vs[2]));
                 addColor = Color.FromArgb(255, byte.Parse(vs[3]), byte.Parse(vs[4]), byte.Parse(vs[5]));
+                if (byte.Parse(vs[6]) == 0)
+                {
+                    artist_name.ForeColor = Color.Black;
+                    title_name.ForeColor = Color.Black;
+                }
+                else
+                {
+                    artist_name.ForeColor = Color.White;
+                    title_name.ForeColor = Color.White;
+                }
             }
-            catch
-            {  }            
             BackColor = MainColor;
             KeyPreview = true;
-
+            this.ContextMenuStrip = Menu;
         }
         
         public void LoadText()
@@ -81,29 +91,6 @@ namespace VkPlayer
             catch { }
         }
 
-        public void GetAllEnabled()
-        {
-            volume.Enabled = true;
-            play_pause_btn.Enabled = true;
-            back_btn.Enabled = true;
-            next_btn.Enabled = true;
-            duration_bar.Enabled = true;
-            artist_name.Enabled = true;
-            title_name.Enabled = true;
-        }
-
-        private void AuthLogPass()
-        {
-            api.Authorize(new ApiAuthParams
-            {
-                Login = _Login,
-                Password = _Password,
-            });
-            user_id = api.UserId.GetHashCode();
-            File.WriteAllText("user_id.dat", user_id.ToString());
-            Show();
-        }
-
         private void AuthToken()
         {
             api.Authorize(new ApiAuthParams
@@ -113,17 +100,17 @@ namespace VkPlayer
             user_id = long.Parse(File.ReadAllText("user_id.dat"));
         }
 
-        private void Auth2Fact()
+        private void Auth2Fact(string login, string password)
         {
             api.Authorize(new ApiAuthParams
             {
-                Login = _Login,
-                Password = _Password,
+                Login = login,
+                Password = password,
                 TwoFactorAuthorization = () =>
                 {
                     AuthForm2 f = new AuthForm2();
                     f.ShowDialog();
-                    while(code==null)
+                    while (code == null)
                     {
                         code = File.ReadAllText("someFile.tempdat");
                     }
@@ -133,61 +120,65 @@ namespace VkPlayer
             });
             user_id = api.UserId.GetHashCode();
             File.WriteAllText("user_id.dat", user_id.ToString());
+            File.WriteAllText("auth.dat", api.Token);
             Show();
         }
 
-        public void GetAuth(string twoFactoringCode)
+        private void AuthLogPass(string login, string password)
+        {
+            api.Authorize(new ApiAuthParams
+            {
+                Login = login,
+                Password = password,
+            });
+            user_id = api.UserId.GetHashCode();
+            File.WriteAllText("user_id.dat", user_id.ToString());
+            File.WriteAllText("auth.dat", api.Token);
+            Show();
+        }
+
+        public void GetAuth(bool twoFactoringCode, string login = null, string password = null)
         {
             service = new ServiceCollection();
             service.AddAudioBypass();
             api = new VkApi(service);
-            if (Token == null && twoFactoringCode == null)
+            if (Token == null && !twoFactoringCode)
             {
-                AuthLogPass();
+                AuthLogPass(login, password);
             }
-            else if (twoFactoringCode != null)
+            else if (twoFactoringCode)
             {
-                Auth2Fact();
+                Auth2Fact(login, password);
             }
             else
             {
                 AuthToken();
             }
             rnd = new Random();
-            countAudio = (int)api.Audio.GetCount(user_id);
-            File.WriteAllText("auth.dat", api.Token);
-            GetAllEnabled();
-        }
 
+        }        
 
-        public void TryAuth()
-        {
-            if (_Password == null && _Login == null && Token == null)
-            {
-                authorization_form f = new authorization_form
-                {
-                    Owner = this
-                };
-                f.ShowDialog();
-            }
-            else
-                GetAuth(null);
-        }
         private void SetInfo()
-        {            
+        {
+            
             var audio = api.Audio.Get(new AudioGetParams { Count = 1, Offset = _offset });
-            try
+            int tempOffset = _offset;
+            while (audio[0].Url == null) 
             {
-                _URL = audio[0].Url.ToString();
-                player.URL = _URL;
-                player.controls.stop();
-                artist_name.Text = audio[0].Artist;
-                title_name.Text = audio[0].Title;
-                player.settings.volume = volume.Value;
-                duration_timer.Start();
-                duration_bar.Value = 0;
+                ++_offset;
+                if (tempOffset == _offset)
+                    _offset-=2;
+                tempOffset = _offset;
+                audio = api.Audio.Get(new AudioGetParams { Count = 1, Offset = _offset });
             }
-            catch { }
+            player.URL = audio[0].Url.ToString();
+            player.controls.stop();
+            artist_name.Text = audio[0].Artist;
+            title_name.Text = audio[0].Title;
+            player.settings.volume = volume.Value;
+            duration_timer.Start();
+            duration_bar.Value = 0;
+
         }
         
         private void play_pause()
@@ -240,7 +231,7 @@ namespace VkPlayer
         {
             if (random)
             {
-                _offset = rnd.Next(0, countAudio);
+                _offset = rnd.Next(0, (int)api.Audio.GetCount(user_id));
             }
             if (api.Audio.GetCount(user_id) > _offset)
             {
@@ -269,6 +260,8 @@ namespace VkPlayer
         {
             duration_bar.Maximum = (int)player.currentMedia.duration;
             duration_bar.Value = (int)player.controls.currentPosition;
+            currentTimeDur.Text = player.controls.currentPositionString;
+            AllTimeDur.Text = player.currentMedia.durationString;
         }
        
         private void duration_bar_Scroll(object sender, EventArgs e)
@@ -286,6 +279,7 @@ namespace VkPlayer
             {
                 timerForRefresh.Stop();
                 NextSongTimer.Start();
+                AllTimeDur.Text = player.currentMedia.durationString;
             }
         }
 
@@ -368,19 +362,13 @@ namespace VkPlayer
             }
             else if (e.KeyCode == Keys.Right)
             {
-                NextSong();
+                NextSong();                
             }
             else if (e.KeyCode == Keys.M)
             {
                 SetMute_Unmute();
             }
         }
-
-        private void artist_name_Click(object sender, EventArgs e)
-        {
-
-        }
-        
 
         private void SetMute_Unmute()
         {
@@ -401,46 +389,6 @@ namespace VkPlayer
         private void mute_unmute_Click(object sender, EventArgs e)
         {
             SetMute_Unmute();
-        }
-
-        private void ShowColors()
-        {
-            colorAmber_btn.Visible = true;
-            colorBlueGrey_btn.Visible = true;
-            colorBlue_btn.Visible = true;
-            colorBrown_btn.Visible = true;
-            colorCyan_btn.Visible = true;
-            colorDeepOrange_btn.Visible = true;
-            colorDeepPurple_btn.Visible = true;
-            colorGreen_btn.Visible = true;
-            colorIndigo_btn.Visible = true;
-            colorLime_btn.Visible = true;
-            colorOrange_btn.Visible = true;
-            colorPurple_btn.Visible = true;
-            ColorRed_btn.Visible = true;
-            ColorRed_btn.Visible = true;
-            colorTeal_btn.Visible = true;
-            colorYellow_btn.Visible = true;
-        }
-
-        private void HideColors()
-        {
-            colorAmber_btn.Visible = false;
-            colorBlueGrey_btn.Visible = false;
-            colorBlue_btn.Visible = false;
-            colorBrown_btn.Visible = false;
-            colorCyan_btn.Visible = false;
-            colorDeepOrange_btn.Visible = false;
-            colorDeepPurple_btn.Visible = false;
-            colorGreen_btn.Visible = false;
-            colorIndigo_btn.Visible = false;
-            colorLime_btn.Visible = false;
-            colorOrange_btn.Visible = false;
-            colorPurple_btn.Visible = false;
-            ColorRed_btn.Visible = false;
-            ColorRed_btn.Visible = false;
-            colorTeal_btn.Visible = false;
-            colorYellow_btn.Visible = false;
         }
 
         private void SetColors(Color mainColor, Color addColor)
@@ -464,173 +412,150 @@ namespace VkPlayer
             {
                 random_radio.BackColor = mainColor;
             }
-        }
-
-        private void SelectColor_btn_Click(object sender, EventArgs e)
-        {
-            if (colorYellow_btn.Visible == true)
-            {
-                HideColors();
-            }
+            if (artist_name.ForeColor.B == 0)
+                clr = 0;
             else
-            {
-                ShowColors();
-            }
+                clr = 255;
         }
 
-        private void ColorRed_btn_Click(object sender, EventArgs e)
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            File.WriteAllText("user_color.dat", $"{MainColor.R} {MainColor.G} {MainColor.B} {addColor.A} {addColor.B} {addColor.B} {clr}");
+        }
+
+        private void redToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 229, 57, 53);
             Color add = Color.FromArgb(255, 183, 28, 28);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorPurple_btn_Click(object sender, EventArgs e)
+        private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 171, 71, 188);
             Color add = Color.FromArgb(255, 123, 31, 162);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorDeepPurple_btn_Click(object sender, EventArgs e)
+        private void deepPurpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 103, 58, 183);
             Color add = Color.FromArgb(255, 69, 39, 160);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorIndigo_btn_Click(object sender, EventArgs e)
+        private void indigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 63, 81, 181);
             Color add = Color.FromArgb(255, 40, 53, 147);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorBlue_btn_Click(object sender, EventArgs e)
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 33, 150, 243);
             Color add = Color.FromArgb(255, 21, 101, 192);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorCyan_btn_Click(object sender, EventArgs e)
+        private void cyanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 38, 198, 218);
             Color add = Color.FromArgb(255, 0, 151, 167);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorTeal_btn_Click(object sender, EventArgs e)
+        private void tealToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 38, 166, 154);
             Color add = Color.FromArgb(255, 0, 121, 107);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorGreen_btn_Click(object sender, EventArgs e)
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 76, 175, 80);
             Color add = Color.FromArgb(255, 46, 125, 50);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorLime_btn_Click(object sender, EventArgs e)
+        private void limeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 205, 220, 57);
             Color add = Color.FromArgb(255, 175, 180, 43);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorYellow_btn_Click(object sender, EventArgs e)
+        private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 238, 88);
             Color add = Color.FromArgb(255, 253, 216, 53);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorAmber_btn_Click(object sender, EventArgs e)
+        private void amberToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 202, 40);
             Color add = Color.FromArgb(255, 255, 179, 0);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorOrange_btn_Click(object sender, EventArgs e)
+        private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 152, 0);
             Color add = Color.FromArgb(255, 245, 124, 0);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorDeepOrange_btn_Click(object sender, EventArgs e)
+        private void deepOrangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 87, 34);
             Color add = Color.FromArgb(255, 216, 67, 21);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorBrown_btn_Click(object sender, EventArgs e)
+        private void brownToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 121, 85, 72);
             Color add = Color.FromArgb(255, 93, 64, 55);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
         }
 
-        private void colorBlueGrey_btn_Click(object sender, EventArgs e)
+        private void blueGrayToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 120, 144, 156);
             Color add = Color.FromArgb(255, 69, 90, 100);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             SetColors(main, add);
-            HideColors();
-        }
-
-        private void Main_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            File.WriteAllText("user_color.dat", $"{MainColor.R} {MainColor.G} {MainColor.B} {addColor.A} {addColor.B} {addColor.B}");
         }
     }
 }

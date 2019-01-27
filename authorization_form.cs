@@ -36,32 +36,25 @@ namespace VkPlayer
         {
             if (this.Owner is Main main)
             {
-                try
+                
+                if (!twoFact_check.Checked)
                 {
-                     if (!twoFact_check.Checked)
-                     {
-                         main._Login = login.Text;
-                         main._Password = password.Text;
-                         main.GetAuth(null);
-                         Close();
-                     }
-                     else
-                     {
-                        main._Login = login.Text;
-                        main._Password = password.Text;
-                        File.WriteAllText("someFile.tempdat", "");
-                        Close();
-                        main.GetAuth("code");
+                    try
+                    {
+                        main.GetAuth(false, login.Text, password.Text);
                     }
-                                      
+                    catch
+                    {
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
+                    }
+                    Close();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show(
-                        "Неверный логин/пароль",
-                        "Ошибка",
-                        MessageBoxButtons.OK);
-                }
+                   File.WriteAllText("someFile.tempdat", "");
+                   main.GetAuth(true, login.Text, password.Text);
+                    Close();
+                }             
             }
         }
        

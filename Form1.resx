@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="artist_name.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="artist_name.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Devanagari, 12pt</value>
@@ -130,11 +126,12 @@
     <value>NoControl</value>
   </data>
   <data name="artist_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 19</value>
+    <value>37, 8</value>
   </data>
   <data name="artist_name.Size" type="System.Drawing.Size, System.Drawing">
     <value>285, 19</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="artist_name.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -154,10 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;artist_name.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="title_name.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>10</value>
   </data>
   <data name="title_name.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Devanagari, 12pt, style=Bold</value>
@@ -166,7 +160,7 @@
     <value>NoControl</value>
   </data>
   <data name="title_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 40</value>
+    <value>37, 29</value>
   </data>
   <data name="title_name.Size" type="System.Drawing.Size, System.Drawing">
     <value>285, 19</value>
@@ -190,12 +184,9 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;title_name.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="volume.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="volume.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="volume.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -223,12 +214,9 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;volume.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>9</value>
   </data>
   <data name="duration_bar.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="duration_bar.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="duration_bar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -253,7 +241,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;duration_bar.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>8</value>
   </data>
   <metadata name="duration_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -264,273 +252,6 @@
   <metadata name="NextSongTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>286, 17</value>
   </metadata>
-  <data name="colorLime_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorLime_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 96</value>
-  </data>
-  <data name="colorLime_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorLime_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorLime_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorLime_btn.Name" xml:space="preserve">
-    <value>colorLime_btn</value>
-  </data>
-  <data name="&gt;&gt;colorLime_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorLime_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorLime_btn.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="colorCyan_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorCyan_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 96</value>
-  </data>
-  <data name="colorCyan_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorCyan_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorCyan_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorCyan_btn.Name" xml:space="preserve">
-    <value>colorCyan_btn</value>
-  </data>
-  <data name="&gt;&gt;colorCyan_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorCyan_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorCyan_btn.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="colorDeepPurple_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorDeepPurple_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 96</value>
-  </data>
-  <data name="colorDeepPurple_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorDeepPurple_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorDeepPurple_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorDeepPurple_btn.Name" xml:space="preserve">
-    <value>colorDeepPurple_btn</value>
-  </data>
-  <data name="&gt;&gt;colorDeepPurple_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorDeepPurple_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorDeepPurple_btn.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="colorGreen_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorGreen_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 77</value>
-  </data>
-  <data name="colorGreen_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorGreen_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorGreen_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorGreen_btn.Name" xml:space="preserve">
-    <value>colorGreen_btn</value>
-  </data>
-  <data name="&gt;&gt;colorGreen_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorGreen_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorGreen_btn.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="colorTeal_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorTeal_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 58</value>
-  </data>
-  <data name="colorTeal_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorTeal_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorTeal_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorTeal_btn.Name" xml:space="preserve">
-    <value>colorTeal_btn</value>
-  </data>
-  <data name="&gt;&gt;colorTeal_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorTeal_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorTeal_btn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="colorBlue_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorBlue_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 77</value>
-  </data>
-  <data name="colorBlue_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorBlue_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorBlue_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorBlue_btn.Name" xml:space="preserve">
-    <value>colorBlue_btn</value>
-  </data>
-  <data name="&gt;&gt;colorBlue_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorBlue_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorBlue_btn.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="colorIndigo_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorIndigo_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 58</value>
-  </data>
-  <data name="colorIndigo_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorIndigo_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorIndigo_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorIndigo_btn.Name" xml:space="preserve">
-    <value>colorIndigo_btn</value>
-  </data>
-  <data name="&gt;&gt;colorIndigo_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorIndigo_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorIndigo_btn.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="colorPurple_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorPurple_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 77</value>
-  </data>
-  <data name="colorPurple_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorPurple_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorPurple_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorPurple_btn.Name" xml:space="preserve">
-    <value>colorPurple_btn</value>
-  </data>
-  <data name="&gt;&gt;colorPurple_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorPurple_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorPurple_btn.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="ColorRed_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ColorRed_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 58</value>
-  </data>
-  <data name="ColorRed_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="ColorRed_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="ColorRed_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;ColorRed_btn.Name" xml:space="preserve">
-    <value>ColorRed_btn</value>
-  </data>
-  <data name="&gt;&gt;ColorRed_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColorRed_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ColorRed_btn.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="SelectColor_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SelectColor_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 40</value>
-  </data>
-  <data name="SelectColor_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="SelectColor_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;SelectColor_btn.Name" xml:space="preserve">
-    <value>SelectColor_btn</value>
-  </data>
-  <data name="&gt;&gt;SelectColor_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SelectColor_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SelectColor_btn.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
   <data name="mute_unmute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -553,7 +274,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mute_unmute.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>5</value>
   </data>
   <data name="random_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -577,7 +298,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;random_radio.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>6</value>
   </data>
   <data name="repeat_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -601,7 +322,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;repeat_radio.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>7</value>
   </data>
   <data name="Logout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -625,16 +346,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Logout.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="next_btn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>3</value>
   </data>
   <data name="next_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="next_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 67</value>
+    <value>202, 56</value>
   </data>
   <data name="next_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 27</value>
@@ -652,10 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;next_btn.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="back_btn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>11</value>
   </data>
   <data name="back_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -673,7 +388,7 @@
     <value>NoControl</value>
   </data>
   <data name="back_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 67</value>
+    <value>125, 56</value>
   </data>
   <data name="back_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 27</value>
@@ -691,10 +406,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="play_pause_btn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>12</value>
   </data>
   <data name="play_pause_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -724,7 +436,7 @@
     <value>NoControl</value>
   </data>
   <data name="play_pause_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 54</value>
+    <value>150, 43</value>
   </data>
   <data name="play_pause_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 55</value>
@@ -742,169 +454,184 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;play_pause_btn.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="colorYellow_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorYellow_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 58</value>
-  </data>
-  <data name="colorYellow_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorYellow_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorYellow_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorYellow_btn.Name" xml:space="preserve">
-    <value>colorYellow_btn</value>
-  </data>
-  <data name="&gt;&gt;colorYellow_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorYellow_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorYellow_btn.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="colorAmber_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorAmber_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 77</value>
-  </data>
-  <data name="colorAmber_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="colorAmber_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="colorAmber_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;colorAmber_btn.Name" xml:space="preserve">
-    <value>colorAmber_btn</value>
-  </data>
-  <data name="&gt;&gt;colorAmber_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorAmber_btn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;colorAmber_btn.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="colorOrange_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="currentTimeDur.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="colorOrange_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 96</value>
+  <data name="currentTimeDur.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
   </data>
-  <data name="colorOrange_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+  <data name="currentTimeDur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 85</value>
   </data>
-  <data name="colorOrange_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="currentTimeDur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 15</value>
   </data>
-  <data name="colorOrange_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="currentTimeDur.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="&gt;&gt;colorOrange_btn.Name" xml:space="preserve">
-    <value>colorOrange_btn</value>
+  <data name="currentTimeDur.Text" xml:space="preserve">
+    <value>00:00</value>
   </data>
-  <data name="&gt;&gt;colorOrange_btn.Type" xml:space="preserve">
+  <data name="&gt;&gt;currentTimeDur.Name" xml:space="preserve">
+    <value>currentTimeDur</value>
+  </data>
+  <data name="&gt;&gt;currentTimeDur.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;colorOrange_btn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;currentTimeDur.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;colorOrange_btn.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;currentTimeDur.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="colorDeepOrange_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AllTimeDur.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AllTimeDur.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
+  </data>
+  <data name="AllTimeDur.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="colorDeepOrange_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 58</value>
+  <data name="AllTimeDur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 85</value>
   </data>
-  <data name="colorDeepOrange_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+  <data name="AllTimeDur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 15</value>
   </data>
-  <data name="colorDeepOrange_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="AllTimeDur.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="colorDeepOrange_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="AllTimeDur.Text" xml:space="preserve">
+    <value>00:00</value>
   </data>
-  <data name="&gt;&gt;colorDeepOrange_btn.Name" xml:space="preserve">
-    <value>colorDeepOrange_btn</value>
+  <data name="&gt;&gt;AllTimeDur.Name" xml:space="preserve">
+    <value>AllTimeDur</value>
   </data>
-  <data name="&gt;&gt;colorDeepOrange_btn.Type" xml:space="preserve">
+  <data name="&gt;&gt;AllTimeDur.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;colorDeepOrange_btn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AllTimeDur.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;colorDeepOrange_btn.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;AllTimeDur.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="colorBrown_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>422, 17</value>
+  </metadata>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 26</value>
   </data>
-  <data name="colorBrown_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 77</value>
+  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
+    <value>Menu</value>
   </data>
-  <data name="colorBrown_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="colorBrown_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 9.75pt</value>
   </data>
-  <data name="colorBrown_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
   </data>
-  <data name="&gt;&gt;colorBrown_btn.Name" xml:space="preserve">
-    <value>colorBrown_btn</value>
+  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Color</value>
   </data>
-  <data name="&gt;&gt;colorBrown_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="redToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;colorBrown_btn.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="redToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
   </data>
-  <data name="&gt;&gt;colorBrown_btn.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="redToolStripMenuItem.Text" xml:space="preserve">
+    <value>Red</value>
   </data>
-  <data name="colorBlueGrey_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="purpleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
   </data>
-  <data name="colorBlueGrey_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 96</value>
+  <data name="purpleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Purple</value>
   </data>
-  <data name="colorBlueGrey_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+  <data name="deepPurpleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
   </data>
-  <data name="colorBlueGrey_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="deepPurpleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Deep purple</value>
   </data>
-  <data name="colorBlueGrey_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="indigoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
   </data>
-  <data name="&gt;&gt;colorBlueGrey_btn.Name" xml:space="preserve">
-    <value>colorBlueGrey_btn</value>
+  <data name="indigoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Indigo</value>
   </data>
-  <data name="&gt;&gt;colorBlueGrey_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="blueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
   </data>
-  <data name="&gt;&gt;colorBlueGrey_btn.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="blueToolStripMenuItem.Text" xml:space="preserve">
+    <value>Blue</value>
   </data>
-  <data name="&gt;&gt;colorBlueGrey_btn.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="cyanToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="cyanToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="tealToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="tealToolStripMenuItem.Text" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="greenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="greenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="limeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="limeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="yellowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="yellowToolStripMenuItem.Text" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="amberToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="amberToolStripMenuItem.Text" xml:space="preserve">
+    <value>Amber</value>
+  </data>
+  <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="orangeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="deepOrangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="deepOrangeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Deep orange</value>
+  </data>
+  <data name="brownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="brownToolStripMenuItem.Text" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="blueGrayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="blueGrayToolStripMenuItem.Text" xml:space="preserve">
+    <value>BlueGray</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1383,6 +1110,102 @@
   </data>
   <data name="&gt;&gt;NextSongTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chooseColorToolStripMenuItem.Name" xml:space="preserve">
+    <value>chooseColorToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;chooseColorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;redToolStripMenuItem.Name" xml:space="preserve">
+    <value>redToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;redToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;purpleToolStripMenuItem.Name" xml:space="preserve">
+    <value>purpleToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;purpleToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deepPurpleToolStripMenuItem.Name" xml:space="preserve">
+    <value>deepPurpleToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deepPurpleToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;indigoToolStripMenuItem.Name" xml:space="preserve">
+    <value>indigoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;indigoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;blueToolStripMenuItem.Name" xml:space="preserve">
+    <value>blueToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;blueToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cyanToolStripMenuItem.Name" xml:space="preserve">
+    <value>cyanToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;cyanToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tealToolStripMenuItem.Name" xml:space="preserve">
+    <value>tealToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tealToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;greenToolStripMenuItem.Name" xml:space="preserve">
+    <value>greenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;greenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;limeToolStripMenuItem.Name" xml:space="preserve">
+    <value>limeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;limeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yellowToolStripMenuItem.Name" xml:space="preserve">
+    <value>yellowToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;yellowToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;amberToolStripMenuItem.Name" xml:space="preserve">
+    <value>amberToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;amberToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orangeToolStripMenuItem.Name" xml:space="preserve">
+    <value>orangeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;orangeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deepOrangeToolStripMenuItem.Name" xml:space="preserve">
+    <value>deepOrangeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deepOrangeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;brownToolStripMenuItem.Name" xml:space="preserve">
+    <value>brownToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;brownToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;blueGrayToolStripMenuItem.Name" xml:space="preserve">
+    <value>blueGrayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;blueGrayToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

@@ -215,9 +215,6 @@
     <None Include="Resources\random.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\repeat.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\mute.png" />
   </ItemGroup>
   <ItemGroup>
@@ -278,6 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon1.ico" />
+    <None Include="Resources\repeat.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
