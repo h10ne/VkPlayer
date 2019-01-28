@@ -220,27 +220,27 @@
             // redToolStripMenuItem
             // 
             resources.ApplyResources(this.redToolStripMenuItem, "redToolStripMenuItem");
-            this.redToolStripMenuItem.Image = global::VkPlayer.Resource1.rolorRed;
+            this.redToolStripMenuItem.Image = global::VkPlayer.Resource1.сolorRed;
             this.redToolStripMenuItem.Name = "redToolStripMenuItem";
             this.redToolStripMenuItem.Click += new System.EventHandler(this.redToolStripMenuItem_Click);
             // 
             // purpleToolStripMenuItem
             // 
-            this.purpleToolStripMenuItem.Image = global::VkPlayer.Resource1.rolorPurple;
+            this.purpleToolStripMenuItem.Image = global::VkPlayer.Resource1.сolorPurple;
             this.purpleToolStripMenuItem.Name = "purpleToolStripMenuItem";
             resources.ApplyResources(this.purpleToolStripMenuItem, "purpleToolStripMenuItem");
             this.purpleToolStripMenuItem.Click += new System.EventHandler(this.pinkToolStripMenuItem_Click);
             // 
             // deepPurpleToolStripMenuItem
             // 
-            this.deepPurpleToolStripMenuItem.Image = global::VkPlayer.Resource1.rolorDeepPurple;
+            this.deepPurpleToolStripMenuItem.Image = global::VkPlayer.Resource1.сolorDeepPurple;
             this.deepPurpleToolStripMenuItem.Name = "deepPurpleToolStripMenuItem";
             resources.ApplyResources(this.deepPurpleToolStripMenuItem, "deepPurpleToolStripMenuItem");
             this.deepPurpleToolStripMenuItem.Click += new System.EventHandler(this.deepPurpleToolStripMenuItem_Click);
             // 
             // indigoToolStripMenuItem
             // 
-            this.indigoToolStripMenuItem.Image = global::VkPlayer.Resource1.rolorIndigo;
+            this.indigoToolStripMenuItem.Image = global::VkPlayer.Resource1.colorIndigo;
             this.indigoToolStripMenuItem.Name = "indigoToolStripMenuItem";
             resources.ApplyResources(this.indigoToolStripMenuItem, "indigoToolStripMenuItem");
             this.indigoToolStripMenuItem.Click += new System.EventHandler(this.indigoToolStripMenuItem_Click);
@@ -296,7 +296,7 @@
             // 
             // orangeToolStripMenuItem
             // 
-            this.orangeToolStripMenuItem.Image = global::VkPlayer.Resource1.coloOrange;
+            this.orangeToolStripMenuItem.Image = global::VkPlayer.Resource1.colorOrange;
             this.orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
             resources.ApplyResources(this.orangeToolStripMenuItem, "orangeToolStripMenuItem");
             this.orangeToolStripMenuItem.Click += new System.EventHandler(this.orangeToolStripMenuItem_Click);
@@ -317,7 +317,7 @@
             // 
             // blueGrayToolStripMenuItem
             // 
-            this.blueGrayToolStripMenuItem.Image = global::VkPlayer.Resource1.coloBlueGrey;
+            this.blueGrayToolStripMenuItem.Image = global::VkPlayer.Resource1.colorBlueGrey;
             this.blueGrayToolStripMenuItem.Name = "blueGrayToolStripMenuItem";
             resources.ApplyResources(this.blueGrayToolStripMenuItem, "blueGrayToolStripMenuItem");
             this.blueGrayToolStripMenuItem.Click += new System.EventHandler(this.blueGrayToolStripMenuItem_Click);

@@ -63,36 +63,6 @@ namespace VkPlayer {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap coloBlueGrey {
-            get {
-                object obj = ResourceManager.GetObject("coloBlueGrey", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap coloGrey {
-            get {
-                object obj = ResourceManager.GetObject("coloGrey", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap coloOrange {
-            get {
-                object obj = ResourceManager.GetObject("coloOrange", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap colorAmber {
             get {
                 object obj = ResourceManager.GetObject("colorAmber", resourceCulture);
@@ -106,6 +76,16 @@ namespace VkPlayer {
         internal static System.Drawing.Bitmap colorBlue {
             get {
                 object obj = ResourceManager.GetObject("colorBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap colorBlueGrey {
+            get {
+                object obj = ResourceManager.GetObject("colorBlueGrey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +143,39 @@ namespace VkPlayer {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap colorGrey {
+            get {
+                object obj = ResourceManager.GetObject("colorGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap colorIndigo {
+            get {
+                object obj = ResourceManager.GetObject("colorIndigo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap colorLime {
             get {
                 object obj = ResourceManager.GetObject("colorLime", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap colorOrange {
+            get {
+                object obj = ResourceManager.GetObject("colorOrange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,49 +303,39 @@ namespace VkPlayer {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rolorDeepPurple {
-            get {
-                object obj = ResourceManager.GetObject("rolorDeepPurple", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rolorIndigo {
-            get {
-                object obj = ResourceManager.GetObject("rolorIndigo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rolorPurple {
-            get {
-                object obj = ResourceManager.GetObject("rolorPurple", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rolorRed {
-            get {
-                object obj = ResourceManager.GetObject("rolorRed", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap unmute {
             get {
                 object obj = ResourceManager.GetObject("unmute", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap сolorDeepPurple {
+            get {
+                object obj = ResourceManager.GetObject("сolorDeepPurple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap сolorPurple {
+            get {
+                object obj = ResourceManager.GetObject("сolorPurple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap сolorRed {
+            get {
+                object obj = ResourceManager.GetObject("сolorRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

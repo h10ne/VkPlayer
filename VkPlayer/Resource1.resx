@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="coloBlueGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="colorBlueGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\coloBlueGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coloGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="colorGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\coloGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coloOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="colorOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\coloOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="colorAmber" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -187,16 +187,16 @@
   <data name="Roboto_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Roboto-Medium.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="rolorDeepPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="сolorDeepPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\rolorDeepPurple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rolorIndigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="colorIndigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\rolorIndigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rolorPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="сolorPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\rolorPurple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rolorRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="сolorRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\rolorRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unmute" type="System.Resources.ResXFileRef, System.Windows.Forms">
