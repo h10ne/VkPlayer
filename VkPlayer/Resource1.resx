@@ -118,15 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="colorBlueGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\coloBlueGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="colorGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\coloGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="colorOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\coloOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="colorAmber" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\colorAmber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,19 +178,61 @@
   <data name="Roboto_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Roboto-Medium.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="сolorDeepPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\rolorDeepPurple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="colorIndigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\rolorIndigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="сolorPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\rolorPurple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="сolorRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\rolorRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="unmute" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\unmute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\colorBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\door_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mute_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\mute_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="next_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\next_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pause_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\pause_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\play_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prev_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\prev_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="random_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\random_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\refresh_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="repeat_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\repeat_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unmute_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\unmute_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorBlueGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\colorBlueGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorDeepPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\colorDeepPurple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\colorGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorIndigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\colorIndigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\colorOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\colorPurple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\colorRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

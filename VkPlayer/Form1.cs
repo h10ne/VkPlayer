@@ -32,10 +32,10 @@ namespace VkPlayer
         private int _offset = 0;
         private bool isPlay = false;
         private bool mute = false;
+        private bool isBlack = false;
         public Main()
         {
             InitializeComponent();
-
             if (File.Exists("auth.dat"))
             {
                 Token = File.ReadAllText("auth.dat");
@@ -51,17 +51,24 @@ namespace VkPlayer
             }
             player = new WindowsMediaPlayer();
             duration_timer.Stop();
-            SetInfo();
+            SetAudioInfo();
             LoadText();
+            play_pause_btn.Image = Resource1.play;
             artist_name.Font = Roboto_medium;
             title_name.Font = Roboto_thin;
             MainColor = Color.FromArgb(255, 63, 81, 181);
             addColor = Color.FromArgb(255, 48, 63, 159);
             if (File.Exists("user_color.dat"))
             {
+                byte darkTheme = 20; 
                 string[] vs = File.ReadAllText("user_color.dat").Split(' ');
                 MainColor = Color.FromArgb(255, byte.Parse(vs[0]), byte.Parse(vs[1]), byte.Parse(vs[2]));
                 addColor = Color.FromArgb(255, byte.Parse(vs[3]), byte.Parse(vs[4]), byte.Parse(vs[5]));
+                if (byte.Parse(vs[0]) == darkTheme)
+                {
+                    isBlack = true;
+                    SetColors(MainColor, addColor);
+                }
                 if (byte.Parse(vs[6]) == 0)
                 {
                     artist_name.ForeColor = Color.Black;
@@ -76,6 +83,11 @@ namespace VkPlayer
             BackColor = MainColor;
             KeyPreview = true;
             this.ContextMenuStrip = Menu;
+            isPlay = false;
+            if (isBlack)
+                play_pause_btn.Image = Resource1.play_white;
+            else
+                play_pause_btn.Image = Resource1.play;
         }
         
         public void LoadText()
@@ -158,9 +170,8 @@ namespace VkPlayer
 
         }        
 
-        private void SetInfo()
+        private void SetAudioInfo()
         {
-            
             var audio = api.Audio.Get(new AudioGetParams { Count = 1, Offset = _offset });
             int tempOffset = _offset;
             while (audio[0].Url == null) 
@@ -172,28 +183,37 @@ namespace VkPlayer
                 audio = api.Audio.Get(new AudioGetParams { Count = 1, Offset = _offset });
             }
             player.URL = audio[0].Url.ToString();
-            player.controls.stop();
             artist_name.Text = audio[0].Artist;
             title_name.Text = audio[0].Title;
             player.settings.volume = volume.Value;
             duration_timer.Start();
             duration_bar.Value = 0;
-
+            if (isBlack)
+                play_pause_btn.Image = Resource1.pause_white;
+            else
+                play_pause_btn.Image = Resource1.pause;
+            isPlay = true;
         }
         
         private void play_pause()
         {
-            if (isPlay)
+            if (!isPlay)
             {
-                player.controls.pause();
-                play_pause_btn.Image = Resource1.play;
-                isPlay = false;
+                player.controls.play();
+                if (!isBlack)
+                    play_pause_btn.Image = Resource1.pause;
+                else
+                    play_pause_btn.Image = Resource1.pause_white;
+                isPlay = true;
             }
             else
             {
-                player.controls.play();
-                play_pause_btn.Image = Resource1.pause;
-                isPlay = true;
+                player.controls.pause();
+                if (!isBlack)
+                    play_pause_btn.Image = Resource1.play;
+                else
+                    play_pause_btn.Image = Resource1.play_white;
+                isPlay = false;
             }
         }
 
@@ -217,15 +237,7 @@ namespace VkPlayer
             {
                 _offset--;
             }
-            SetInfo();
-            if (isPlay)
-            {
-                player.controls.play();
-            }
-            else
-            {
-                player.controls.pause();
-            }
+            SetAudioInfo();
         }
         private void NextSong()
         {
@@ -241,16 +253,8 @@ namespace VkPlayer
             {
                 _offset = 0;
             }
-            SetInfo();
-            if (isPlay)
-            {
-                player.controls.play();
-            }
-            else
-            {
-                player.controls.pause();
-            }
-        }
+            SetAudioInfo();
+        }        
 
         private void next_btn_Click(object sender, EventArgs e)
         {
@@ -267,17 +271,19 @@ namespace VkPlayer
         private void duration_bar_Scroll(object sender, EventArgs e)
         {
             duration_bar.Maximum = (int)player.currentMedia.duration;
-            player.controls.currentPosition = duration_bar.Value;            
+            player.controls.currentPosition = duration_bar.Value;
+            currentTimeDur.Text = player.controls.currentPositionString;
         }
         private void timerForRefresh_Tick(object sender, EventArgs e)
         {
             if (Token!=null && artist_name.Text=="artist" && title_name.Text=="title")
             {
-                SetInfo();
+                SetAudioInfo();
             }
             if (artist_name.Text != "artist" && title_name.Text != "title")
             {
                 timerForRefresh.Stop();
+                player.controls.stop();
                 NextSongTimer.Start();
                 AllTimeDur.Text = player.currentMedia.durationString;
             }
@@ -376,13 +382,19 @@ namespace VkPlayer
             {
                 player.settings.mute = false;
                 mute = false;
-                mute_unmute.Image = Resource1.unmute;
+                if (!isBlack)
+                    mute_unmute.Image = Resource1.unmute;
+                else
+                    mute_unmute.Image = Resource1.unmute_white;
             }
             else
             {
                 player.settings.mute = true;
                 mute = true;
-                mute_unmute.Image = Resource1.mute;
+                if (!isBlack)
+                    mute_unmute.Image = Resource1.mute;
+                else
+                    mute_unmute.Image = Resource1.mute_white;
             }
         }
 
@@ -391,8 +403,48 @@ namespace VkPlayer
             SetMute_Unmute();
         }
 
-        private void SetColors(Color mainColor, Color addColor)
-        {
+        private void SetColors(Color mainColor, Color addColor, bool black = true)
+        {   
+            if (isBlack)
+            {
+                if (isPlay)
+                    play_pause_btn.Image = Resource1.pause_white;
+                else
+                    play_pause_btn.Image = Resource1.play_white;
+                next_btn.Image = Resource1.next_white;
+                back_btn.Image = Resource1.prev_white;
+                Logout.Image = Resource1.door_white;
+                if (mute)
+                    mute_unmute.Image = Resource1.mute_white;
+                else
+                    mute_unmute.Image = Resource1.unmute_white;
+                repeat_radio.Image = Resource1.repeat_white;
+                random_radio.Image = Resource1.random_white;
+                currentTimeDur.ForeColor = Color.White;
+                AllTimeDur.ForeColor = Color.White;
+            }
+
+            if (!black && isBlack)
+            {
+                isBlack = false;
+
+                if (isPlay)
+                    play_pause_btn.Image = Resource1.pause;
+                else
+                    play_pause_btn.Image = Resource1.play;
+                next_btn.Image = Resource1.next;
+                back_btn.Image = Resource1.prev;
+                Logout.Image = Resource1.door;
+                if (mute)
+                    mute_unmute.Image = Resource1.mute;
+                else
+                    mute_unmute.Image = Resource1.unmute;
+                repeat_radio.Image = Resource1.repeat;
+                random_radio.Image = Resource1.random;
+                currentTimeDur.ForeColor = Color.Black;
+                AllTimeDur.ForeColor = Color.Black;
+            }
+
             this.BackColor = mainColor;
             this.MainColor = mainColor;
             this.addColor = addColor;
@@ -420,7 +472,7 @@ namespace VkPlayer
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            File.WriteAllText("user_color.dat", $"{MainColor.R} {MainColor.G} {MainColor.B} {addColor.A} {addColor.B} {addColor.B} {clr}");
+            File.WriteAllText("user_color.dat", $"{MainColor.R} {MainColor.G} {MainColor.B} {addColor.R} {addColor.G} {addColor.B} {clr}");
         }
 
         private void redToolStripMenuItem_Click(object sender, EventArgs e)
@@ -429,7 +481,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 183, 28, 28);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
@@ -438,7 +490,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 123, 31, 162);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void deepPurpleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -447,7 +499,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 69, 39, 160);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void indigoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -456,7 +508,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 40, 53, 147);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void blueToolStripMenuItem_Click(object sender, EventArgs e)
@@ -465,7 +517,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 21, 101, 192);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void cyanToolStripMenuItem_Click(object sender, EventArgs e)
@@ -474,7 +526,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 0, 151, 167);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void tealToolStripMenuItem_Click(object sender, EventArgs e)
@@ -483,7 +535,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 0, 121, 107);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void greenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -492,7 +544,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 46, 125, 50);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void limeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -501,7 +553,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 175, 180, 43);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
@@ -510,7 +562,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 253, 216, 53);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void amberToolStripMenuItem_Click(object sender, EventArgs e)
@@ -519,7 +571,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 255, 179, 0);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -528,7 +580,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 245, 124, 0);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void deepOrangeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -537,7 +589,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 216, 67, 21);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void brownToolStripMenuItem_Click(object sender, EventArgs e)
@@ -546,7 +598,7 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 93, 64, 55);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
-            SetColors(main, add);
+            SetColors(main, add, false);
         }
 
         private void blueGrayToolStripMenuItem_Click(object sender, EventArgs e)
@@ -555,6 +607,16 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 69, 90, 100);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            SetColors(main, add, false);
+        }
+
+        private void blackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            isBlack = true;            
+            artist_name.ForeColor = Color.White;
+            title_name.ForeColor = Color.White;
+            Color main = Color.FromArgb(255, 20, 20, 20);
+            Color add = Color.FromArgb(255, 50, 50, 50);
             SetColors(main, add);
         }
     }

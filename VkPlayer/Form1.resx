@@ -408,30 +408,6 @@
   <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="play_pause_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAABERJREFUaEPdmcmyFEUUhjtwLQ5sRMRhgyGioAQP4bBGhQhDAnQp4iOIgMMbwAZH
-        EHTj8AQyqAEE815QccQAhSXX/7vVde/p/LO7s7rrXqL8I764HacrM/+8XVl58lRvZmbmf0E22EWywS6S
-        DXYRD0ynx8WLYo/4QhwVZ/rw+XPBd1zDtRPLfFuguR4SO8Rx8Y+gkxK49ph4QzwoGsl8W6Bcy8V74jcR
-        DU7Cr+IdcZ8okvm2QJleFT+JaKYNLoutYqzMtwVG627xsYiDp/wovhJviW1iYx8+7xR8xzW5tjUfirvE
-        UJlvCwzXw+J7EQesuSE+Es+IkQb64ppnBW1om+uTNcf6y8p8WyAvJnFOxIFqPhXrxKSi7QGR6/usyE7G
-        fFvAda/4QcQB4BfxgmhLL4krIh3nO3GPGJD5toDrExE7Bn6dNaJtPSHOi3Q8bsEBmW8LDGqLiB0CA3Gr
-        LZTo+4JIx31FzMl8W2Be94v0p2bPWC0WWuz6v4s4Nrcye9eszLcF5vW+iB3dEjxGx4kn0rLq41QijWHM
-        6OFdMSvzbYFKD4g/RezkoCjRenGq/3daHRLRwx9ihXDfFqj0pogd/CtKbykWLG3IpcgAphF9pfsMuZn7
-        tkCvd4fgkRcb8+QqVT2Rmn2iZJMcJvap2B+J5hLzbYFe7zHBL1A35D5lxy5VOhE4ISa91Z4Tca3wSz9q
-        vi1QLbK6EVwSS0WpchOBv0VRQpiI/C5NUDeabwtUB5/Y6EvRRMMmUrNX3Cma6GsR+9htvi1QnexiI7LY
-        Jho3ETgpNohSvS1i+8Pm2wLVkTQ2Iv1uopKJwFVR2vdrIrb91nxboDpfx0Ylm2BU6URqON+wDkYJD7HN
-        afNtgdszkXGP54kmkt5aTTe10on8JRb01qJkExtxPG2ixVjsh8y3Bbrx+N1lvi2Q3xCbpBjDJrLoG2IX
-        UpRV5tsCSsgEFYy6IdzOpDEtTPAwKkoaESXQ2JhUurRWW0/kupg2jX9S3BTRy3bhvi1QKXew4pBTojYP
-        VukTtPHBClHXjZ1wn/IgGCcy5TaOuptEHB+oD8/KfFtgXhz0OfDHjigITPU6oFDcnvz349g/i7kit/m2
-        wKAowcTOgFLNQpaDHhEXRTruy2JO5tsCLopjsUOgtsVCbFtrRa6m9YEYkPm2gItyZXqGB2pelDnb0mbB
-        e5J0HLaCVkqmiEIyBeU4QA1loqfEpHpafCZyfZOJZ99mmW8LDBfrIvfLAPsM6Ti7sP33MuKa5wUbbbpP
-        1LDxDX0lZ74tMFrs0LyEiQOmkJuR5JGxkn5zlgA+E/tGcE2ubc1+MbLgYb4tUCaSP16TxcHbgAlSOB8r
-        822BcvFMZ4PKvdNoCn1wfFj0l6FRKwX5DxVA8qtocBTXBOvgdUEfjWS+LTCdqA/zFmuXOCyOiNN9+Ey+
-        xnesGY4LE8t8p4Gukg12kWywi2SD3WOm9x8tOPZCQzOvXwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="play_pause_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -522,24 +498,6 @@
   <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>422, 17</value>
   </metadata>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 26</value>
-  </data>
-  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 9.75pt</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
   <data name="redToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
   </data>
@@ -560,6 +518,17 @@
   </data>
   <data name="deepPurpleToolStripMenuItem.Text" xml:space="preserve">
     <value>Deep purple</value>
+  </data>
+  <data name="indigoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEDSURBVDhPndO7SgNBGIbhnPECAhYG7WPhoUuvRUihTW5I
+        QWwCphOx0y6BoIRAxGibO9HCwkJEjaf3XZxmGSGb4mFh+L+ZnZl/co1mLyhhBfvoYIwpbtFFG6soI8mE
+        oANbOMMzvvGT8oJLNLCEJFzABoaYIR1Ku4MTVAwv4xQfiBXHXGDNcBNPiP3qf9xC2/AR3v8Gs+gavsI8
+        e02bGJ5gkfDU8ABZDiu4MXyIN2Q5MGs7hnfwiC/ECmNspD3DVZzgFfOs/olz1AzbYXX0ESaITeKYZzPC
+        NsqGVcQ6fAAP8Ay8AVfxa8hGsvc3kTyOEFYebmEXB/AW7nGNY7RgK7sQ9b3cL6HXsbu2FxntAAAAAElF
+        TkSuQmCC
+</value>
   </data>
   <data name="indigoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>
@@ -609,6 +578,17 @@
   <data name="amberToolStripMenuItem.Text" xml:space="preserve">
     <value>Amber</value>
   </data>
+  <data name="orangeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEKSURBVDhPfdM9S0JxGIZxtcRPIEJho4tLueQHqKEWG/pE
+        Bk4JOUqjg5MgDg4Rzn2UBgeHlHwpu64DB+LwcIYfB+S+/b+c5xSO40aqjAs84gXv+MAb+ujgHCdIOmmx
+        gmuM8IVjxi9WeEULLpSUT9HGAtlS1h5zXKFkuQ5XjMKRHYaoWfaMa0TBiEdY4s6ylxOF8rh6z7K3GgXy
+        ePaZZV9HFMhjeWHZ9xgF8rjtqeVneAlRKGJ2i67lBzgAUTDyg0/cWD6Dk3NAFP7PVTcYoGrZWXXknBzP
+        Eh3B39LiBE0ULctZvYST4wD4J96ou/H5DbfqihaTjyMtq4Qa7tHDDM77FE+4RRVFkG8U/gD6aj2CD1P2
+        1AAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>
   </data>
@@ -627,11 +607,57 @@
   <data name="brownToolStripMenuItem.Text" xml:space="preserve">
     <value>Brown</value>
   </data>
+  <data name="blueGrayToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEZSURBVDhPldMxSwJhHMdxz4oQmqRFaBNqUHwBDhVGU4Oz
+        k4uvwSFoCxpycRAEl+NoEAqJoK0ixMPJF9AQrS1ZQSlUVt/fcQfH8Qjn8Fn+/H/P/Z/nnidxeecGVpFF
+        BS3cYIhrnOAAGSzBywTBNZRwjk/8RczwjCYKWIEXTmEfA0RDUVq4izySCudwAVOzyTsaWFe4BtOo82gL
+        j9hTuOMXF/GKQ4X7oWJcmtRReBQqxjVBT+H7UDGuD9gKt/HrF+NQ7xh1havQ8ZsaTX7wgB2Ft3DmF03N
+        YfrqC46RVlh3ehu6y98wbUE1/d832NiEpbDoihbhQPv5giYRLTjFE/RANKn3OIKwLGMDZZziCrfQYznC
+        LtKwQL+b+Ae+d5evzK4BswAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="blueGrayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>
   </data>
   <data name="blueGrayToolStripMenuItem.Text" xml:space="preserve">
     <value>BlueGray</value>
+  </data>
+  <data name="blackToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAQ9JREFUOE+V0yFPQmEUh3GYd+oIbpjwNoMBszOS9RPY+RDMit/AIhs2RiC5STUR
+        KPgFIGs0OEUloPg8TBy7OzANv93t7vw597zvIZem6UIBZVTRRA/3uMMlzrCPLcwzi+AOTnCDd8wyPvEE
+        f/QY25iH7Wiwj2wo6wO3OEJi+BB2jIojY1yhZNgZo09dxREecWr4+uflf7ygbthTjQrWcfaO4cHSy7+a
+        oGvYe4wK1vGMWoZdAA8hKop84Rk1w26OCxAVRqYYoWLYlXNznCMqXmZXG11g1/AmXDk35w3RCIbsaNCr
+        PUDesNxVV66BB7zC6/BrfDrjEHY0uIHfP4YS7ME9r6ODLto4RwVF5EF9mvsGxlHtNBTNLq0AAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="blackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="blackToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 9.75pt</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 26</value>
+  </data>
+  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1205,6 +1231,12 @@
     <value>blueGrayToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;blueGrayToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;blackToolStripMenuItem.Name" xml:space="preserve">
+    <value>blackToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;blackToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

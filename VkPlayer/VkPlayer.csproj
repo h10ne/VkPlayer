@@ -152,8 +152,8 @@
     </Compile>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -276,6 +276,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon1.ico" />
+    <None Include="Resources\colorOrange.png" />
+    <None Include="Resources\colorIndigo.png" />
+    <None Include="Resources\colorGrey.png" />
+    <None Include="Resources\colorBlueGrey.png" />
+    <None Include="Resources\colorPurple.png" />
+    <None Include="Resources\colorDeepPurple.png" />
+    <None Include="Resources\colorRed.png" />
+    <None Include="Resources\random_white.png" />
+    <None Include="Resources\colorBlack.png" />
+    <None Include="Resources\unmute_white.png" />
+    <None Include="Resources\repeat_white.png" />
+    <None Include="Resources\refresh_white.png" />
+    <None Include="Resources\prev_white.png" />
+    <None Include="Resources\play_white.png" />
+    <None Include="Resources\pause_white.png" />
+    <None Include="Resources\next_white.png" />
+    <None Include="Resources\mute_white.png" />
+    <None Include="Resources\door_white.png" />
     <None Include="Resources\repeat.png" />
   </ItemGroup>
   <ItemGroup>

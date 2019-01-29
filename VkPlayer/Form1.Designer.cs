@@ -63,6 +63,7 @@
             this.deepOrangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.brownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueGrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duration_bar)).BeginInit();
             this.Menu.SuspendLayout();
@@ -174,6 +175,7 @@
             // play_pause_btn
             // 
             this.play_pause_btn.BackColor = System.Drawing.Color.Transparent;
+            this.play_pause_btn.Image = global::VkPlayer.Resource1.play;
             resources.ApplyResources(this.play_pause_btn, "play_pause_btn");
             this.play_pause_btn.Name = "play_pause_btn";
             this.play_pause_btn.Click += new System.EventHandler(this.play_pause_btn_Click);
@@ -181,6 +183,7 @@
             // currentTimeDur
             // 
             resources.ApplyResources(this.currentTimeDur, "currentTimeDur");
+            this.currentTimeDur.ForeColor = System.Drawing.SystemColors.ControlText;
             this.currentTimeDur.Name = "currentTimeDur";
             // 
             // AllTimeDur
@@ -212,7 +215,8 @@
             this.orangeToolStripMenuItem,
             this.deepOrangeToolStripMenuItem,
             this.brownToolStripMenuItem,
-            this.blueGrayToolStripMenuItem});
+            this.blueGrayToolStripMenuItem,
+            this.blackToolStripMenuItem});
             resources.ApplyResources(this.chooseColorToolStripMenuItem, "chooseColorToolStripMenuItem");
             this.chooseColorToolStripMenuItem.Image = global::VkPlayer.Resource1.colorCircle;
             this.chooseColorToolStripMenuItem.Name = "chooseColorToolStripMenuItem";
@@ -220,29 +224,28 @@
             // redToolStripMenuItem
             // 
             resources.ApplyResources(this.redToolStripMenuItem, "redToolStripMenuItem");
-            this.redToolStripMenuItem.Image = global::VkPlayer.Resource1.сolorRed;
+            this.redToolStripMenuItem.Image = global::VkPlayer.Resource1.colorRed;
             this.redToolStripMenuItem.Name = "redToolStripMenuItem";
             this.redToolStripMenuItem.Click += new System.EventHandler(this.redToolStripMenuItem_Click);
             // 
             // purpleToolStripMenuItem
             // 
-            this.purpleToolStripMenuItem.Image = global::VkPlayer.Resource1.сolorPurple;
+            this.purpleToolStripMenuItem.Image = global::VkPlayer.Resource1.colorPurple;
             this.purpleToolStripMenuItem.Name = "purpleToolStripMenuItem";
             resources.ApplyResources(this.purpleToolStripMenuItem, "purpleToolStripMenuItem");
             this.purpleToolStripMenuItem.Click += new System.EventHandler(this.pinkToolStripMenuItem_Click);
             // 
             // deepPurpleToolStripMenuItem
             // 
-            this.deepPurpleToolStripMenuItem.Image = global::VkPlayer.Resource1.сolorDeepPurple;
+            this.deepPurpleToolStripMenuItem.Image = global::VkPlayer.Resource1.colorDeepPurple;
             this.deepPurpleToolStripMenuItem.Name = "deepPurpleToolStripMenuItem";
             resources.ApplyResources(this.deepPurpleToolStripMenuItem, "deepPurpleToolStripMenuItem");
             this.deepPurpleToolStripMenuItem.Click += new System.EventHandler(this.deepPurpleToolStripMenuItem_Click);
             // 
             // indigoToolStripMenuItem
             // 
-            this.indigoToolStripMenuItem.Image = global::VkPlayer.Resource1.colorIndigo;
-            this.indigoToolStripMenuItem.Name = "indigoToolStripMenuItem";
             resources.ApplyResources(this.indigoToolStripMenuItem, "indigoToolStripMenuItem");
+            this.indigoToolStripMenuItem.Name = "indigoToolStripMenuItem";
             this.indigoToolStripMenuItem.Click += new System.EventHandler(this.indigoToolStripMenuItem_Click);
             // 
             // blueToolStripMenuItem
@@ -296,9 +299,8 @@
             // 
             // orangeToolStripMenuItem
             // 
-            this.orangeToolStripMenuItem.Image = global::VkPlayer.Resource1.colorOrange;
-            this.orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
             resources.ApplyResources(this.orangeToolStripMenuItem, "orangeToolStripMenuItem");
+            this.orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
             this.orangeToolStripMenuItem.Click += new System.EventHandler(this.orangeToolStripMenuItem_Click);
             // 
             // deepOrangeToolStripMenuItem
@@ -317,10 +319,15 @@
             // 
             // blueGrayToolStripMenuItem
             // 
-            this.blueGrayToolStripMenuItem.Image = global::VkPlayer.Resource1.colorBlueGrey;
-            this.blueGrayToolStripMenuItem.Name = "blueGrayToolStripMenuItem";
             resources.ApplyResources(this.blueGrayToolStripMenuItem, "blueGrayToolStripMenuItem");
+            this.blueGrayToolStripMenuItem.Name = "blueGrayToolStripMenuItem";
             this.blueGrayToolStripMenuItem.Click += new System.EventHandler(this.blueGrayToolStripMenuItem_Click);
+            // 
+            // blackToolStripMenuItem
+            // 
+            resources.ApplyResources(this.blackToolStripMenuItem, "blackToolStripMenuItem");
+            this.blackToolStripMenuItem.Name = "blackToolStripMenuItem";
+            this.blackToolStripMenuItem.Click += new System.EventHandler(this.blackToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -387,6 +394,7 @@
         private System.Windows.Forms.ToolStripMenuItem deepOrangeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem brownToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blueGrayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blackToolStripMenuItem;
     }
 }
 
