@@ -54,4 +54,4 @@
 <li><del>При перезапуске приложения цветовое оформление сбрасывается</del></li>
 </ul>
 <hr>
-<h1>Ссылка на Я.диск - <a href ="https://yadi.sk/d/FFGuxM2B7_pnQQ" target="_blank">https://yadi.sk/d/FFGuxM2B7_pnQQ</a></h1>
+<h1>Ссылка на Я.диск - <a href ="https://yadi.sk/d/-hq4lIY_N8R4bA" target="_blank">https://yadi.sk/d/-hq4lIY_N8R4bA</a></h1>
