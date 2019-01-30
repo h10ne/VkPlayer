@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;artist_name.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="title_name.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Devanagari, 12pt, style=Bold</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;title_name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="volume.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -214,7 +214,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;volume.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="duration_bar.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -241,7 +241,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;duration_bar.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <metadata name="duration_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -252,77 +252,158 @@
   <metadata name="NextSongTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>286, 17</value>
   </metadata>
-  <data name="mute_unmute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="currentTimeDur.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="currentTimeDur.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
+  </data>
+  <data name="currentTimeDur.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="mute_unmute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 103</value>
+  <data name="currentTimeDur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 85</value>
   </data>
-  <data name="mute_unmute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
+  <data name="currentTimeDur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 15</value>
   </data>
-  <data name="mute_unmute.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+  <data name="currentTimeDur.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="&gt;&gt;mute_unmute.Name" xml:space="preserve">
-    <value>mute_unmute</value>
+  <data name="currentTimeDur.Text" xml:space="preserve">
+    <value>00:00</value>
   </data>
-  <data name="&gt;&gt;mute_unmute.Type" xml:space="preserve">
+  <data name="&gt;&gt;currentTimeDur.Name" xml:space="preserve">
+    <value>currentTimeDur</value>
+  </data>
+  <data name="&gt;&gt;currentTimeDur.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mute_unmute.Parent" xml:space="preserve">
+  <data name="&gt;&gt;currentTimeDur.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;mute_unmute.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;currentTimeDur.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="AllTimeDur.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AllTimeDur.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
+  </data>
+  <data name="AllTimeDur.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AllTimeDur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 85</value>
+  </data>
+  <data name="AllTimeDur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 15</value>
+  </data>
+  <data name="AllTimeDur.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="AllTimeDur.Text" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="&gt;&gt;AllTimeDur.Name" xml:space="preserve">
+    <value>AllTimeDur</value>
+  </data>
+  <data name="&gt;&gt;AllTimeDur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AllTimeDur.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AllTimeDur.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>422, 17</value>
+  </metadata>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 26</value>
+  </data>
+  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="searchAudio_box.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
+  </data>
+  <data name="searchAudio_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 6</value>
+  </data>
+  <data name="searchAudio_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 23</value>
+  </data>
+  <data name="searchAudio_box.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;searchAudio_box.Name" xml:space="preserve">
+    <value>searchAudio_box</value>
+  </data>
+  <data name="&gt;&gt;searchAudio_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchAudio_box.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;searchAudio_box.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="AudioList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
+  </data>
+  <data name="AudioList.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="AudioList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 29</value>
+  </data>
+  <data name="AudioList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 92</value>
+  </data>
+  <data name="AudioList.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;AudioList.Name" xml:space="preserve">
+    <value>AudioList</value>
+  </data>
+  <data name="&gt;&gt;AudioList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AudioList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AudioList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="find_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="find_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 33</value>
+  </data>
+  <data name="find_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 24</value>
+  </data>
+  <data name="find_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;find_btn.Name" xml:space="preserve">
+    <value>find_btn</value>
+  </data>
+  <data name="&gt;&gt;find_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;find_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;find_btn.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="random_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="random_radio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 103</value>
-  </data>
-  <data name="random_radio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="random_radio.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;random_radio.Name" xml:space="preserve">
-    <value>random_radio</value>
-  </data>
-  <data name="&gt;&gt;random_radio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;random_radio.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;random_radio.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="repeat_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="repeat_radio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 103</value>
-  </data>
-  <data name="repeat_radio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="repeat_radio.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;repeat_radio.Name" xml:space="preserve">
-    <value>repeat_radio</value>
-  </data>
-  <data name="&gt;&gt;repeat_radio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;repeat_radio.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;repeat_radio.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="Logout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -346,7 +427,79 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Logout.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
+  </data>
+  <data name="mute_unmute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mute_unmute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 103</value>
+  </data>
+  <data name="mute_unmute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="mute_unmute.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;mute_unmute.Name" xml:space="preserve">
+    <value>mute_unmute</value>
+  </data>
+  <data name="&gt;&gt;mute_unmute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mute_unmute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mute_unmute.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="random_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="random_radio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 103</value>
+  </data>
+  <data name="random_radio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="random_radio.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;random_radio.Name" xml:space="preserve">
+    <value>random_radio</value>
+  </data>
+  <data name="&gt;&gt;random_radio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;random_radio.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;random_radio.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="repeat_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="repeat_radio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 103</value>
+  </data>
+  <data name="repeat_radio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="repeat_radio.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;repeat_radio.Name" xml:space="preserve">
+    <value>repeat_radio</value>
+  </data>
+  <data name="&gt;&gt;repeat_radio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;repeat_radio.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;repeat_radio.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="next_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -370,7 +523,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;next_btn.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="back_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -406,7 +559,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="play_pause_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -430,74 +583,17 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;play_pause_btn.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
-  <data name="currentTimeDur.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 9.75pt</value>
   </data>
-  <data name="currentTimeDur.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Light, 9.75pt</value>
+  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
   </data>
-  <data name="currentTimeDur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 85</value>
+  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Color</value>
   </data>
-  <data name="currentTimeDur.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 15</value>
-  </data>
-  <data name="currentTimeDur.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="currentTimeDur.Text" xml:space="preserve">
-    <value>00:00</value>
-  </data>
-  <data name="&gt;&gt;currentTimeDur.Name" xml:space="preserve">
-    <value>currentTimeDur</value>
-  </data>
-  <data name="&gt;&gt;currentTimeDur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;currentTimeDur.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;currentTimeDur.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="AllTimeDur.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AllTimeDur.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Light, 9.75pt</value>
-  </data>
-  <data name="AllTimeDur.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="AllTimeDur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 85</value>
-  </data>
-  <data name="AllTimeDur.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 15</value>
-  </data>
-  <data name="AllTimeDur.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="AllTimeDur.Text" xml:space="preserve">
-    <value>00:00</value>
-  </data>
-  <data name="&gt;&gt;AllTimeDur.Name" xml:space="preserve">
-    <value>AllTimeDur</value>
-  </data>
-  <data name="&gt;&gt;AllTimeDur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AllTimeDur.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;AllTimeDur.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 17</value>
-  </metadata>
   <data name="redToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
   </data>
@@ -521,13 +617,12 @@
   </data>
   <data name="indigoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEDSURBVDhPndO7SgNBGIbhnPECAhYG7WPhoUuvRUihTW5I
-        QWwCphOx0y6BoIRAxGibO9HCwkJEjaf3XZxmGSGb4mFh+L+ZnZl/co1mLyhhBfvoYIwpbtFFG6soI8mE
-        oANbOMMzvvGT8oJLNLCEJFzABoaYIR1Ku4MTVAwv4xQfiBXHXGDNcBNPiP3qf9xC2/AR3v8Gs+gavsI8
-        e02bGJ5gkfDU8ABZDiu4MXyIN2Q5MGs7hnfwiC/ECmNspD3DVZzgFfOs/olz1AzbYXX0ESaITeKYZzPC
-        NsqGVcQ6fAAP8Ay8AVfxa8hGsvc3kTyOEFYebmEXB/AW7nGNY7RgK7sQ9b3cL6HXsbu2FxntAAAAAElF
-        TkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAQNJREFUOE+d07tKA0EYhuGc8QICFgbtY+GhS69FSKFNbkhBbAKmE7HTLoGghEDE
+        aJs70cLCQkSNp/ddnGYZIZviYWH4v5mdmX9yjWYvKGEF++hgjClu0UUbqygjyYSgA1s4wzO+8ZPygks0
+        sIQkXMAGhpghHUq7gxNUDC/jFB+IFcdcYM1wE0+I/ep/3ELb8BHe/waz6Bq+wjx7TZsYnmCR8NTwAFkO
+        K7gxfIg3ZDkwazuGd/CIL8QKY2ykPcNVnOAV86z+iXPUDNthdfQRJohN4phnM8I2yoZVxDp8AA/wDLwB
+        V/FryEay9zeRPI4QVh5uYRcH8BbucY1jtGAruxD1vdwvodexu7YXGe0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="indigoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -580,13 +675,12 @@
   </data>
   <data name="orangeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEKSURBVDhPfdM9S0JxGIZxtcRPIEJho4tLueQHqKEWG/pE
-        Bk4JOUqjg5MgDg4Rzn2UBgeHlHwpu64DB+LwcIYfB+S+/b+c5xSO40aqjAs84gXv+MAb+ujgHCdIOmmx
-        gmuM8IVjxi9WeEULLpSUT9HGAtlS1h5zXKFkuQ5XjMKRHYaoWfaMa0TBiEdY4s6ylxOF8rh6z7K3GgXy
-        ePaZZV9HFMhjeWHZ9xgF8rjtqeVneAlRKGJ2i67lBzgAUTDyg0/cWD6Dk3NAFP7PVTcYoGrZWXXknBzP
-        Eh3B39LiBE0ULctZvYST4wD4J96ou/H5DbfqihaTjyMtq4Qa7tHDDM77FE+4RRVFkG8U/gD6aj2CD1P2
-        1AAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAQpJREFUOE990z1LQnEYhnG1xE8gQmGji0u55AeooRYb+kQGTgk5SqODkyAODhHO
+        fZQGB4eUfCm7rgMH4vBwhh8H5L79v5znFI7jRqqMCzziBe/4wBv66OAcJ0g6abGCa4zwhWPGL1Z4RQsu
+        lJRP0cYC2VLWHnNcoWS5DleMwpEdhqhZ9oxrRMGIR1jizrKXE4XyuHrPsrcaBfJ49pllX0cUyGN5Ydn3
+        GAXyuO2p5Wd4CVEoYnaLruUHOABRMPKDT9xYPoOTc0AU/s9VNxigatlZdeScHM8SHcHf0uIETRQty1m9
+        hJPjAPgn3qi78fkNt+qKFpOPIy2rhBru0cMMzvsUT7hFFUWQbxT+APpqPYIPU/bUAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -609,13 +703,13 @@
   </data>
   <data name="blueGrayToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEZSURBVDhPldMxSwJhHMdxz4oQmqRFaBNqUHwBDhVGU4Oz
-        k4uvwSFoCxpycRAEl+NoEAqJoK0ixMPJF9AQrS1ZQSlUVt/fcQfH8Qjn8Fn+/H/P/Z/nnidxeecGVpFF
-        BS3cYIhrnOAAGSzBywTBNZRwjk/8RczwjCYKWIEXTmEfA0RDUVq4izySCudwAVOzyTsaWFe4BtOo82gL
-        j9hTuOMXF/GKQ4X7oWJcmtRReBQqxjVBT+H7UDGuD9gKt/HrF+NQ7xh1havQ8ZsaTX7wgB2Ft3DmF03N
-        YfrqC46RVlh3ehu6y98wbUE1/d832NiEpbDoihbhQPv5giYRLTjFE/RANKn3OIKwLGMDZZziCrfQYznC
-        LtKwQL+b+Ae+d5evzK4BswAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAARlJREFUOE+V0zFLAmEcx3HPihCapEVoE2pQfAEOFUZTg7OTi6/BIWgLGnJxEASX
+        42gQComgrSLEw8kX0BCtLVlBKVRW399xB8fxCOfwWf78f8/9n+eeJ3F55wZWkUUFLdxgiGuc4AAZLMHL
+        BME1lHCOT/xFzPCMJgpYgRdOYR8DRENRWriLPJIK53ABU7PJOxpYV7gG06jzaAuP2FO44xcX8YpDhfuh
+        Ylya1FF4FCrGNUFP4ftQMa4P2Aq38esX41DvGHWFq9DxmxpNfvCAHYW3cOYXTc1h+uoLjpFWWHd6G7rL
+        3zBtQTX93zfY2ISlsOiKFuFA+/mCJhEtOMUT9EA0qfc4grAsYwNlnOIKt9BjOcIu0rBAv5v4B753l6/M
+        rgGzAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="blueGrayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -641,24 +735,6 @@
   <data name="blackToolStripMenuItem.Text" xml:space="preserve">
     <value>Dark</value>
   </data>
-  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 9.75pt</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 26</value>
-  </data>
-  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -666,7 +742,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>352, 131</value>
+    <value>349, 131</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1115,6 +1191,9 @@
         AAA//wAA//8AAAAAAAD//wAA//+AAAAAAAH//wAA///gAAAAAAf//wAA///wAAAAAA///wAA///8AAAA
         AD///wAA////AAAAAP///wAA////4AAAB////wAA/////gAAf////wAA
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VkPlayer</value>
