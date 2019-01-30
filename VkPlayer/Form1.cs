@@ -35,6 +35,7 @@ namespace VkPlayer
         private bool isPlay = false;
         private bool mute = false;
         private bool isBlack = false;
+        private bool isFind = false;
         public Main()
         {
             InitializeComponent();
@@ -90,6 +91,7 @@ namespace VkPlayer
                 play_pause_btn.Image = Resource1.play_white;
             else
                 play_pause_btn.Image = Resource1.play;
+            play_pause_btn.Focus();
         }
         
         public void LoadText()
@@ -247,12 +249,13 @@ namespace VkPlayer
             {
                 try
                 {
-                    //AudioList.SelectedIndex = Math.Min(AudioList.SelectedIndex - 1, AudioList.Items.Count + 1);
+
+                    AudioList.SelectedIndex -= 1;
                     searchSetInfo();
                 }
                 catch
                 {
-                    AudioList.SelectedIndex = Math.Min(AudioList.SelectedIndex + 1, AudioList.Items.Count - 1);
+                    AudioList.SelectedIndex += 1;
                     searchSetInfo();
                 }
             }
@@ -281,18 +284,24 @@ namespace VkPlayer
 
                 if (random)
                 {
-                    Random rnds = new Random(20);
-                    int value = rnds.Next();
-                    //AudioList.SetSelected(AudioList.SelectedItem, false);
+                    Random rnds = new Random();
+                    int value = rnds.Next(0,19);
+                    AudioList.SelectedIndex = value; try
+                    {
+                        searchSetInfo();
+                    }
+                    catch
+                    {
+                        //AudioList.SelectedIndex = 0;
+                        //searchSetInfo();
+                    }
                 }
-
-                try
+                else
                 {
-                    //AudioList.SelectedIndex = Math.Min(AudioList.SelectedIndex + 1, AudioList.Items.Count - 1);
                     AudioList.SelectedIndex += 1;
                     searchSetInfo();
                 }
-                catch { }
+                
             }
 
         }        
@@ -329,7 +338,7 @@ namespace VkPlayer
                 player.controls.stop();
                 NextSongTimer.Start();
                 AllTimeDur.Text = player.currentMedia.durationString;
-                AudioList.Focus();
+                next_btn.Focus();
             }
         }
 
@@ -360,16 +369,18 @@ namespace VkPlayer
                     if (!repeat)
                         try
                         {
-                            AudioList.SelectedIndex = Math.Min(AudioList.SelectedIndex + 1, AudioList.Items.Count - 1);
+                            AudioList.SelectedIndex += 1; ;
                             searchSetInfo();
                         }
                         catch { }
                     else
-                        player.controls.play();
-                    
-
+                    {
+                        Random rnds = new Random();
+                        int value = rnds.Next(0, 19);
+                        AudioList.SelectedIndex = value;
+                        searchSetInfo();
+                    }
                 }
-                
 
             }
         }
@@ -405,7 +416,7 @@ namespace VkPlayer
 
         private void Main_KeyDown(object sender, KeyEventArgs e)
         {
-            if (!searchAudio_box.Focused)
+            if (!searchAudio_box.Focused && !AudioList.Focused)
             {
                 if (e.KeyCode == Keys.Space)
                 {
@@ -480,6 +491,7 @@ namespace VkPlayer
                 next_btn.Image = Resource1.next_white;
                 back_btn.Image = Resource1.prev_white;
                 Logout.Image = Resource1.door_white;
+                find_btn.Image = Resource1.find_white;
                 if (mute)
                     mute_unmute.Image = Resource1.mute_white;
                 else
@@ -501,6 +513,7 @@ namespace VkPlayer
                 next_btn.Image = Resource1.next;
                 back_btn.Image = Resource1.prev;
                 Logout.Image = Resource1.door;
+                find_btn.Image = Resource1.find;
                 if (mute)
                     mute_unmute.Image = Resource1.mute;
                 else
@@ -514,6 +527,10 @@ namespace VkPlayer
             this.BackColor = mainColor;
             this.MainColor = mainColor;
             this.addColor = addColor;
+            AudioList.BackColor = addColor;
+            searchAudio_box.BackColor = addColor;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             if (repeat)
             {
                 repeat_radio.BackColor = addColor;
@@ -735,7 +752,7 @@ namespace VkPlayer
             if (isBlack)
                 play_pause_btn.Image = Resource1.pause_white;
             else
-                play_pause_btn.Image = Resource1.pause;
+                play_pause_btn.Image = Resource1.pause;            
         }
 
         private void AudioList_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -746,6 +763,32 @@ namespace VkPlayer
                 searchSetInfo();
             }
             catch { }
+            next_btn.Focus();
+        }
+
+        private void Main_MouseClick(object sender, MouseEventArgs e)
+        {
+            next_btn.Focus();
+        }
+
+        private void AudioList_MouseClick(object sender, MouseEventArgs e)
+        {
+            next_btn.Focus();
+        }
+
+        private void find_btn_Click(object sender, EventArgs e)
+        {
+            if (isFind)
+            {
+                Width = 365;
+                isFind = false;
+            }
+            else
+            {
+                Width = 521;
+                isFind = true;
+            }
+            play_pause_btn.Focus();
         }
     }
 }

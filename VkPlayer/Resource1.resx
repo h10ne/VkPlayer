@@ -235,4 +235,10 @@
   <data name="colorRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\colorRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="find" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\find.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="find_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\find_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
