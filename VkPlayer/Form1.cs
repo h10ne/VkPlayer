@@ -22,6 +22,7 @@ namespace VkPlayer
         private ServiceCollection service;
         public Font Roboto_medium;
         public Font Roboto_thin;
+        public Font Roboto_thin_10;
         private Color MainColor;
         private Color addColor;
         public string code = null;
@@ -57,8 +58,10 @@ namespace VkPlayer
             SetAudioInfo();
             LoadText();
             play_pause_btn.Image = Resource1.play;
-            artist_name.Font = Roboto_medium;
-            title_name.Font = Roboto_thin;
+            artist_name.Font = Roboto_thin;
+            title_name.Font = Roboto_medium;
+            AudioList.Font = Roboto_thin_10;
+            searchAudio_box.Font = Roboto_thin_10;
             MainColor = Color.FromArgb(255, 63, 81, 181);
             addColor = Color.FromArgb(255, 48, 63, 159);
             if (File.Exists("user_color.dat"))
@@ -105,8 +108,9 @@ namespace VkPlayer
                 PrivateFontCollection font = new PrivateFontCollection();
                 font.AddFontFile("Roboto-Medium.ttf");
                 font.AddFontFile("Roboto-Light.ttf");
-                Roboto_medium = new Font(font.Families[0], 12);
-                Roboto_thin = new Font(font.Families[1], 12);
+                Roboto_medium = new Font(font.Families[1], 12);
+                Roboto_thin = new Font(font.Families[0], 12);
+                Roboto_thin_10 = new Font(font.Families[0], 11);
             }
             catch { }
         }
@@ -259,7 +263,7 @@ namespace VkPlayer
                 }
                 catch
                 {
-                    AudioList.SelectedIndex += 1;
+                    AudioList.SelectedIndex = 19;
                     searchSetInfo();
                 }
             }
@@ -302,8 +306,16 @@ namespace VkPlayer
                 }
                 else
                 {
-                    AudioList.SelectedIndex += 1;
-                    searchSetInfo();
+                    try
+                    {
+                        AudioList.SelectedIndex += 1;
+                        searchSetInfo();
+                    }
+                    catch
+                    {
+                        AudioList.SelectedIndex = 0;
+                        searchSetInfo();
+                    }
                 }
                 
             }
@@ -742,6 +754,7 @@ namespace VkPlayer
             AudioList.Items.Clear();            
             if (e.KeyCode == Keys.Enter)
             {
+                e.SuppressKeyPress = true;
                 try
                 {
                     searchAudios = api.Audio.Search(new AudioSearchParams
