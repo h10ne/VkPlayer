@@ -76,11 +76,15 @@ namespace VkPlayer
                 {
                     artist_name.ForeColor = Color.Black;
                     title_name.ForeColor = Color.Black;
+                    AudioList.ForeColor = Color.Black;
+                    searchAudio_box.ForeColor = Color.Black;
                 }
                 else
                 {
                     artist_name.ForeColor = Color.White;
                     title_name.ForeColor = Color.White;
+                    AudioList.ForeColor = Color.White;
+                    searchAudio_box.ForeColor = Color.White;
                 }
             }
             BackColor = MainColor;
@@ -529,8 +533,6 @@ namespace VkPlayer
             this.addColor = addColor;
             AudioList.BackColor = addColor;
             searchAudio_box.BackColor = addColor;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
             if (repeat)
             {
                 repeat_radio.BackColor = addColor;
@@ -564,6 +566,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 183, 28, 28);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -573,6 +577,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 123, 31, 162);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -582,6 +588,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 69, 39, 160);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -591,6 +599,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 40, 53, 147);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -600,6 +610,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 21, 101, 192);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -609,6 +621,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 0, 151, 167);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
+            AudioList.ForeColor = Color.Black;
+            searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
 
@@ -618,6 +632,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 0, 121, 107);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
+            AudioList.ForeColor = Color.Black;
+            searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
 
@@ -627,6 +643,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 46, 125, 50);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -636,6 +654,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 175, 180, 43);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
+            AudioList.ForeColor = Color.Black;
+            searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
 
@@ -645,6 +665,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 253, 216, 53);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
+            AudioList.ForeColor = Color.Black;
+            searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
 
@@ -654,6 +676,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 255, 179, 0);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
+            AudioList.ForeColor = Color.Black;
+            searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
 
@@ -663,6 +687,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 245, 124, 0);
             artist_name.ForeColor = Color.Black;
             title_name.ForeColor = Color.Black;
+            AudioList.ForeColor = Color.Black;
+            searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
 
@@ -672,6 +698,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 216, 67, 21);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -681,6 +709,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 93, 64, 55);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -690,6 +720,8 @@ namespace VkPlayer
             Color add = Color.FromArgb(255, 69, 90, 100);
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
 
@@ -698,6 +730,8 @@ namespace VkPlayer
             isBlack = true;            
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
+            AudioList.ForeColor = Color.White;
+            searchAudio_box.ForeColor = Color.White;
             Color main = Color.FromArgb(255, 20, 20, 20);
             Color add = Color.FromArgb(255, 50, 50, 50);
             SetColors(main, add);
@@ -752,7 +786,8 @@ namespace VkPlayer
             if (isBlack)
                 play_pause_btn.Image = Resource1.pause_white;
             else
-                play_pause_btn.Image = Resource1.pause;            
+                play_pause_btn.Image = Resource1.pause;
+            isPlay = true;
         }
 
         private void AudioList_MouseDoubleClick(object sender, MouseEventArgs e)
