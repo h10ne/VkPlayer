@@ -64,6 +64,8 @@
             this.brownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueGrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchAudio_box = new System.Windows.Forms.TextBox();
+            this.AudioList = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duration_bar)).BeginInit();
             this.Menu.SuspendLayout();
@@ -329,11 +331,28 @@
             this.blackToolStripMenuItem.Name = "blackToolStripMenuItem";
             this.blackToolStripMenuItem.Click += new System.EventHandler(this.blackToolStripMenuItem_Click);
             // 
+            // searchAudio_box
+            // 
+            resources.ApplyResources(this.searchAudio_box, "searchAudio_box");
+            this.searchAudio_box.Name = "searchAudio_box";
+            this.searchAudio_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchAudio_KeyDown);
+            // 
+            // AudioList
+            // 
+            this.AudioList.BackColor = System.Drawing.Color.White;
+            this.AudioList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.AudioList, "AudioList");
+            this.AudioList.FormattingEnabled = true;
+            this.AudioList.Name = "AudioList";
+            this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
+            this.Controls.Add(this.AudioList);
+            this.Controls.Add(this.searchAudio_box);
             this.Controls.Add(this.AllTimeDur);
             this.Controls.Add(this.currentTimeDur);
             this.Controls.Add(this.Logout);
@@ -347,7 +366,7 @@
             this.Controls.Add(this.next_btn);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.play_pause_btn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
@@ -395,6 +414,8 @@
         private System.Windows.Forms.ToolStripMenuItem brownToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blueGrayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blackToolStripMenuItem;
+        private System.Windows.Forms.TextBox searchAudio_box;
+        private System.Windows.Forms.ListBox AudioList;
     }
 }
 

@@ -10,7 +10,7 @@ using System.IO;
 using WMPLib;
 using System.Drawing.Text;
 using System.Drawing;
-
+using System.Collections.Generic;
 namespace VkPlayer
 {
     public partial class Main : Form
@@ -26,6 +26,8 @@ namespace VkPlayer
         private Color addColor;
         public string code = null;
         Random rnd;
+        bool customSong = false;
+        private VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> searchAudios;
         private int clr;
         private bool repeat = false;
         private bool random = false;
@@ -228,32 +230,71 @@ namespace VkPlayer
         }
         private void back_btn_Click(object sender, EventArgs e)
         {
-            prevSong();
+            PrevSong();
         }
 
-        private void prevSong()
+        private void PrevSong()
         {
-            if (_offset != 0)
+            if (!customSong)
             {
-                _offset--;
-            }
-            SetAudioInfo();
-        }
-        private void NextSong()
-        {
-            if (random)
-            {
-                _offset = rnd.Next(0, (int)api.Audio.GetCount(user_id));
-            }
-            if (api.Audio.GetCount(user_id) > _offset)
-            {
-                _offset++;
+                if (_offset != 0)
+                {
+                    _offset--;
+                }
+                SetAudioInfo();
             }
             else
             {
-                _offset = 0;
+                try
+                {
+                    //AudioList.SelectedIndex = Math.Min(AudioList.SelectedIndex - 1, AudioList.Items.Count + 1);
+                    searchSetInfo();
+                }
+                catch
+                {
+                    AudioList.SelectedIndex = Math.Min(AudioList.SelectedIndex + 1, AudioList.Items.Count - 1);
+                    searchSetInfo();
+                }
             }
-            SetAudioInfo();
+        }
+        private void NextSong()
+        {
+            if (!customSong)
+            {
+                if (random)
+                {
+                    _offset = rnd.Next(0, (int)api.Audio.GetCount(user_id));
+                }
+                if (api.Audio.GetCount(user_id) > _offset)
+                {
+                    _offset++;
+                }
+                else
+                {
+                    _offset = 0;
+                }
+                SetAudioInfo();
+            }
+            else
+            {
+
+
+                if (random)
+                {
+                    Random rnds = new Random(20);
+                    int value = rnds.Next();
+                    //AudioList.SetSelected(AudioList.SelectedItem, false);
+                }
+
+                try
+                {
+                    //AudioList.SelectedIndex = Math.Min(AudioList.SelectedIndex + 1, AudioList.Items.Count - 1);
+                    AudioList.SelectedIndex += 1;
+                    searchSetInfo();
+                }
+                catch { }
+            }
+
         }        
 
         private void next_btn_Click(object sender, EventArgs e)
@@ -262,6 +303,8 @@ namespace VkPlayer
         }        
         private void duration_timer_Tick(object sender, EventArgs e)
         {
+            if (searchAudio_box.Text == "")
+                customSong = false;
             duration_bar.Maximum = (int)player.currentMedia.duration;
             duration_bar.Value = (int)player.controls.currentPosition;
             currentTimeDur.Text = player.controls.currentPositionString;
@@ -286,6 +329,7 @@ namespace VkPlayer
                 player.controls.stop();
                 NextSongTimer.Start();
                 AllTimeDur.Text = player.currentMedia.durationString;
+                AudioList.Focus();
             }
         }
 
@@ -302,12 +346,31 @@ namespace VkPlayer
         {
             if (player.status == "Остановлено")
             {
-                if (!repeat)
-                    NextSong();
+                if (!customSong)
+                {
+                    if (!repeat)
+                        NextSong();
+                    else
+                    {
+                        player.controls.play();
+                    }
+                }
                 else
                 {
-                    player.controls.play();
+                    if (!repeat)
+                        try
+                        {
+                            AudioList.SelectedIndex = Math.Min(AudioList.SelectedIndex + 1, AudioList.Items.Count - 1);
+                            searchSetInfo();
+                        }
+                        catch { }
+                    else
+                        player.controls.play();
+                    
+
                 }
+                
+
             }
         }
 
@@ -342,37 +405,40 @@ namespace VkPlayer
 
         private void Main_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Space)
+            if (!searchAudio_box.Focused)
             {
-                play_pause();
-            }
-            else if(e.KeyCode == Keys.Up)
-            {
-                if (volume.Value + 5 < volume.Maximum)
+                if (e.KeyCode == Keys.Space)
                 {
-                    player.settings.volume += 5;
-                    volume.Value += 5;
+                    play_pause();
                 }
-            }
-            else if (e.KeyCode == Keys.Down)
-            {
-                if (volume.Value - 5 > volume.Minimum)
+                else if (e.KeyCode == Keys.Up)
                 {
-                    player.settings.volume -= 5;
-                    volume.Value -= 5;
+                    if (volume.Value + 5 < volume.Maximum)
+                    {
+                        player.settings.volume += 5;
+                        volume.Value += 5;
+                    }
                 }
-            }
-            else if (e.KeyCode == Keys.Left)
-            {
-                prevSong();
-            }
-            else if (e.KeyCode == Keys.Right)
-            {
-                NextSong();                
-            }
-            else if (e.KeyCode == Keys.M)
-            {
-                SetMute_Unmute();
+                else if (e.KeyCode == Keys.Down)
+                {
+                    if (volume.Value - 5 > volume.Minimum)
+                    {
+                        player.settings.volume -= 5;
+                        volume.Value -= 5;
+                    }
+                }
+                else if (e.KeyCode == Keys.Left)
+                {
+                    PrevSong();
+                }
+                else if (e.KeyCode == Keys.Right)
+                {
+                    NextSong();
+                }
+                else if (e.KeyCode == Keys.M)
+                {
+                    SetMute_Unmute();
+                }
             }
         }
 
@@ -618,6 +684,68 @@ namespace VkPlayer
             Color main = Color.FromArgb(255, 20, 20, 20);
             Color add = Color.FromArgb(255, 50, 50, 50);
             SetColors(main, add);
+        }
+
+        private void searchAudio_KeyDown(object sender, KeyEventArgs e)
+        {
+            AudioList.Items.Clear();            
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    searchAudios = api.Audio.Search(new AudioSearchParams
+                    {
+                        Query = searchAudio_box.Text,
+                        Autocomplete = true,
+                        SearchOwn = true,
+                        Count = 20,
+                        PerformerOnly = false
+                    });
+
+                    foreach (var audio in searchAudios)
+                        AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
+                }
+                catch { }
+            }
+        }
+
+        void searchSetInfo()
+        {            
+            string selectItem = AudioList.SelectedItem.ToString();
+            int index = 0;
+            for (int i = 0; i < selectItem.Length; i++)
+            {
+                if (selectItem[i] == ' ' && selectItem[i + 1] == '-' && selectItem[i + 2] == ' ')
+                {
+                    index = i;
+                    break;
+                }
+
+            }
+            string artist = selectItem.Substring(0, index);
+            string title = selectItem.Substring(index + 3);
+            foreach (var audio in searchAudios)
+                if (audio.Artist == artist && audio.Title == title)
+                {
+                    player.URL = audio.Url.ToString();
+                    artist_name.Text = artist;
+                    title_name.Text = title;
+                    player.controls.play();
+                }
+            if (isBlack)
+                play_pause_btn.Image = Resource1.pause_white;
+            else
+                play_pause_btn.Image = Resource1.pause;
+        }
+
+        private void AudioList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                customSong = true;
+                searchSetInfo();
+            }
+            catch { }
         }
     }
 }
