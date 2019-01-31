@@ -81,10 +81,10 @@
             // 
             this.twoFact_check.AutoSize = true;
             this.twoFact_check.BackColor = System.Drawing.Color.Transparent;
-            this.twoFact_check.Font = new System.Drawing.Font("Roboto Light", 8.7F, System.Drawing.FontStyle.Bold);
-            this.twoFact_check.Location = new System.Drawing.Point(9, 73);
+            this.twoFact_check.Font = new System.Drawing.Font("Roboto Medium", 9.5F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.twoFact_check.Location = new System.Drawing.Point(12, 73);
             this.twoFact_check.Name = "twoFact_check";
-            this.twoFact_check.Size = new System.Drawing.Size(188, 18);
+            this.twoFact_check.Size = new System.Drawing.Size(174, 19);
             this.twoFact_check.TabIndex = 0;
             this.twoFact_check.Text = "Two-factor authentication";
             this.twoFact_check.UseVisualStyleBackColor = false;

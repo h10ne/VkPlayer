@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing;
 namespace VkPlayer
 {
     public partial class AuthForm2 : Form
@@ -16,6 +17,12 @@ namespace VkPlayer
         {
             File.WriteAllText("someFile.tempdat", CodeBox.Text);
             Close();
+        }
+
+        private void CodeBox_Enter(object sender, EventArgs e)
+        {
+            CodeBox.Text = "";
+            CodeBox.ForeColor = Color.Black;
         }
     }
 }

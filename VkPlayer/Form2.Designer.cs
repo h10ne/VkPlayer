@@ -39,7 +39,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(159)))), ((int)(((byte)(231)))));
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(199)))), ((int)(((byte)(237)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(210)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(49, 45);
             this.button1.Name = "button1";
@@ -59,6 +59,7 @@
             this.CodeBox.TabIndex = 1;
             this.CodeBox.Text = "Code";
             this.CodeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CodeBox.Enter += new System.EventHandler(this.CodeBox_Enter);
             // 
             // AuthForm2
             // 
