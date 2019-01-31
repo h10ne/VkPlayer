@@ -189,12 +189,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back_btn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\next_btn.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\refresh.png" />
   </ItemGroup>
   <ItemGroup>
@@ -224,15 +218,6 @@
     <None Include="Resources\colorCircle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\coloBlueGrey.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\coloGrey.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\coloOrange.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\colorAmber.png" />
   </ItemGroup>
   <ItemGroup>
@@ -257,22 +242,14 @@
     <None Include="Resources\colorYellow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rolorDeepPurple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rolorIndigo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rolorPurple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rolorRed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\colorBlue.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon1.ico" />
+    <None Include="Resources\auth_back_2.png" />
+    <None Include="Resources\auth_back.png" />
+    <None Include="Resources\eye_click.png" />
+    <None Include="Resources\eye.png" />
     <None Include="Resources\door_white.png" />
     <None Include="Resources\door.png" />
     <None Include="Resources\find_white.png" />
