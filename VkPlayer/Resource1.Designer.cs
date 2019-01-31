@@ -63,6 +63,26 @@ namespace VkPlayer {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap auth_back {
+            get {
+                object obj = ResourceManager.GetObject("auth_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap auth_back_2 {
+            get {
+                object obj = ResourceManager.GetObject("auth_back_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap colorAmber {
             get {
                 object obj = ResourceManager.GetObject("colorAmber", resourceCulture);
@@ -256,6 +276,26 @@ namespace VkPlayer {
         internal static System.Drawing.Bitmap door_white {
             get {
                 object obj = ResourceManager.GetObject("door_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye {
+            get {
+                object obj = ResourceManager.GetObject("eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_click {
+            get {
+                object obj = ResourceManager.GetObject("eye_click", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

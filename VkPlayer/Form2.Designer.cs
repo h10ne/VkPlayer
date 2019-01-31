@@ -31,17 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthForm2));
             this.button1 = new System.Windows.Forms.Button();
             this.CodeBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(57, 59);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(159)))), ((int)(((byte)(231)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(199)))), ((int)(((byte)(237)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(210)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(49, 45);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 29);
+            this.button1.Size = new System.Drawing.Size(83, 31);
             this.button1.TabIndex = 0;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = false;
@@ -50,28 +52,22 @@
             // CodeBox
             // 
             this.CodeBox.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CodeBox.Location = new System.Drawing.Point(75, 15);
+            this.CodeBox.ForeColor = System.Drawing.Color.Gray;
+            this.CodeBox.Location = new System.Drawing.Point(37, 12);
             this.CodeBox.Name = "CodeBox";
-            this.CodeBox.Size = new System.Drawing.Size(116, 27);
+            this.CodeBox.Size = new System.Drawing.Size(105, 27);
             this.CodeBox.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(13, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Code";
+            this.CodeBox.Text = "Code";
+            this.CodeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CodeBox.Enter += new System.EventHandler(this.CodeBox_Enter);
             // 
             // AuthForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(31)))), ((int)(((byte)(162)))));
-            this.ClientSize = new System.Drawing.Size(201, 100);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = global::VkPlayer.Resource1.auth_back_2;
+            this.ClientSize = new System.Drawing.Size(188, 81);
             this.Controls.Add(this.CodeBox);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -85,7 +81,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox CodeBox;
     }
 }

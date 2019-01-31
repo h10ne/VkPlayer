@@ -1,8 +1,4 @@
 
-.vs/VkPlayer/v15/.suo
-.vs/VkPlayer/v15/Server/sqlite3/db.lock
-.vs/VkPlayer/v15/Server/sqlite3/storage.ide
-.vs/VkPlayer/v15/Server/sqlite3/storage.ide-shm
-.vs/VkPlayer/v15/Server/sqlite3/storage.ide-wal
+.vs/
 VkPlayer/bin
 VkPlayer/obj
