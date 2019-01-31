@@ -379,6 +379,7 @@
             this.Controls.Add(this.next_btn);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.play_pause_btn);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Main";

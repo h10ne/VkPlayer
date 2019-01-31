@@ -28,32 +28,14 @@ namespace VkPlayer
         {
             if (this.Owner is Main main)
             {
-                
-                if (!twoFact_check.Checked)
+                try
                 {
-                    try
-                    {
-                        main.GetAuth(false, login.Text, password.Text);
-                        Close();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
-                    }
+                    main.GetAuth(login.Text, password.Text);
                 }
-                else
-                {
-                    try
-                    {
-                        File.WriteAllText("someFile.tempdat", "");
-                        main.GetAuth(true, login.Text, password.Text);
-                        Close();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
-                    }
-                }             
+                catch
+                { }
+                if (main.isAuth == true)
+                    Close();
             }
         }
 

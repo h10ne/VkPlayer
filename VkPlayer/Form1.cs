@@ -37,13 +37,14 @@ namespace VkPlayer
         private bool mute = false;
         private bool isBlack = false;
         private bool isFind = false;
+        public bool isAuth = false;
         public Main()
         {
             InitializeComponent();
             if (File.Exists("auth.dat"))
             {
                 Token = File.ReadAllText("auth.dat");
-                GetAuth(false);
+                GetAuth();
             }
             else
             {
@@ -161,25 +162,35 @@ namespace VkPlayer
             Show();
         }
 
-        public void GetAuth(bool twoFactoringCode, string login = null, string password = null)
+        public void GetAuth(string login = null, string password = null)
         {
             service = new ServiceCollection();
             service.AddAudioBypass();
             api = new VkApi(service);
-            if (Token == null && !twoFactoringCode)
-            {
-                AuthLogPass(login, password);
-            }
-            else if (twoFactoringCode)
-            {
-                Auth2Fact(login, password);
-            }
-            else
+            if (Token!=null)
             {
                 AuthToken();
             }
+            else
+            {
+                try
+                {
+                    try
+                    {
+                        AuthLogPass(login, password);
+                    }
+                    catch
+                    {
+                        Auth2Fact(login, password);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
+                }
+            }
             rnd = new Random();
-
+            isAuth = true;
         }        
 
         private void SetAudioInfo()
