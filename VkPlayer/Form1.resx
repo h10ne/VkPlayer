@@ -487,7 +487,7 @@
     <value>360, 6</value>
   </data>
   <data name="searchAudio_box.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 23</value>
+    <value>221, 23</value>
   </data>
   <data name="searchAudio_box.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -514,7 +514,7 @@
     <value>360, 29</value>
   </data>
   <data name="AudioList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 92</value>
+    <value>221, 92</value>
   </data>
   <data name="AudioList.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>

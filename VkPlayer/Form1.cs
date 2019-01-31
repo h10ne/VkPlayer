@@ -10,7 +10,6 @@ using System.IO;
 using WMPLib;
 using System.Drawing.Text;
 using System.Drawing;
-using System.Collections.Generic;
 namespace VkPlayer
 {
     public partial class Main : Form
@@ -844,7 +843,7 @@ namespace VkPlayer
             }
             else
             {
-                Width = 521;
+                Width = 601;
                 isFind = true;
             }
             play_pause_btn.Focus();
