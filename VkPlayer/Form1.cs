@@ -10,6 +10,8 @@ using System.IO;
 using WMPLib;
 using System.Drawing.Text;
 using System.Drawing;
+using System.Threading;
+
 namespace VkPlayer
 {
     public partial class Main : Form
@@ -37,6 +39,7 @@ namespace VkPlayer
         private bool isBlack = false;
         private bool isFind = false;
         public bool isAuth = false;
+        VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> audio;
         public Main()
         {
             InitializeComponent();
@@ -188,25 +191,25 @@ namespace VkPlayer
                     MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
                 }
             }
+            audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(user_id) });
             rnd = new Random();
             isAuth = true;
-        }        
+        }
 
-        private void SetAudioInfo()
+        private void SetAudioInfo(bool isback = false)
         {
-            var audio = api.Audio.Get(new AudioGetParams { Count = 1, Offset = _offset });
             int tempOffset = _offset;
-            while (audio[0].Url == null) 
+            while (audio[_offset].Url == null) 
             {
-                ++_offset;
-                if (tempOffset == _offset)
-                    _offset-=2;
-                tempOffset = _offset;
-                audio = api.Audio.Get(new AudioGetParams { Count = 1, Offset = _offset });
+                if (isback)
+                    _offset--;
+                else
+                    _offset++;
             }
-            player.URL = audio[0].Url.ToString();
-            artist_name.Text = audio[0].Artist;
-            title_name.Text = audio[0].Title;
+            Thread.Sleep(270);
+            player.URL = audio[_offset].Url.ToString();
+            artist_name.Text = audio[_offset].Artist;
+            title_name.Text = audio[_offset].Title;
             player.settings.volume = volume.Value;
             duration_timer.Start();
             duration_bar.Value = 0;
@@ -261,7 +264,7 @@ namespace VkPlayer
                 {
                     _offset--;
                 }
-                SetAudioInfo();
+                SetAudioInfo(true);
             }
             else
             {
@@ -310,8 +313,7 @@ namespace VkPlayer
                     }
                     catch
                     {
-                        //AudioList.SelectedIndex = 0;
-                        //searchSetInfo();
+
                     }
                 }
                 else
@@ -848,5 +850,6 @@ namespace VkPlayer
             }
             play_pause_btn.Focus();
         }
+        
     }
 }
