@@ -133,6 +133,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
+    <Compile Include="States.cs" />
     <EmbeddedResource Include="authorization_form.resx">
       <DependentUpon>authorization_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,12 +248,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon1.ico" />
+    <None Include="Resources\door.png" />
     <None Include="Resources\auth_back_2.png" />
     <None Include="Resources\auth_back.png" />
     <None Include="Resources\eye_click.png" />
     <None Include="Resources\eye.png" />
     <None Include="Resources\door_white.png" />
-    <None Include="Resources\door.png" />
     <None Include="Resources\find_white.png" />
     <None Include="Resources\find.png" />
     <None Include="Resources\colorOrange.png" />
