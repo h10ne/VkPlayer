@@ -148,9 +148,6 @@
   <data name="colorYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\colorYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -183,9 +180,6 @@
   </data>
   <data name="colorBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\colorBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="door_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\door_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mute_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\mute_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -252,5 +246,8 @@
   </data>
   <data name="eye_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\eye_click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

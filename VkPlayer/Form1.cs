@@ -16,33 +16,27 @@ namespace VkPlayer
 {
     public partial class Main : Form
     {
-        WMPLib.WindowsMediaPlayer player;
-        private long user_id;
+        public WMPLib.WindowsMediaPlayer player;
         public string Token = null;
-        private static IVkApi api;
-        private ServiceCollection service;
+        public IVkApi api;
         public Font Roboto_medium;
         public Font Roboto_thin;
         public Font Roboto_thin_10;
         private Color MainColor;
         private Color addColor;
         public string code = null;
-        Random rnd;
-        bool customSong = false;
-        private VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> searchAudios;
+        public Random rnd;
         private int clr;
-        private bool repeat = false;
-        private bool random = false;
-        private int _offset = 0;
-        private bool isPlay = false;
-        private bool mute = false;
-        private bool isBlack = false;
-        private bool isFind = false;
+        Playlist playlist;
+        public Switches VkBools;
+        public VkDatas vkDatas;
         public bool isAuth = false;
-        VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> audio;
         public Main()
         {
             InitializeComponent();
+            VkBools = new Switches();
+            vkDatas = new VkDatas();
+            playlist = new Playlist(new OwnAudios());
             if (File.Exists("auth.dat"))
             {
                 Token = File.ReadAllText("auth.dat");
@@ -69,13 +63,13 @@ namespace VkPlayer
             addColor = Color.FromArgb(255, 48, 63, 159);
             if (File.Exists("user_color.dat"))
             {
-                byte darkTheme = 20; 
+                byte darkTheme = 20;
                 string[] vs = File.ReadAllText("user_color.dat").Split(' ');
                 MainColor = Color.FromArgb(255, byte.Parse(vs[0]), byte.Parse(vs[1]), byte.Parse(vs[2]));
                 addColor = Color.FromArgb(255, byte.Parse(vs[3]), byte.Parse(vs[4]), byte.Parse(vs[5]));
                 if (byte.Parse(vs[0]) == darkTheme)
                 {
-                    isBlack = true;
+                    VkBools.isBlack = true;
                     SetColors(MainColor, addColor);
                 }
                 if (byte.Parse(vs[6]) == 0)
@@ -96,14 +90,14 @@ namespace VkPlayer
             BackColor = MainColor;
             KeyPreview = true;
             this.ContextMenuStrip = Menu;
-            isPlay = false;
-            if (isBlack)
+            VkBools.isPlay = false;
+            if (VkBools.isBlack)
                 play_pause_btn.Image = Resource1.play_white;
             else
                 play_pause_btn.Image = Resource1.play;
             play_pause_btn.Focus();
         }
-        
+
         public void LoadText()
         {
             try
@@ -124,7 +118,7 @@ namespace VkPlayer
             {
                 AccessToken = Token
             });
-            user_id = long.Parse(File.ReadAllText("user_id.dat"));
+            vkDatas.user_id = long.Parse(File.ReadAllText("user_id.dat"));
         }
 
         private void Auth2Fact(string login, string password)
@@ -145,8 +139,8 @@ namespace VkPlayer
                     return code;
                 }
             });
-            user_id = api.UserId.GetHashCode();
-            File.WriteAllText("user_id.dat", user_id.ToString());
+            vkDatas.user_id = api.UserId.GetHashCode();
+            File.WriteAllText("user_id.dat", vkDatas.user_id.ToString());
             File.WriteAllText("auth.dat", api.Token);
             Show();
         }
@@ -158,18 +152,18 @@ namespace VkPlayer
                 Login = login,
                 Password = password,
             });
-            user_id = api.UserId.GetHashCode();
-            File.WriteAllText("user_id.dat", user_id.ToString());
+            vkDatas.user_id = api.UserId.GetHashCode();
+            File.WriteAllText("user_id.dat", vkDatas.user_id.ToString());
             File.WriteAllText("auth.dat", api.Token);
             Show();
         }
 
         public void GetAuth(string login = null, string password = null)
         {
-            service = new ServiceCollection();
-            service.AddAudioBypass();
-            api = new VkApi(service);
-            if (Token!=null)
+            vkDatas.service = new ServiceCollection();
+            vkDatas.service.AddAudioBypass();
+            api = new VkApi(vkDatas.service);
+            if (Token != null)
             {
                 AuthToken();
             }
@@ -191,54 +185,53 @@ namespace VkPlayer
                     MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
                 }
             }
-            audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(user_id) });
+            vkDatas.audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
             rnd = new Random();
             isAuth = true;
         }
 
         private void SetAudioInfo(bool isback = false)
         {
-            int tempOffset = _offset;
-            while (audio[_offset].Url == null) 
+            while (vkDatas.audio[vkDatas._offset].Url == null)
             {
                 if (isback)
-                    _offset--;
+                    vkDatas._offset--;
                 else
-                    _offset++;
+                    vkDatas._offset++;
             }
             Thread.Sleep(270);
-            player.URL = audio[_offset].Url.ToString();
-            artist_name.Text = audio[_offset].Artist;
-            title_name.Text = audio[_offset].Title;
             player.settings.volume = volume.Value;
+            player.URL = vkDatas.audio[vkDatas._offset].Url.ToString();
+            artist_name.Text = vkDatas.audio[vkDatas._offset].Artist;
+            title_name.Text = vkDatas.audio[vkDatas._offset].Title;
             duration_timer.Start();
             duration_bar.Value = 0;
-            if (isBlack)
+            if (VkBools.isBlack)
                 play_pause_btn.Image = Resource1.pause_white;
             else
                 play_pause_btn.Image = Resource1.pause;
-            isPlay = true;
+            VkBools.isPlay = true;
         }
-        
+
         private void play_pause()
         {
-            if (!isPlay)
+            if (!VkBools.isPlay)
             {
                 player.controls.play();
-                if (!isBlack)
+                if (!VkBools.isBlack)
                     play_pause_btn.Image = Resource1.pause;
                 else
                     play_pause_btn.Image = Resource1.pause_white;
-                isPlay = true;
+                VkBools.isPlay = true;
             }
             else
             {
                 player.controls.pause();
-                if (!isBlack)
+                if (!VkBools.isBlack)
                     play_pause_btn.Image = Resource1.play;
                 else
                     play_pause_btn.Image = Resource1.play_white;
-                isPlay = false;
+                VkBools.isPlay = false;
             }
         }
 
@@ -253,101 +246,28 @@ namespace VkPlayer
         }
         private void back_btn_Click(object sender, EventArgs e)
         {
-            PrevSong();
+            playlist.PrevSong(this);
         }
-
-        private void PrevSong()
-        {
-            if (!customSong)
-            {
-                if (_offset != 0)
-                {
-                    _offset--;
-                }
-                SetAudioInfo(true);
-            }
-            else
-            {
-                try
-                {
-
-                    AudioList.SelectedIndex -= 1;
-                    searchSetInfo();
-                }
-                catch
-                {
-                    AudioList.SelectedIndex = 19;
-                    searchSetInfo();
-                }
-            }
-        }
-        private void NextSong()
-        {
-            if (!customSong)
-            {
-                if (random)
-                {
-                    _offset = rnd.Next(0, (int)api.Audio.GetCount(user_id));
-                }
-                if (api.Audio.GetCount(user_id) > _offset)
-                {
-                    _offset++;
-                }
-                else
-                {
-                    _offset = 0;
-                }
-                SetAudioInfo();
-            }
-            else
-            {
-
-
-                if (random)
-                {
-                    Random rnds = new Random();
-                    int value = rnds.Next(0,19);
-                    AudioList.SelectedIndex = value; try
-                    {
-                        searchSetInfo();
-                    }
-                    catch
-                    {
-
-                    }
-                }
-                else
-                {
-                    try
-                    {
-                        AudioList.SelectedIndex += 1;
-                        searchSetInfo();
-                    }
-                    catch
-                    {
-                        AudioList.SelectedIndex = 0;
-                        searchSetInfo();
-                    }
-                }
-                
-            }
-
-        }        
+        
+        
 
         private void next_btn_Click(object sender, EventArgs e)
         {
-            NextSong();
-        }        
+            playlist.NextSong(this);
+        }
         private void duration_timer_Tick(object sender, EventArgs e)
         {
             if (searchAudio_box.Text == "")
-                customSong = false;
+            {
+                playlist = new Playlist(new OwnAudios());
+                vkDatas.searchAudios = null;
+            }
             duration_bar.Maximum = (int)player.currentMedia.duration;
             duration_bar.Value = (int)player.controls.currentPosition;
             currentTimeDur.Text = player.controls.currentPositionString;
             AllTimeDur.Text = player.currentMedia.durationString;
         }
-       
+
         private void duration_bar_Scroll(object sender, EventArgs e)
         {
             duration_bar.Maximum = (int)player.currentMedia.duration;
@@ -356,7 +276,7 @@ namespace VkPlayer
         }
         private void timerForRefresh_Tick(object sender, EventArgs e)
         {
-            if (Token!=null && artist_name.Text=="artist" && title_name.Text=="title")
+            if (Token != null && artist_name.Text == "artist" && title_name.Text == "title")
             {
                 SetAudioInfo();
             }
@@ -370,76 +290,42 @@ namespace VkPlayer
             }
         }
 
-        private void Logout_Click(object sender, EventArgs e)
-        {
-            System.IO.File.Delete("auth.dat");
-            System.IO.File.Delete("user_id.dat");
-            System.IO.File.Delete("user_color.dat");
-            System.Windows.Forms.Application.Restart();
-            Close();
-        }
-
         private void NextSongTimer_Tick(object sender, EventArgs e)
         {
             if (player.status == "Остановлено")
             {
-                if (!customSong)
-                {
-                    if (!repeat)
-                        NextSong();
-                    else
-                    {
-                        player.controls.play();
-                    }
-                }
-                else
-                {
-                    if (!repeat)
-                        try
-                        {
-                            AudioList.SelectedIndex += 1; ;
-                            searchSetInfo();
-                        }
-                        catch { }
-                    else
-                    {
-                        Random rnds = new Random();
-                        int value = rnds.Next(0, 19);
-                        AudioList.SelectedIndex = value;
-                        searchSetInfo();
-                    }
-                }
-
+                playlist.NextSong(this);
+                playlist.SetAudioInfo(this);
             }
         }
 
         private void repeat_radio_Click(object sender, EventArgs e)
         {
-            if (repeat == false)
+            if (VkBools.repeat == false)
             {
-                repeat = true;
+                VkBools.repeat = true;
                 repeat_radio.BackColor = addColor;
             }
             else
             {
-                repeat = false;
+                VkBools.repeat = false;
                 repeat_radio.BackColor = MainColor;
             }
         }
 
         private void random_radio_Click(object sender, EventArgs e)
         {
-            if (random == false)
+            if (VkBools.random == false)
             {
-                random = true;
+                VkBools.random = true;
                 random_radio.BackColor = addColor;
             }
             else
             {
-                random = false;
+                VkBools.random = false;
                 random_radio.BackColor = MainColor;
             }
-            
+
         }
 
         private void Main_KeyDown(object sender, KeyEventArgs e)
@@ -468,11 +354,11 @@ namespace VkPlayer
                 }
                 else if (e.KeyCode == Keys.Left)
                 {
-                    PrevSong();
+                    playlist.PrevSong(this);
                 }
                 else if (e.KeyCode == Keys.Right)
                 {
-                    NextSong();
+                    playlist.NextSong(this);
                 }
                 else if (e.KeyCode == Keys.M)
                 {
@@ -483,11 +369,11 @@ namespace VkPlayer
 
         private void SetMute_Unmute()
         {
-            if (mute)
+            if (VkBools.mute)
             {
                 player.settings.mute = false;
-                mute = false;
-                if (!isBlack)
+                VkBools.mute = false;
+                if (!VkBools.isBlack)
                     mute_unmute.Image = Resource1.unmute;
                 else
                     mute_unmute.Image = Resource1.unmute_white;
@@ -495,8 +381,8 @@ namespace VkPlayer
             else
             {
                 player.settings.mute = true;
-                mute = true;
-                if (!isBlack)
+                VkBools.mute = true;
+                if (!VkBools.isBlack)
                     mute_unmute.Image = Resource1.mute;
                 else
                     mute_unmute.Image = Resource1.mute_white;
@@ -509,18 +395,17 @@ namespace VkPlayer
         }
 
         private void SetColors(Color mainColor, Color addColor, bool black = true)
-        {   
-            if (isBlack)
+        {
+            if (VkBools.isBlack)
             {
-                if (isPlay)
+                if (VkBools.isPlay)
                     play_pause_btn.Image = Resource1.pause_white;
                 else
                     play_pause_btn.Image = Resource1.play_white;
                 next_btn.Image = Resource1.next_white;
                 back_btn.Image = Resource1.prev_white;
-                Logout.Image = Resource1.door_white;
                 find_btn.Image = Resource1.find_white;
-                if (mute)
+                if (VkBools.mute)
                     mute_unmute.Image = Resource1.mute_white;
                 else
                     mute_unmute.Image = Resource1.unmute_white;
@@ -530,19 +415,18 @@ namespace VkPlayer
                 AllTimeDur.ForeColor = Color.White;
             }
 
-            if (!black && isBlack)
+            if (!black && VkBools.isBlack)
             {
-                isBlack = false;
+                VkBools.isBlack = false;
 
-                if (isPlay)
+                if (VkBools.isPlay)
                     play_pause_btn.Image = Resource1.pause;
                 else
                     play_pause_btn.Image = Resource1.play;
                 next_btn.Image = Resource1.next;
                 back_btn.Image = Resource1.prev;
-                Logout.Image = Resource1.door;
                 find_btn.Image = Resource1.find;
-                if (mute)
+                if (VkBools.mute)
                     mute_unmute.Image = Resource1.mute;
                 else
                     mute_unmute.Image = Resource1.unmute;
@@ -557,7 +441,7 @@ namespace VkPlayer
             this.addColor = addColor;
             AudioList.BackColor = addColor;
             searchAudio_box.BackColor = addColor;
-            if (repeat)
+            if (VkBools.repeat)
             {
                 repeat_radio.BackColor = addColor;
             }
@@ -565,7 +449,7 @@ namespace VkPlayer
             {
                 repeat_radio.BackColor = mainColor;
             }
-            if (random)
+            if (VkBools.random)
             {
                 random_radio.BackColor = addColor;
             }
@@ -751,7 +635,7 @@ namespace VkPlayer
 
         private void blackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            isBlack = true;            
+            VkBools.isBlack = true;
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             AudioList.ForeColor = Color.White;
@@ -763,13 +647,13 @@ namespace VkPlayer
 
         private void searchAudio_KeyDown(object sender, KeyEventArgs e)
         {
-            AudioList.Items.Clear();            
+            AudioList.Items.Clear();
             if (e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true;
                 try
                 {
-                    searchAudios = api.Audio.Search(new AudioSearchParams
+                    vkDatas.searchAudios = api.Audio.Search(new AudioSearchParams
                     {
                         Query = searchAudio_box.Text,
                         Autocomplete = true,
@@ -778,49 +662,20 @@ namespace VkPlayer
                         PerformerOnly = false
                     });
 
-                    foreach (var audio in searchAudios)
+                    foreach (var audio in vkDatas.searchAudios)
                         AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
                 }
                 catch { }
             }
         }
-
-        void searchSetInfo()
-        {            
-            string selectItem = AudioList.SelectedItem.ToString();
-            int index = 0;
-            for (int i = 0; i < selectItem.Length; i++)
-            {
-                if (selectItem[i] == ' ' && selectItem[i + 1] == '-' && selectItem[i + 2] == ' ')
-                {
-                    index = i;
-                    break;
-                }
-
-            }
-            string artist = selectItem.Substring(0, index);
-            string title = selectItem.Substring(index + 3);
-            foreach (var audio in searchAudios)
-                if (audio.Artist == artist && audio.Title == title)
-                {
-                    player.URL = audio.Url.ToString();
-                    artist_name.Text = artist;
-                    title_name.Text = title;
-                    player.controls.play();
-                }
-            if (isBlack)
-                play_pause_btn.Image = Resource1.pause_white;
-            else
-                play_pause_btn.Image = Resource1.pause;
-            isPlay = true;
-        }
+        
 
         private void AudioList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             try
             {
-                customSong = true;
-                searchSetInfo();
+                playlist = new Playlist(new SearchAudios());
+                playlist.SetAudioInfo(this);
             }
             catch { }
             next_btn.Focus();
@@ -838,18 +693,26 @@ namespace VkPlayer
 
         private void find_btn_Click(object sender, EventArgs e)
         {
-            if (isFind)
+            if (VkBools.isFind)
             {
                 Width = 365;
-                isFind = false;
+                VkBools.isFind = false;
             }
             else
             {
                 Width = 601;
-                isFind = true;
+                VkBools.isFind = true;
             }
             play_pause_btn.Focus();
         }
-        
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.IO.File.Delete("auth.dat");
+            System.IO.File.Delete("user_id.dat");
+            System.IO.File.Delete("user_color.dat");
+            System.Windows.Forms.Application.Restart();
+            Close();
+        }
     }
 }
