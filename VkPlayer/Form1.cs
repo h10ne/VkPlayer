@@ -294,7 +294,8 @@ namespace VkPlayer
         {
             if (player.status == "Остановлено")
             {
-                playlist.NextSong(this);
+                if (!VkBools.repeat)
+                    playlist.NextSong(this);
                 playlist.SetAudioInfo(this);
             }
         }
