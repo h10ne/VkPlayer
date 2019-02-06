@@ -35,21 +35,44 @@ interface IState
 class OwnAudios:IState
 {
     public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
-    {
-        while (main.vkDatas.audio[main.vkDatas._offset].Url == null)
-        {
-            if (isback)
-                main.vkDatas._offset--;
-            else
-                main.vkDatas._offset++;
+    {      
+        try
+        {         
+            main.CutAudio(main.AudioList.SelectedItem.ToString(), out string artist, out string title);
+            foreach (var audio in main.vkDatas.audio)
+                if (audio.Artist == artist && audio.Title == title)
+                {
+                    main.vkDatas._offset = main.AudioList.SelectedIndex;
+                    bool th = false;
+                    while (main.vkDatas.audio[main.vkDatas._offset].Url == null)
+                    {
+                        if (isback)
+                            main.vkDatas._offset--;
+                        else
+                            main.vkDatas._offset++;
+                        th = true;
+                    }
+                    if (th) throw new Exception("1");
+                    main.player.URL = audio.Url.ToString();
+                    main.artist_name.Text = artist;
+                    main.title_name.Text = title;
+                    main.player.controls.play();
+                    break;
+                }
         }
-        Thread.Sleep(270);
-        main.player.settings.volume = main.volume.Value;
-        main.player.URL = main.vkDatas.audio[main.vkDatas._offset].Url.ToString();
-        main.artist_name.Text = main.vkDatas.audio[main.vkDatas._offset].Artist;
-        main.title_name.Text = main.vkDatas.audio[main.vkDatas._offset].Title;
-        main.duration_timer.Start();
-        main.duration_bar.Value = 0;
+        catch
+        {
+            Thread.Sleep(270);
+            main.player.settings.volume = main.volume.Value;
+            main.player.URL = main.vkDatas.audio[main.vkDatas._offset].Url.ToString();
+            main.artist_name.Text = main.vkDatas.audio[main.vkDatas._offset].Artist;
+            main.title_name.Text = main.vkDatas.audio[main.vkDatas._offset].Title;
+            main.duration_timer.Start();
+            main.duration_bar.Value = 0;
+            main.AddAudioToList(main.vkDatas.audio);
+            main.AudioList.SelectedIndex = main.vkDatas._offset;
+        }
+        
 
         if (main.VkBools.isBlack)
             main.play_pause_btn.Image = Resource1.pause_white;
@@ -62,26 +85,40 @@ class OwnAudios:IState
     {
         if (main.VkBools.random)
         {
-            main.vkDatas._offset = main.rnd.Next(0, (int)main.api.Audio.GetCount(main.vkDatas.user_id));
+            Random rnds = new Random();
+            int value = rnds.Next(0, int.Parse(main.api.Audio.GetCount(main.vkDatas.user_id).ToString())-1);
+            main.AudioList.SelectedIndex = value;
+            SetAudioInfo(main);
         }
-        if (main.api.Audio.GetCount(main.vkDatas.user_id) > main.vkDatas._offset)
+        else
         {
-            main.vkDatas._offset++;
+            try
+            {
+                main.AudioList.SelectedIndex += 1;
+                SetAudioInfo(main);
+            }
+            catch
+            {
+                main.AudioList.SelectedIndex = 0;
+                SetAudioInfo(main);
+            }
         }
-        else        
-        {
-            main.vkDatas._offset = 0;
-        }
-        SetAudioInfo(main);
     }
 
     public void PrevSong(VkPlayer.Main main)
     {
-        if (main.vkDatas._offset != 0)
+        try
         {
-            main.vkDatas._offset--;
+
+            main.AudioList.SelectedIndex -= 1;
+            if (main.AudioList.SelectedIndex == -1)
+                main.AudioList.SelectedIndex = int.Parse(main.api.Audio.GetCount(main.vkDatas.user_id).ToString()) - 1;
+            SetAudioInfo(main, true);
         }
-        SetAudioInfo(main, true);
+        catch
+        {
+            SetAudioInfo(main, true);
+        }
     }
 }
 
@@ -104,38 +141,33 @@ class SearchAudios:IState
 
     public void NextSong(VkPlayer.Main main)
     {
-        if (main.VkBools.random)
+        if (main.vkDatas.searchAudios!=null)
         {
-            Random rnds = new Random();
-            int value = rnds.Next(0, 19);
-            main.AudioList.SelectedIndex = value;
-            try
+            if (main.VkBools.random)
             {
+                Random rnds = new Random();
+                int value = rnds.Next(0, 19);
+                main.AudioList.SelectedIndex = value;
                 SetAudioInfo(main);
             }
-            catch
+            else
             {
-
+                try
+                {
+                    main.AudioList.SelectedIndex += 1;
+                    SetAudioInfo(main);
+                }
+                catch
+                {
+                    main.AudioList.SelectedIndex = 0;
+                    SetAudioInfo(main);
+                }
             }
-        }
-        else
-        {
-            try
-            {
-                main.AudioList.SelectedIndex += 1;
-                SetAudioInfo(main);
-            }
-            catch
-            {
-                main.AudioList.SelectedIndex = 0;
-                SetAudioInfo(main);
-            }
-        }
+        }        
     }
     public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
     {
         main.CutAudio(main.AudioList.SelectedItem.ToString(), out string artist, out string title);
-
         foreach (var audio in main.vkDatas.searchAudios)
             if (audio.Artist == artist && audio.Title == title)
             {

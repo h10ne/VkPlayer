@@ -37,6 +37,8 @@ namespace VkPlayer
             VkBools = new Switches();
             vkDatas = new VkDatas();
             playlist = new Playlist(new OwnAudios());
+            //AddAudioToList(vkDatas.audio);
+            //AudioList.SelectedIndex = 1;
             if (File.Exists("auth.dat"))
             {
                 Token = File.ReadAllText("auth.dat");
@@ -53,7 +55,6 @@ namespace VkPlayer
             player = new WindowsMediaPlayer();
             duration_timer.Stop();
             playlist.SetAudioInfo(this);
-            AddAudioToList(vkDatas.audio);
             LoadText();
             play_pause_btn.Image = Resource1.play;
             artist_name.Font = Roboto_thin;
@@ -235,11 +236,6 @@ namespace VkPlayer
         }
         private void duration_timer_Tick(object sender, EventArgs e)
         {
-            if (searchAudio_box.Text == "")
-            {
-                playlist = new Playlist(new OwnAudios());
-                vkDatas.searchAudios = null;
-            }
             AllTimeDur.Text = player.currentMedia.durationString;
             duration_bar.Maximum = (int)player.currentMedia.duration;
             duration_bar.Value = (int)player.controls.currentPosition;
@@ -610,17 +606,18 @@ namespace VkPlayer
         }
 
 
-        private void AddAudioToList(VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> audios)
+        public void AddAudioToList(VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> audios)
         {
+            AudioList.Items.Clear();
             foreach (var audio in audios)
                 AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
         }
 
         private void SearchAudio_KeyDown(object sender, KeyEventArgs e)
         {
-            AudioList.Items.Clear();
             if (e.KeyCode == Keys.Enter)
             {
+                AudioList.Items.Clear();
                 e.SuppressKeyPress = true;
                 try
                 {
@@ -660,7 +657,6 @@ namespace VkPlayer
         {
             try
             {
-                playlist = new Playlist(new SearchAudios());
                 playlist.SetAudioInfo(this);
             }
             catch { }
@@ -679,6 +675,24 @@ namespace VkPlayer
 
         private void find_btn_Click(object sender, EventArgs e)
         {
+            playlist = new Playlist(new SearchAudios());
+            try
+            {
+                AddAudioToList(vkDatas.searchAudios);
+            }
+            catch { }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.IO.File.Delete("auth.dat");
+            System.IO.File.Delete("user_id.dat");
+            System.IO.File.Delete("user_color.dat");
+            System.Windows.Forms.Application.Restart();
+            Close();
+        }
+        private void List_Click(object sender, EventArgs e)
+        {
             if (VkBools.isFind)
             {
                 Width = 365;
@@ -692,13 +706,11 @@ namespace VkPlayer
             play_pause_btn.Focus();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Own_Click(object sender, EventArgs e)
         {
-            System.IO.File.Delete("auth.dat");
-            System.IO.File.Delete("user_id.dat");
-            System.IO.File.Delete("user_color.dat");
-            System.Windows.Forms.Application.Restart();
-            Close();
+            playlist = new Playlist(new OwnAudios());
+            AudioList.SelectedIndex = int.Parse(vkDatas._offset.ToString());
+            AddAudioToList(vkDatas.audio);
         }
     }
 }

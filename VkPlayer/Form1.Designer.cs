@@ -60,6 +60,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchAudio_box = new System.Windows.Forms.TextBox();
             this.AudioList = new System.Windows.Forms.ListBox();
+            this.List = new System.Windows.Forms.Label();
             this.find_btn = new System.Windows.Forms.Label();
             this.mute_unmute = new System.Windows.Forms.Label();
             this.random_radio = new System.Windows.Forms.Label();
@@ -67,7 +68,7 @@
             this.next_btn = new System.Windows.Forms.Label();
             this.back_btn = new System.Windows.Forms.Label();
             this.play_pause_btn = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Own = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duration_bar)).BeginInit();
             this.Menu.SuspendLayout();
@@ -300,6 +301,16 @@
             this.AudioList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseClick);
             this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
             // 
+            // List
+            // 
+            this.List.BackColor = System.Drawing.Color.Transparent;
+            this.List.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.List.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.List.Image = global::VkPlayer.Resource1.list;
+            resources.ApplyResources(this.List, "List");
+            this.List.Name = "List";
+            this.List.Click += new System.EventHandler(this.List_Click);
+            // 
             // find_btn
             // 
             this.find_btn.BackColor = System.Drawing.Color.Transparent;
@@ -359,15 +370,15 @@
             this.play_pause_btn.Name = "play_pause_btn";
             this.play_pause_btn.Click += new System.EventHandler(this.play_pause_btn_Click);
             // 
-            // label1
+            // Own
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Image = global::VkPlayer.Resource1.list;
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.find_btn_Click);
+            this.Own.BackColor = System.Drawing.Color.Transparent;
+            this.Own.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Own.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Own.Image = global::VkPlayer.Resource1.person;
+            resources.ApplyResources(this.Own, "Own");
+            this.Own.Name = "Own";
+            this.Own.Click += new System.EventHandler(this.Own_Click);
             // 
             // Main
             // 
@@ -378,7 +389,8 @@
             this.Controls.Add(this.searchAudio_box);
             this.Controls.Add(this.AllTimeDur);
             this.Controls.Add(this.currentTimeDur);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.List);
+            this.Controls.Add(this.Own);
             this.Controls.Add(this.find_btn);
             this.Controls.Add(this.title_name);
             this.Controls.Add(this.mute_unmute);
@@ -443,7 +455,8 @@
         internal System.Windows.Forms.ListBox AudioList;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         public System.Windows.Forms.Label AllTimeDur;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label List;
+        private System.Windows.Forms.Label Own;
     }
 }
 
