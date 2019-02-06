@@ -40,15 +40,6 @@
             this.currentTimeDur = new System.Windows.Forms.Label();
             this.AllTimeDur = new System.Windows.Forms.Label();
             this.Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.searchAudio_box = new System.Windows.Forms.TextBox();
-            this.AudioList = new System.Windows.Forms.ListBox();
-            this.find_btn = new System.Windows.Forms.Label();
-            this.mute_unmute = new System.Windows.Forms.Label();
-            this.random_radio = new System.Windows.Forms.Label();
-            this.repeat_radio = new System.Windows.Forms.Label();
-            this.next_btn = new System.Windows.Forms.Label();
-            this.back_btn = new System.Windows.Forms.Label();
-            this.play_pause_btn = new System.Windows.Forms.Label();
             this.chooseColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,6 +58,16 @@
             this.blueGrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchAudio_box = new System.Windows.Forms.TextBox();
+            this.AudioList = new System.Windows.Forms.ListBox();
+            this.find_btn = new System.Windows.Forms.Label();
+            this.mute_unmute = new System.Windows.Forms.Label();
+            this.random_radio = new System.Windows.Forms.Label();
+            this.repeat_radio = new System.Windows.Forms.Label();
+            this.next_btn = new System.Windows.Forms.Label();
+            this.back_btn = new System.Windows.Forms.Label();
+            this.play_pause_btn = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duration_bar)).BeginInit();
             this.Menu.SuspendLayout();
@@ -143,81 +144,6 @@
             this.exitToolStripMenuItem});
             this.Menu.Name = "Menu";
             resources.ApplyResources(this.Menu, "Menu");
-            // 
-            // searchAudio_box
-            // 
-            this.searchAudio_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.searchAudio_box, "searchAudio_box");
-            this.searchAudio_box.Name = "searchAudio_box";
-            this.searchAudio_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchAudio_KeyDown);
-            // 
-            // AudioList
-            // 
-            this.AudioList.BackColor = System.Drawing.Color.White;
-            this.AudioList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.AudioList, "AudioList");
-            this.AudioList.FormattingEnabled = true;
-            this.AudioList.Name = "AudioList";
-            this.AudioList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseClick);
-            this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
-            // 
-            // find_btn
-            // 
-            this.find_btn.BackColor = System.Drawing.Color.Transparent;
-            this.find_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.find_btn.Image = global::VkPlayer.Resource1.find;
-            resources.ApplyResources(this.find_btn, "find_btn");
-            this.find_btn.Name = "find_btn";
-            this.find_btn.Click += new System.EventHandler(this.find_btn_Click);
-            // 
-            // mute_unmute
-            // 
-            this.mute_unmute.BackColor = System.Drawing.Color.Transparent;
-            this.mute_unmute.Image = global::VkPlayer.Resource1.unmute;
-            resources.ApplyResources(this.mute_unmute, "mute_unmute");
-            this.mute_unmute.Name = "mute_unmute";
-            this.mute_unmute.Click += new System.EventHandler(this.mute_unmute_Click);
-            // 
-            // random_radio
-            // 
-            this.random_radio.BackColor = System.Drawing.Color.Transparent;
-            this.random_radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.random_radio.Image = global::VkPlayer.Resource1.random;
-            resources.ApplyResources(this.random_radio, "random_radio");
-            this.random_radio.Name = "random_radio";
-            this.random_radio.Click += new System.EventHandler(this.random_radio_Click);
-            // 
-            // repeat_radio
-            // 
-            this.repeat_radio.BackColor = System.Drawing.Color.Transparent;
-            this.repeat_radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.repeat_radio.Image = global::VkPlayer.Resource1.repeat;
-            resources.ApplyResources(this.repeat_radio, "repeat_radio");
-            this.repeat_radio.Name = "repeat_radio";
-            this.repeat_radio.Click += new System.EventHandler(this.repeat_radio_Click);
-            // 
-            // next_btn
-            // 
-            this.next_btn.BackColor = System.Drawing.Color.Transparent;
-            this.next_btn.Image = global::VkPlayer.Resource1.next;
-            resources.ApplyResources(this.next_btn, "next_btn");
-            this.next_btn.Name = "next_btn";
-            this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
-            // 
-            // back_btn
-            // 
-            this.back_btn.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.back_btn, "back_btn");
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
-            // 
-            // play_pause_btn
-            // 
-            this.play_pause_btn.BackColor = System.Drawing.Color.Transparent;
-            this.play_pause_btn.Image = global::VkPlayer.Resource1.play;
-            resources.ApplyResources(this.play_pause_btn, "play_pause_btn");
-            this.play_pause_btn.Name = "play_pause_btn";
-            this.play_pause_btn.Click += new System.EventHandler(this.play_pause_btn_Click);
             // 
             // chooseColorToolStripMenuItem
             // 
@@ -357,6 +283,92 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // searchAudio_box
+            // 
+            this.searchAudio_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.searchAudio_box, "searchAudio_box");
+            this.searchAudio_box.Name = "searchAudio_box";
+            this.searchAudio_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchAudio_KeyDown);
+            // 
+            // AudioList
+            // 
+            this.AudioList.BackColor = System.Drawing.Color.White;
+            this.AudioList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.AudioList, "AudioList");
+            this.AudioList.FormattingEnabled = true;
+            this.AudioList.Name = "AudioList";
+            this.AudioList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseClick);
+            this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
+            // 
+            // find_btn
+            // 
+            this.find_btn.BackColor = System.Drawing.Color.Transparent;
+            this.find_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.find_btn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.find_btn.Image = global::VkPlayer.Resource1.find;
+            resources.ApplyResources(this.find_btn, "find_btn");
+            this.find_btn.Name = "find_btn";
+            this.find_btn.Click += new System.EventHandler(this.find_btn_Click);
+            // 
+            // mute_unmute
+            // 
+            this.mute_unmute.BackColor = System.Drawing.Color.Transparent;
+            this.mute_unmute.Image = global::VkPlayer.Resource1.unmute;
+            resources.ApplyResources(this.mute_unmute, "mute_unmute");
+            this.mute_unmute.Name = "mute_unmute";
+            this.mute_unmute.Click += new System.EventHandler(this.mute_unmute_Click);
+            // 
+            // random_radio
+            // 
+            this.random_radio.BackColor = System.Drawing.Color.Transparent;
+            this.random_radio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.random_radio.Image = global::VkPlayer.Resource1.random;
+            resources.ApplyResources(this.random_radio, "random_radio");
+            this.random_radio.Name = "random_radio";
+            this.random_radio.Click += new System.EventHandler(this.random_radio_Click);
+            // 
+            // repeat_radio
+            // 
+            this.repeat_radio.BackColor = System.Drawing.Color.Transparent;
+            this.repeat_radio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.repeat_radio.Image = global::VkPlayer.Resource1.repeat;
+            resources.ApplyResources(this.repeat_radio, "repeat_radio");
+            this.repeat_radio.Name = "repeat_radio";
+            this.repeat_radio.Click += new System.EventHandler(this.repeat_radio_Click);
+            // 
+            // next_btn
+            // 
+            this.next_btn.BackColor = System.Drawing.Color.Transparent;
+            this.next_btn.Image = global::VkPlayer.Resource1.next;
+            resources.ApplyResources(this.next_btn, "next_btn");
+            this.next_btn.Name = "next_btn";
+            this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
+            // 
+            // back_btn
+            // 
+            this.back_btn.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.back_btn, "back_btn");
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
+            // play_pause_btn
+            // 
+            this.play_pause_btn.BackColor = System.Drawing.Color.Transparent;
+            this.play_pause_btn.Image = global::VkPlayer.Resource1.play;
+            resources.ApplyResources(this.play_pause_btn, "play_pause_btn");
+            this.play_pause_btn.Name = "play_pause_btn";
+            this.play_pause_btn.Click += new System.EventHandler(this.play_pause_btn_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Image = global::VkPlayer.Resource1.list;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            this.label1.Click += new System.EventHandler(this.find_btn_Click);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -366,6 +378,7 @@
             this.Controls.Add(this.searchAudio_box);
             this.Controls.Add(this.AllTimeDur);
             this.Controls.Add(this.currentTimeDur);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.find_btn);
             this.Controls.Add(this.title_name);
             this.Controls.Add(this.mute_unmute);
@@ -401,7 +414,6 @@
         private System.Windows.Forms.Label random_radio;
         private System.Windows.Forms.Label mute_unmute;
         private System.Windows.Forms.Label currentTimeDur;
-        private System.Windows.Forms.Label AllTimeDur;
         private System.Windows.Forms.ContextMenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem chooseColorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem;
@@ -430,6 +442,8 @@
         internal System.Windows.Forms.TextBox searchAudio_box;
         internal System.Windows.Forms.ListBox AudioList;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.Label AllTimeDur;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -50,6 +50,7 @@ class OwnAudios:IState
         main.title_name.Text = main.vkDatas.audio[main.vkDatas._offset].Title;
         main.duration_timer.Start();
         main.duration_bar.Value = 0;
+
         if (main.VkBools.isBlack)
             main.play_pause_btn.Image = Resource1.pause_white;
         else
@@ -133,19 +134,8 @@ class SearchAudios:IState
     }
     public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
     {
-        string selectItem = main.AudioList.SelectedItem.ToString();
-        int index = 0;
-        for (int i = 0; i < selectItem.Length; i++)
-        {
-            if (selectItem[i] == ' ' && selectItem[i + 1] == '-' && selectItem[i + 2] == ' ')
-            {
-                index = i;
-                break;
-            }
+        main.CutAudio(main.AudioList.SelectedItem.ToString(), out string artist, out string title);
 
-        }
-        string artist = selectItem.Substring(0, index);
-        string title = selectItem.Substring(index + 3);
         foreach (var audio in main.vkDatas.searchAudios)
             if (audio.Artist == artist && audio.Title == title)
             {
@@ -153,6 +143,7 @@ class SearchAudios:IState
                 main.artist_name.Text = artist;
                 main.title_name.Text = title;
                 main.player.controls.play();
+                break;
             }
         if (main.VkBools.isBlack)
             main.play_pause_btn.Image = Resource1.pause_white;

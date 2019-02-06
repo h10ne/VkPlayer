@@ -101,6 +101,8 @@
             this.Controls.Add(this.login);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "authorization_form";
             this.Text = "Authorization";
             this.ResumeLayout(false);
