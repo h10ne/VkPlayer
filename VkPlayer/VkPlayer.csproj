@@ -248,8 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon1.ico" />
-    <None Include="Resources\person.png" />
+    <None Include="Resources\list_white.png" />
     <None Include="Resources\list.png" />
+    <None Include="Resources\person.png" />
     <None Include="Resources\ownList.png" />
     <None Include="Resources\door.png" />
     <None Include="Resources\auth_back_2.png" />

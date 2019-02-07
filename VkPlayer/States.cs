@@ -37,10 +37,11 @@ class OwnAudios:IState
     public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
     {      
         try
-        {         
-            main.CutAudio(main.AudioList.SelectedItem.ToString(), out string artist, out string title);
+        {
+            if (main.vkDatas._offset == -1)
+                throw new Exception();
             foreach (var audio in main.vkDatas.audio)
-                if (audio.Artist == artist && audio.Title == title)
+                if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
                 {
                     main.vkDatas._offset = main.AudioList.SelectedIndex;
                     bool th = false;
@@ -54,15 +55,18 @@ class OwnAudios:IState
                     }
                     if (th) throw new Exception("1");
                     main.player.URL = audio.Url.ToString();
-                    main.artist_name.Text = artist;
-                    main.title_name.Text = title;
+                    main.artist_name.Text = audio.Artist;
+                    main.title_name.Text = audio.Title;
                     main.player.controls.play();
                     break;
                 }
+
         }
         catch
         {
             Thread.Sleep(270);
+            if (main.vkDatas._offset == -1)
+                main.vkDatas._offset++;
             main.player.settings.volume = main.volume.Value;
             main.player.URL = main.vkDatas.audio[main.vkDatas._offset].Url.ToString();
             main.artist_name.Text = main.vkDatas.audio[main.vkDatas._offset].Artist;
@@ -167,13 +171,12 @@ class SearchAudios:IState
     }
     public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
     {
-        main.CutAudio(main.AudioList.SelectedItem.ToString(), out string artist, out string title);
         foreach (var audio in main.vkDatas.searchAudios)
-            if (audio.Artist == artist && audio.Title == title)
+            if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
             {
                 main.player.URL = audio.Url.ToString();
-                main.artist_name.Text = artist;
-                main.title_name.Text = title;
+                main.artist_name.Text = audio.Artist;
+                main.title_name.Text = audio.Title;
                 main.player.controls.play();
                 break;
             }

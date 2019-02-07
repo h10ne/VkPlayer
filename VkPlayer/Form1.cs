@@ -379,13 +379,13 @@ namespace VkPlayer
                     play_pause_btn.Image = Resource1.play_white;
                 next_btn.Image = Resource1.next_white;
                 back_btn.Image = Resource1.prev_white;
-                find_btn.Image = Resource1.find_white;
                 if (VkBools.mute)
                     mute_unmute.Image = Resource1.mute_white;
                 else
                     mute_unmute.Image = Resource1.unmute_white;
                 repeat_radio.Image = Resource1.repeat_white;
                 random_radio.Image = Resource1.random_white;
+                List.Image = Resource1.list_white;
                 currentTimeDur.ForeColor = Color.White;
                 AllTimeDur.ForeColor = Color.White;
             }
@@ -400,13 +400,13 @@ namespace VkPlayer
                     play_pause_btn.Image = Resource1.play;
                 next_btn.Image = Resource1.next;
                 back_btn.Image = Resource1.prev;
-                find_btn.Image = Resource1.find;
                 if (VkBools.mute)
                     mute_unmute.Image = Resource1.mute;
                 else
                     mute_unmute.Image = Resource1.unmute;
                 repeat_radio.Image = Resource1.repeat;
                 random_radio.Image = Resource1.random;
+                List.Image = Resource1.list;
                 currentTimeDur.ForeColor = Color.Black;
                 AllTimeDur.ForeColor = Color.Black;
             }
@@ -617,6 +617,7 @@ namespace VkPlayer
         {
             if (e.KeyCode == Keys.Enter)
             {
+                playlist = new Playlist(new SearchAudios());
                 AudioList.Items.Clear();
                 e.SuppressKeyPress = true;
                 try
@@ -630,26 +631,9 @@ namespace VkPlayer
                         PerformerOnly = false
                     });
                     AddAudioToList(vkDatas.searchAudios);
-                    
                 }
                 catch { }
             }
-        }
-        
-        public void CutAudio(string source, out string name, out string title)
-        {
-            string selectItem = source;
-            int index = 0;
-            for (int i = 0; i < selectItem.Length; i++)
-            {
-                if (selectItem[i] == ' ' && selectItem[i + 1] == '-' && selectItem[i + 2] == ' ')
-                {
-                    index = i;
-                    break;
-                }
-            }
-            name = selectItem.Substring(0, index);
-            title = selectItem.Substring(index + 3);
         }
 
 
@@ -673,16 +657,6 @@ namespace VkPlayer
             next_btn.Focus();
         }
 
-        private void find_btn_Click(object sender, EventArgs e)
-        {
-            playlist = new Playlist(new SearchAudios());
-            try
-            {
-                AddAudioToList(vkDatas.searchAudios);
-            }
-            catch { }
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.IO.File.Delete("auth.dat");
@@ -695,12 +669,14 @@ namespace VkPlayer
         {
             if (VkBools.isFind)
             {
-                Width = 365;
+                //Width = 365;
+                Height = 167;
                 VkBools.isFind = false;
             }
             else
             {
-                Width = 601;
+                //Width = 601;
+                Height = 410;
                 VkBools.isFind = true;
             }
             play_pause_btn.Focus();
@@ -708,9 +684,10 @@ namespace VkPlayer
 
         private void Own_Click(object sender, EventArgs e)
         {
+            AudioList.Items.Clear();
             playlist = new Playlist(new OwnAudios());
-            AudioList.SelectedIndex = int.Parse(vkDatas._offset.ToString());
             AddAudioToList(vkDatas.audio);
+            AudioList.SelectedIndex = vkDatas._offset;
         }
     }
 }

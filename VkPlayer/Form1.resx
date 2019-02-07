@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;artist_name.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="title_name.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Devanagari, 12pt, style=Bold</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;title_name.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="volume.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -214,7 +214,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;volume.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="duration_bar.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -241,7 +241,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;duration_bar.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <metadata name="duration_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -319,7 +319,7 @@
     <value>3</value>
   </data>
   <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 17</value>
+    <value>417, 22</value>
   </metadata>
   <data name="redToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
@@ -496,10 +496,10 @@
     <value>Roboto Light, 9.75pt</value>
   </data>
   <data name="searchAudio_box.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 6</value>
+    <value>6, 132</value>
   </data>
   <data name="searchAudio_box.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 23</value>
+    <value>337, 23</value>
   </data>
   <data name="searchAudio_box.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -523,10 +523,10 @@
     <value>15</value>
   </data>
   <data name="AudioList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 29</value>
+    <value>6, 161</value>
   </data>
   <data name="AudioList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 92</value>
+    <value>337, 212</value>
   </data>
   <data name="AudioList.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -547,10 +547,10 @@
     <value>NoControl</value>
   </data>
   <data name="List.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 9</value>
+    <value>318, 5</value>
   </data>
   <data name="List.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+    <value>25, 22</value>
   </data>
   <data name="List.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -567,29 +567,29 @@
   <data name="&gt;&gt;List.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="find_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="Own.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="find_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 43</value>
+  <data name="Own.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 30</value>
   </data>
-  <data name="find_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+  <data name="Own.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 22</value>
   </data>
-  <data name="find_btn.TabIndex" type="System.Int32, mscorlib">
+  <data name="Own.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;find_btn.Name" xml:space="preserve">
-    <value>find_btn</value>
+  <data name="&gt;&gt;Own.Name" xml:space="preserve">
+    <value>Own</value>
   </data>
-  <data name="&gt;&gt;find_btn.Type" xml:space="preserve">
+  <data name="&gt;&gt;Own.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;find_btn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Own.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;find_btn.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;Own.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="mute_unmute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -613,7 +613,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mute_unmute.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="random_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -637,7 +637,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;random_radio.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="repeat_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -661,7 +661,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;repeat_radio.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="next_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -685,7 +685,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;next_btn.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="back_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -721,7 +721,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="play_pause_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -745,31 +745,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;play_pause_btn.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="Own.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Own.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 67</value>
-  </data>
-  <data name="Own.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
-  </data>
-  <data name="Own.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Own.Name" xml:space="preserve">
-    <value>Own</value>
-  </data>
-  <data name="&gt;&gt;Own.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Own.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Own.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>16</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -781,7 +757,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>587, 131</value>
+    <value>349, 128</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1230,6 +1206,9 @@
         AAA//wAA//8AAAAAAAD//wAA//+AAAAAAAH//wAA///gAAAAAAf//wAA///wAAAAAA///wAA///8AAAA
         AD///wAA////AAAAAP///wAA////4AAAB////wAA/////gAAf////wAA
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VkPlayer</value>
