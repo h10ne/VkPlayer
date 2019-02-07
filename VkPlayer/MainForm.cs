@@ -37,8 +37,6 @@ namespace VkPlayer
             VkBools = new Switches();
             vkDatas = new VkDatas();
             playlist = new Playlist(new OwnAudios());
-            //AddAudioToList(vkDatas.audio);
-            //AudioList.SelectedIndex = 1;
             if (File.Exists("auth.dat"))
             {
                 Token = File.ReadAllText("auth.dat");
@@ -46,7 +44,7 @@ namespace VkPlayer
             }
             else
             {
-                authorization_form f = new authorization_form
+                AuthForm f = new AuthForm
                 {
                     Owner = this
                 };
@@ -61,8 +59,7 @@ namespace VkPlayer
             title_name.Font = Roboto_medium;
             AudioList.Font = Roboto_thin_10;
             searchAudio_box.Font = Roboto_thin_10;
-            MainColor = Color.FromArgb(255, 63, 81, 181);
-            addColor = Color.FromArgb(255, 48, 63, 159);
+
             if (File.Exists("user_color.dat"))
             {
                 byte darkTheme = 20;
@@ -89,6 +86,12 @@ namespace VkPlayer
                     searchAudio_box.ForeColor = Color.White;
                 }
             }
+            else
+            {
+                MainColor = Color.FromArgb(255, 63, 81, 181);
+                addColor = Color.FromArgb(255, 48, 63, 159);
+            }
+            Own.BackColor = addColor;
             BackColor = MainColor;
             KeyPreview = true;
             this.ContextMenuStrip = Menu;
@@ -339,6 +342,22 @@ namespace VkPlayer
                 {
                     SetMute_Unmute();
                 }
+                else if (e.KeyCode == Keys.O)
+                {
+                    SetOwn();
+                }
+                else if (e.KeyCode == Keys.H)
+                {
+                    SetHot();
+                }
+                else if (e.KeyCode == Keys.R)
+                {
+                    SetRecom();
+                }
+                else if (e.KeyCode == Keys.L)
+                {
+                    Hide_Unhide();
+                }
             }
         }
 
@@ -420,6 +439,7 @@ namespace VkPlayer
             this.BackColor = mainColor;
             this.MainColor = mainColor;
             this.addColor = addColor;
+            SetBackColorForLists("none");
             AudioList.BackColor = addColor;
             searchAudio_box.BackColor = addColor;
             if (VkBools.repeat)
@@ -613,20 +633,22 @@ namespace VkPlayer
 
         private void SetBackColorForLists(string wich)
         {
-            Own.BackColor = MainColor;
-            Hot.BackColor = MainColor;
-            recom.BackColor = MainColor;
-
             wich = wich.ToUpper();
             switch (wich)
             {
                 case "OWN":
+                    Hot.BackColor = MainColor;
+                    recom.BackColor = MainColor;
                     Own.BackColor = addColor;
                     break;
                 case "HOT":
+                    Own.BackColor = MainColor;
+                    recom.BackColor = MainColor;
                     Hot.BackColor = addColor;
                     break;
                 case "RECOM":
+                    Own.BackColor = MainColor;
+                    Hot.BackColor = MainColor;
                     recom.BackColor = addColor;
                     break;
             }
@@ -692,7 +714,8 @@ namespace VkPlayer
             System.Windows.Forms.Application.Restart();
             Close();
         }
-        private void List_Click(object sender, EventArgs e)
+
+        private void Hide_Unhide()
         {
             if (VkBools.isFind)
             {
@@ -703,33 +726,58 @@ namespace VkPlayer
             else
             {
                 //Width = 601;
-                Height = 410;
+                Height = 405;
                 VkBools.isFind = true;
             }
             play_pause_btn.Focus();
         }
+        private void List_Click(object sender, EventArgs e)
+        {
+            Hide_Unhide();
+        }
 
-        private void Own_Click(object sender, EventArgs e)
+        private void SetOwn()
         {
             AudioList.Items.Clear();
             playlist = new Playlist(new OwnAudios());
             SetBackColorForLists("own");
             AddAudioToList(vkDatas.Audio);
             AudioList.SelectedIndex = vkDatas._offset;
+            playlist.NextSong(this);
+        }
+
+        private void SetHot()
+        {
+            SetBackColorForLists("hot");
+            playlist = new Playlist(new HotAudio());
+            vkDatas.HotAudios = api.Audio.GetPopular(onlyEng: false, genre: null, count: 35, offset: null);
+            AudioList.Items.Clear();
+            foreach (var audio in vkDatas.HotAudios)
+                AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
+            playlist.NextSong(this);
+        }
+
+        private void Own_Click(object sender, EventArgs e)
+        {
+            SetOwn();
         }
 
         private void Hot_Click(object sender, EventArgs e)
         {
-            SetBackColorForLists("hot");
+            SetHot();
         }
 
-        private void recom_Click(object sender, EventArgs e)
+        private void SetRecom()
         {
             SetBackColorForLists("recom");
             playlist = new Playlist(new RecommendedAudio());
-            vkDatas.RecommendedAudio = api.Audio.GetRecommendations(null,null,50,null,true);
+            vkDatas.RecommendedAudio = api.Audio.GetRecommendations(null, null, 50, null, true);
             AddAudioToList(vkDatas.RecommendedAudio);
-
+            playlist.NextSong(this);
+        }
+        private void recom_Click(object sender, EventArgs e)
+        {
+            SetRecom();
         }
     }
 }

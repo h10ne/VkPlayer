@@ -321,6 +321,168 @@
   <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>417, 22</value>
   </metadata>
+  <data name="redToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
+  </data>
+  <data name="redToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="redToolStripMenuItem.Text" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="purpleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="purpleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="deepPurpleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="deepPurpleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Deep purple</value>
+  </data>
+  <data name="indigoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAQNJREFUOE+d07tKA0EYhuGc8QICFgbtY+GhS69FSKFNbkhBbAKmE7HTLoGghEDE
+        aJs70cLCQkSNp/ddnGYZIZviYWH4v5mdmX9yjWYvKGEF++hgjClu0UUbqygjyYSgA1s4wzO+8ZPygks0
+        sIQkXMAGhpghHUq7gxNUDC/jFB+IFcdcYM1wE0+I/ep/3ELb8BHe/waz6Bq+wjx7TZsYnmCR8NTwAFkO
+        K7gxfIg3ZDkwazuGd/CIL8QKY2ykPcNVnOAV86z+iXPUDNthdfQRJohN4phnM8I2yoZVxDp8AA/wDLwB
+        V/FryEay9zeRPI4QVh5uYRcH8BbucY1jtGAruxD1vdwvodexu7YXGe0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="indigoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="indigoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="blueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="blueToolStripMenuItem.Text" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cyanToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="cyanToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="tealToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="tealToolStripMenuItem.Text" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="greenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="greenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="limeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="limeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="yellowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="yellowToolStripMenuItem.Text" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="amberToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="amberToolStripMenuItem.Text" xml:space="preserve">
+    <value>Amber</value>
+  </data>
+  <data name="orangeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAQpJREFUOE990z1LQnEYhnG1xE8gQmGji0u55AeooRYb+kQGTgk5SqODkyAODhHO
+        fZQGB4eUfCm7rgMH4vBwhh8H5L79v5znFI7jRqqMCzziBe/4wBv66OAcJ0g6abGCa4zwhWPGL1Z4RQsu
+        lJRP0cYC2VLWHnNcoWS5DleMwpEdhqhZ9oxrRMGIR1jizrKXE4XyuHrPsrcaBfJ49pllX0cUyGN5Ydn3
+        GAXyuO2p5Wd4CVEoYnaLruUHOABRMPKDT9xYPoOTc0AU/s9VNxigatlZdeScHM8SHcHf0uIETRQty1m9
+        hJPjAPgn3qi78fkNt+qKFpOPIy2rhBru0cMMzvsUT7hFFUWQbxT+APpqPYIPU/bUAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="orangeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="deepOrangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="deepOrangeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Deep orange</value>
+  </data>
+  <data name="brownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="brownToolStripMenuItem.Text" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="blueGrayToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAARlJREFUOE+V0zFLAmEcx3HPihCapEVoE2pQfAEOFUZTg7OTi6/BIWgLGnJxEASX
+        42gQComgrSLEw8kX0BCtLVlBKVRW399xB8fxCOfwWf78f8/9n+eeJ3F55wZWkUUFLdxgiGuc4AAZLMHL
+        BME1lHCOT/xFzPCMJgpYgRdOYR8DRENRWriLPJIK53ABU7PJOxpYV7gG06jzaAuP2FO44xcX8YpDhfuh
+        Ylya1FF4FCrGNUFP4ftQMa4P2Aq38esX41DvGHWFq9DxmxpNfvCAHYW3cOYXTc1h+uoLjpFWWHd6G7rL
+        3zBtQTX93zfY2ISlsOiKFuFA+/mCJhEtOMUT9EA0qfc4grAsYwNlnOIKt9BjOcIu0rBAv5v4B753l6/M
+        rgGzAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="blueGrayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="blueGrayToolStripMenuItem.Text" xml:space="preserve">
+    <value>BlueGray</value>
+  </data>
+  <data name="blackToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAQ9JREFUOE+V0yFPQmEUh3GYd+oIbpjwNoMBszOS9RPY+RDMit/AIhs2RiC5STUR
+        KPgFIGs0OEUloPg8TBy7OzANv93t7vw597zvIZem6UIBZVTRRA/3uMMlzrCPLcwzi+AOTnCDd8wyPvEE
+        f/QY25iH7Wiwj2wo6wO3OEJi+BB2jIojY1yhZNgZo09dxREecWr4+uflf7ygbthTjQrWcfaO4cHSy7+a
+        oGvYe4wK1vGMWoZdAA8hKop84Rk1w26OCxAVRqYYoWLYlXNznCMqXmZXG11g1/AmXDk35w3RCIbsaNCr
+        PUDesNxVV66BB7zC6/BrfDrjEHY0uIHfP4YS7ME9r6ODLto4RwVF5EF9mvsGxlHtNBTNLq0AAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="blackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="blackToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 9.75pt</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="exitToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="exitToolStripMenuItem.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 48</value>
   </data>
@@ -553,7 +715,7 @@
     <value>NoControl</value>
   </data>
   <data name="next_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 56</value>
+    <value>202, 61</value>
   </data>
   <data name="next_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 27</value>
@@ -589,7 +751,7 @@
     <value>NoControl</value>
   </data>
   <data name="back_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 56</value>
+    <value>125, 61</value>
   </data>
   <data name="back_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 27</value>
@@ -613,7 +775,7 @@
     <value>NoControl</value>
   </data>
   <data name="play_pause_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 43</value>
+    <value>150, 48</value>
   </data>
   <data name="play_pause_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 55</value>
@@ -633,168 +795,6 @@
   <data name="&gt;&gt;play_pause_btn.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 9.75pt</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="redToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto Light, 9.75pt</value>
-  </data>
-  <data name="redToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="redToolStripMenuItem.Text" xml:space="preserve">
-    <value>Red</value>
-  </data>
-  <data name="purpleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="purpleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Purple</value>
-  </data>
-  <data name="deepPurpleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="deepPurpleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Deep purple</value>
-  </data>
-  <data name="indigoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAAQNJREFUOE+d07tKA0EYhuGc8QICFgbtY+GhS69FSKFNbkhBbAKmE7HTLoGghEDE
-        aJs70cLCQkSNp/ddnGYZIZviYWH4v5mdmX9yjWYvKGEF++hgjClu0UUbqygjyYSgA1s4wzO+8ZPygks0
-        sIQkXMAGhpghHUq7gxNUDC/jFB+IFcdcYM1wE0+I/ep/3ELb8BHe/waz6Bq+wjx7TZsYnmCR8NTwAFkO
-        K7gxfIg3ZDkwazuGd/CIL8QKY2ykPcNVnOAV86z+iXPUDNthdfQRJohN4phnM8I2yoZVxDp8AA/wDLwB
-        V/FryEay9zeRPI4QVh5uYRcH8BbucY1jtGAruxD1vdwvodexu7YXGe0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="indigoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="indigoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Indigo</value>
-  </data>
-  <data name="blueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="blueToolStripMenuItem.Text" xml:space="preserve">
-    <value>Blue</value>
-  </data>
-  <data name="cyanToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="cyanToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cyan</value>
-  </data>
-  <data name="tealToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="tealToolStripMenuItem.Text" xml:space="preserve">
-    <value>Teal</value>
-  </data>
-  <data name="greenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="greenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Green</value>
-  </data>
-  <data name="limeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="limeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Lime</value>
-  </data>
-  <data name="yellowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="yellowToolStripMenuItem.Text" xml:space="preserve">
-    <value>Yellow</value>
-  </data>
-  <data name="amberToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="amberToolStripMenuItem.Text" xml:space="preserve">
-    <value>Amber</value>
-  </data>
-  <data name="orangeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAAQpJREFUOE990z1LQnEYhnG1xE8gQmGji0u55AeooRYb+kQGTgk5SqODkyAODhHO
-        fZQGB4eUfCm7rgMH4vBwhh8H5L79v5znFI7jRqqMCzziBe/4wBv66OAcJ0g6abGCa4zwhWPGL1Z4RQsu
-        lJRP0cYC2VLWHnNcoWS5DleMwpEdhqhZ9oxrRMGIR1jizrKXE4XyuHrPsrcaBfJ49pllX0cUyGN5Ydn3
-        GAXyuO2p5Wd4CVEoYnaLruUHOABRMPKDT9xYPoOTc0AU/s9VNxigatlZdeScHM8SHcHf0uIETRQty1m9
-        hJPjAPgn3qi78fkNt+qKFpOPIy2rhBru0cMMzvsUT7hFFUWQbxT+APpqPYIPU/bUAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="orangeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Orange</value>
-  </data>
-  <data name="deepOrangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="deepOrangeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Deep orange</value>
-  </data>
-  <data name="brownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="brownToolStripMenuItem.Text" xml:space="preserve">
-    <value>Brown</value>
-  </data>
-  <data name="blueGrayToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAARlJREFUOE+V0zFLAmEcx3HPihCapEVoE2pQfAEOFUZTg7OTi6/BIWgLGnJxEASX
-        42gQComgrSLEw8kX0BCtLVlBKVRW399xB8fxCOfwWf78f8/9n+eeJ3F55wZWkUUFLdxgiGuc4AAZLMHL
-        BME1lHCOT/xFzPCMJgpYgRdOYR8DRENRWriLPJIK53ABU7PJOxpYV7gG06jzaAuP2FO44xcX8YpDhfuh
-        Ylya1FF4FCrGNUFP4ftQMa4P2Aq38esX41DvGHWFq9DxmxpNfvCAHYW3cOYXTc1h+uoLjpFWWHd6G7rL
-        3zBtQTX93zfY2ISlsOiKFuFA+/mCJhEtOMUT9EA0qfc4grAsYwNlnOIKt9BjOcIu0rBAv5v4B753l6/M
-        rgGzAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="blueGrayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="blueGrayToolStripMenuItem.Text" xml:space="preserve">
-    <value>BlueGray</value>
-  </data>
-  <data name="blackToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAAQ9JREFUOE+V0yFPQmEUh3GYd+oIbpjwNoMBszOS9RPY+RDMit/AIhs2RiC5STUR
-        KPgFIGs0OEUloPg8TBy7OzANv93t7vw597zvIZem6UIBZVTRRA/3uMMlzrCPLcwzi+AOTnCDd8wyPvEE
-        f/QY25iH7Wiwj2wo6wO3OEJi+BB2jIojY1yhZNgZo09dxREecWr4+uflf7ygbthTjQrWcfaO4cHSy7+a
-        oGvYe4wK1vGMWoZdAA8hKop84Rk1w26OCxAVRqYYoWLYlXNznCMqXmZXG11g1/AmXDk35w3RCIbsaNCr
-        PUDesNxVV66BB7zC6/BrfDrjEHY0uIHfP4YS7ME9r6ODLto4RwVF5EF9mvsGxlHtNBTNLq0AAAAASUVO
-        RK5CYII=
-</value>
-  </data>
-  <data name="blackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="blackToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dark</value>
-  </data>
-  <data name="exitToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="exitToolStripMenuItem.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Transparent</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -805,7 +805,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>349, 357</value>
+    <value>349, 128</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1254,9 +1254,6 @@
         AAA//wAA//8AAAAAAAD//wAA//+AAAAAAAH//wAA///gAAAAAAf//wAA///wAAAAAA///wAA///8AAAA
         AD///wAA////AAAAAP///wAA////4AAAB////wAA/////gAAf////wAA
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VkPlayer</value>

@@ -139,7 +139,7 @@ class SearchAudios:IState
         }
         catch
         {
-            main.AudioList.SelectedIndex = 19;
+            main.AudioList.SelectedIndex = main.AudioList.Items.Count - 1;
             SetAudioInfo(main, true);
         }
     }
@@ -152,11 +152,7 @@ class SearchAudios:IState
             {
                 Random rnds = new Random();
                 int value;
-                do
-                {
-                    value = rnds.Next(0, 19);
-                }
-                while (value >= main.AudioList.Items.Count);
+                value = rnds.Next(0, main.AudioList.Items.Count);
                 main.AudioList.SelectedIndex = value;
                 SetAudioInfo(main);
             }
@@ -180,11 +176,24 @@ class SearchAudios:IState
         foreach (var audio in main.vkDatas.SearchAudios)
             if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
             {
-                main.player.URL = audio.Url.ToString();
-                main.artist_name.Text = audio.Artist;
-                main.title_name.Text = audio.Title;
-                main.player.controls.play();
-                break;
+                if (audio.Url != null)
+                {
+                    main.player.URL = audio.Url.ToString();
+                    main.artist_name.Text = audio.Artist;
+                    main.title_name.Text = audio.Title;
+                    main.player.controls.play();
+                    break;
+                }
+                else if (isback)
+                {
+                    main.AudioList.SelectedIndex -= 1;
+                    SetAudioInfo(main, true);
+                }
+                else
+                {
+                    main.AudioList.SelectedIndex += 1;
+                    SetAudioInfo(main, false);
+                }
             }
         if (main.VkBools.isBlack)
             main.play_pause_btn.Image = Resource1.pause_white;
@@ -202,11 +211,11 @@ class RecommendedAudio : IState
         {
 
             main.AudioList.SelectedIndex -= 1;
-            SetAudioInfo(main);
+            SetAudioInfo(main, true);
         }
         catch
         {
-            main.AudioList.SelectedIndex = 49;
+            main.AudioList.SelectedIndex = main.AudioList.Items.Count-1;
             SetAudioInfo(main, true);
         }
     }
@@ -216,7 +225,7 @@ class RecommendedAudio : IState
         if (main.VkBools.random)
         {
             Random rnds = new Random();
-            int value = rnds.Next(0, 16);
+            int value = rnds.Next(0, main.AudioList.Items.Count);
             main.AudioList.SelectedIndex = value;
             SetAudioInfo(main);
         }
@@ -239,11 +248,97 @@ class RecommendedAudio : IState
         foreach (var audio in main.vkDatas.RecommendedAudio)
             if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
             {
-                main.player.URL = audio.Url.ToString();
-                main.artist_name.Text = audio.Artist;
-                main.title_name.Text = audio.Title;
-                main.player.controls.play();
-                break;
+                if (audio.Url != null)
+                {
+                    main.player.URL = audio.Url.ToString();
+                    main.artist_name.Text = audio.Artist;
+                    main.title_name.Text = audio.Title;
+                    main.player.controls.play();
+                    break;
+                }
+                else if (isback)
+                {
+                    main.AudioList.SelectedIndex -= 1;
+                    SetAudioInfo(main, true);
+                }
+                else
+                {
+                    main.AudioList.SelectedIndex += 1;
+                    SetAudioInfo(main, false);
+                }
+            }
+        if (main.VkBools.isBlack)
+            main.play_pause_btn.Image = Resource1.pause_white;
+        else
+            main.play_pause_btn.Image = Resource1.pause;
+        main.VkBools.isPlay = true;
+    }
+}
+
+
+class HotAudio : IState
+{
+    public void PrevSong(VkPlayer.Main main)
+    {
+        try
+        {
+
+            main.AudioList.SelectedIndex -= 1;
+            SetAudioInfo(main, true);
+        }
+        catch
+        {
+            main.AudioList.SelectedIndex = main.AudioList.Items.Count - 1;
+            SetAudioInfo(main, true);
+        }
+    }
+
+    public void NextSong(VkPlayer.Main main)
+    {
+        if (main.VkBools.random)
+        {
+            Random rnds = new Random();
+            int value = rnds.Next(0, main.AudioList.Items.Count);
+            main.AudioList.SelectedIndex = value;
+            SetAudioInfo(main);
+        }
+        else
+        {
+            try
+            {
+                main.AudioList.SelectedIndex += 1;
+                SetAudioInfo(main);
+            }
+            catch
+            {
+                main.AudioList.SelectedIndex = 0;
+                SetAudioInfo(main);
+            }
+        }
+    }
+    public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
+    {
+        foreach (var audio in main.vkDatas.HotAudios)
+            if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
+            {
+                if (audio.Url != null)
+                {
+                    main.player.URL = audio.Url.ToString();
+                    main.artist_name.Text = audio.Artist;
+                    main.title_name.Text = audio.Title;
+                    main.player.controls.play();
+                    break;
+                }
+                else if (isback)
+                {
+                    main.AudioList.SelectedIndex -= 1;
+                    SetAudioInfo(main, true);
+                }
+                else
+                {
+                    main.AudioList.SelectedIndex += 1;
+                    SetAudioInfo(main, false);
+                }
             }
         if (main.VkBools.isBlack)
             main.play_pause_btn.Image = Resource1.pause_white;

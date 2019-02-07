@@ -40,18 +40,6 @@
             this.currentTimeDur = new System.Windows.Forms.Label();
             this.AllTimeDur = new System.Windows.Forms.Label();
             this.Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.searchAudio_box = new System.Windows.Forms.TextBox();
-            this.AudioList = new System.Windows.Forms.ListBox();
-            this.Hot = new System.Windows.Forms.Label();
-            this.List = new System.Windows.Forms.Label();
-            this.recom = new System.Windows.Forms.Label();
-            this.Own = new System.Windows.Forms.Label();
-            this.mute_unmute = new System.Windows.Forms.Label();
-            this.random_radio = new System.Windows.Forms.Label();
-            this.repeat_radio = new System.Windows.Forms.Label();
-            this.next_btn = new System.Windows.Forms.Label();
-            this.back_btn = new System.Windows.Forms.Label();
-            this.play_pause_btn = new System.Windows.Forms.Label();
             this.chooseColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,6 +58,18 @@
             this.blueGrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchAudio_box = new System.Windows.Forms.TextBox();
+            this.AudioList = new System.Windows.Forms.ListBox();
+            this.Hot = new System.Windows.Forms.Label();
+            this.List = new System.Windows.Forms.Label();
+            this.recom = new System.Windows.Forms.Label();
+            this.Own = new System.Windows.Forms.Label();
+            this.mute_unmute = new System.Windows.Forms.Label();
+            this.random_radio = new System.Windows.Forms.Label();
+            this.repeat_radio = new System.Windows.Forms.Label();
+            this.next_btn = new System.Windows.Forms.Label();
+            this.back_btn = new System.Windows.Forms.Label();
+            this.play_pause_btn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duration_bar)).BeginInit();
             this.Menu.SuspendLayout();
@@ -98,7 +98,7 @@
             this.volume.SmallChange = 0;
             this.volume.TabStop = false;
             this.volume.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.volume.Value = 50;
+            this.volume.Value = 25;
             this.volume.Scroll += new System.EventHandler(this.volume_Scroll);
             // 
             // duration_bar
@@ -146,112 +146,6 @@
             this.exitToolStripMenuItem});
             this.Menu.Name = "Menu";
             resources.ApplyResources(this.Menu, "Menu");
-            // 
-            // searchAudio_box
-            // 
-            this.searchAudio_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.searchAudio_box, "searchAudio_box");
-            this.searchAudio_box.Name = "searchAudio_box";
-            this.searchAudio_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchAudio_KeyDown);
-            // 
-            // AudioList
-            // 
-            this.AudioList.BackColor = System.Drawing.Color.White;
-            this.AudioList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.AudioList, "AudioList");
-            this.AudioList.FormattingEnabled = true;
-            this.AudioList.Name = "AudioList";
-            this.AudioList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseClick);
-            this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
-            // 
-            // Hot
-            // 
-            this.Hot.BackColor = System.Drawing.Color.Transparent;
-            this.Hot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Hot.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Hot.Image = global::VkPlayer.Resource1.hot;
-            resources.ApplyResources(this.Hot, "Hot");
-            this.Hot.Name = "Hot";
-            this.Hot.Click += new System.EventHandler(this.Hot_Click);
-            // 
-            // List
-            // 
-            this.List.BackColor = System.Drawing.Color.Transparent;
-            this.List.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.List.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.List.Image = global::VkPlayer.Resource1.list;
-            resources.ApplyResources(this.List, "List");
-            this.List.Name = "List";
-            this.List.Click += new System.EventHandler(this.List_Click);
-            // 
-            // recom
-            // 
-            this.recom.BackColor = System.Drawing.Color.Transparent;
-            this.recom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.recom.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.recom.Image = global::VkPlayer.Resource1.recom;
-            resources.ApplyResources(this.recom, "recom");
-            this.recom.Name = "recom";
-            this.recom.Click += new System.EventHandler(this.recom_Click);
-            // 
-            // Own
-            // 
-            this.Own.BackColor = System.Drawing.Color.Transparent;
-            this.Own.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Own.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Own.Image = global::VkPlayer.Resource1.person;
-            resources.ApplyResources(this.Own, "Own");
-            this.Own.Name = "Own";
-            this.Own.Click += new System.EventHandler(this.Own_Click);
-            // 
-            // mute_unmute
-            // 
-            this.mute_unmute.BackColor = System.Drawing.Color.Transparent;
-            this.mute_unmute.Image = global::VkPlayer.Resource1.unmute;
-            resources.ApplyResources(this.mute_unmute, "mute_unmute");
-            this.mute_unmute.Name = "mute_unmute";
-            this.mute_unmute.Click += new System.EventHandler(this.mute_unmute_Click);
-            // 
-            // random_radio
-            // 
-            this.random_radio.BackColor = System.Drawing.Color.Transparent;
-            this.random_radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.random_radio.Image = global::VkPlayer.Resource1.random;
-            resources.ApplyResources(this.random_radio, "random_radio");
-            this.random_radio.Name = "random_radio";
-            this.random_radio.Click += new System.EventHandler(this.random_radio_Click);
-            // 
-            // repeat_radio
-            // 
-            this.repeat_radio.BackColor = System.Drawing.Color.Transparent;
-            this.repeat_radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.repeat_radio.Image = global::VkPlayer.Resource1.repeat;
-            resources.ApplyResources(this.repeat_radio, "repeat_radio");
-            this.repeat_radio.Name = "repeat_radio";
-            this.repeat_radio.Click += new System.EventHandler(this.repeat_radio_Click);
-            // 
-            // next_btn
-            // 
-            this.next_btn.BackColor = System.Drawing.Color.Transparent;
-            this.next_btn.Image = global::VkPlayer.Resource1.next;
-            resources.ApplyResources(this.next_btn, "next_btn");
-            this.next_btn.Name = "next_btn";
-            this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
-            // 
-            // back_btn
-            // 
-            this.back_btn.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.back_btn, "back_btn");
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
-            // 
-            // play_pause_btn
-            // 
-            this.play_pause_btn.BackColor = System.Drawing.Color.Transparent;
-            this.play_pause_btn.Image = global::VkPlayer.Resource1.play;
-            resources.ApplyResources(this.play_pause_btn, "play_pause_btn");
-            this.play_pause_btn.Name = "play_pause_btn";
-            this.play_pause_btn.Click += new System.EventHandler(this.play_pause_btn_Click);
             // 
             // chooseColorToolStripMenuItem
             // 
@@ -390,6 +284,112 @@
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // searchAudio_box
+            // 
+            this.searchAudio_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.searchAudio_box, "searchAudio_box");
+            this.searchAudio_box.Name = "searchAudio_box";
+            this.searchAudio_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchAudio_KeyDown);
+            // 
+            // AudioList
+            // 
+            this.AudioList.BackColor = System.Drawing.Color.White;
+            this.AudioList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.AudioList, "AudioList");
+            this.AudioList.FormattingEnabled = true;
+            this.AudioList.Name = "AudioList";
+            this.AudioList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseClick);
+            this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
+            // 
+            // Hot
+            // 
+            this.Hot.BackColor = System.Drawing.Color.Transparent;
+            this.Hot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Hot.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Hot.Image = global::VkPlayer.Resource1.hot;
+            resources.ApplyResources(this.Hot, "Hot");
+            this.Hot.Name = "Hot";
+            this.Hot.Click += new System.EventHandler(this.Hot_Click);
+            // 
+            // List
+            // 
+            this.List.BackColor = System.Drawing.Color.Transparent;
+            this.List.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.List.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.List.Image = global::VkPlayer.Resource1.list;
+            resources.ApplyResources(this.List, "List");
+            this.List.Name = "List";
+            this.List.Click += new System.EventHandler(this.List_Click);
+            // 
+            // recom
+            // 
+            this.recom.BackColor = System.Drawing.Color.Transparent;
+            this.recom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recom.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.recom.Image = global::VkPlayer.Resource1.recom;
+            resources.ApplyResources(this.recom, "recom");
+            this.recom.Name = "recom";
+            this.recom.Click += new System.EventHandler(this.recom_Click);
+            // 
+            // Own
+            // 
+            this.Own.BackColor = System.Drawing.Color.Transparent;
+            this.Own.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Own.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Own.Image = global::VkPlayer.Resource1.person;
+            resources.ApplyResources(this.Own, "Own");
+            this.Own.Name = "Own";
+            this.Own.Click += new System.EventHandler(this.Own_Click);
+            // 
+            // mute_unmute
+            // 
+            this.mute_unmute.BackColor = System.Drawing.Color.Transparent;
+            this.mute_unmute.Image = global::VkPlayer.Resource1.unmute;
+            resources.ApplyResources(this.mute_unmute, "mute_unmute");
+            this.mute_unmute.Name = "mute_unmute";
+            this.mute_unmute.Click += new System.EventHandler(this.mute_unmute_Click);
+            // 
+            // random_radio
+            // 
+            this.random_radio.BackColor = System.Drawing.Color.Transparent;
+            this.random_radio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.random_radio.Image = global::VkPlayer.Resource1.random;
+            resources.ApplyResources(this.random_radio, "random_radio");
+            this.random_radio.Name = "random_radio";
+            this.random_radio.Click += new System.EventHandler(this.random_radio_Click);
+            // 
+            // repeat_radio
+            // 
+            this.repeat_radio.BackColor = System.Drawing.Color.Transparent;
+            this.repeat_radio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.repeat_radio.Image = global::VkPlayer.Resource1.repeat;
+            resources.ApplyResources(this.repeat_radio, "repeat_radio");
+            this.repeat_radio.Name = "repeat_radio";
+            this.repeat_radio.Click += new System.EventHandler(this.repeat_radio_Click);
+            // 
+            // next_btn
+            // 
+            this.next_btn.BackColor = System.Drawing.Color.Transparent;
+            this.next_btn.Image = global::VkPlayer.Resource1.next;
+            resources.ApplyResources(this.next_btn, "next_btn");
+            this.next_btn.Name = "next_btn";
+            this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
+            // 
+            // back_btn
+            // 
+            this.back_btn.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.back_btn, "back_btn");
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
+            // play_pause_btn
+            // 
+            this.play_pause_btn.BackColor = System.Drawing.Color.Transparent;
+            this.play_pause_btn.Image = global::VkPlayer.Resource1.play;
+            resources.ApplyResources(this.play_pause_btn, "play_pause_btn");
+            this.play_pause_btn.Name = "play_pause_btn";
+            this.play_pause_btn.Click += new System.EventHandler(this.play_pause_btn_Click);
             // 
             // Main
             // 
