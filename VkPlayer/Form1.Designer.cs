@@ -42,7 +42,9 @@
             this.Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.searchAudio_box = new System.Windows.Forms.TextBox();
             this.AudioList = new System.Windows.Forms.ListBox();
+            this.Hot = new System.Windows.Forms.Label();
             this.List = new System.Windows.Forms.Label();
+            this.recom = new System.Windows.Forms.Label();
             this.Own = new System.Windows.Forms.Label();
             this.mute_unmute = new System.Windows.Forms.Label();
             this.random_radio = new System.Windows.Forms.Label();
@@ -162,6 +164,16 @@
             this.AudioList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseClick);
             this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
             // 
+            // Hot
+            // 
+            this.Hot.BackColor = System.Drawing.Color.Transparent;
+            this.Hot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Hot.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Hot.Image = global::VkPlayer.Resource1.hot;
+            resources.ApplyResources(this.Hot, "Hot");
+            this.Hot.Name = "Hot";
+            this.Hot.Click += new System.EventHandler(this.Hot_Click);
+            // 
             // List
             // 
             this.List.BackColor = System.Drawing.Color.Transparent;
@@ -171,6 +183,16 @@
             resources.ApplyResources(this.List, "List");
             this.List.Name = "List";
             this.List.Click += new System.EventHandler(this.List_Click);
+            // 
+            // recom
+            // 
+            this.recom.BackColor = System.Drawing.Color.Transparent;
+            this.recom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recom.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.recom.Image = global::VkPlayer.Resource1.recom;
+            resources.ApplyResources(this.recom, "recom");
+            this.recom.Name = "recom";
+            this.recom.Click += new System.EventHandler(this.recom_Click);
             // 
             // Own
             // 
@@ -374,11 +396,13 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
+            this.Controls.Add(this.Hot);
             this.Controls.Add(this.AudioList);
             this.Controls.Add(this.searchAudio_box);
             this.Controls.Add(this.AllTimeDur);
             this.Controls.Add(this.currentTimeDur);
             this.Controls.Add(this.List);
+            this.Controls.Add(this.recom);
             this.Controls.Add(this.Own);
             this.Controls.Add(this.title_name);
             this.Controls.Add(this.mute_unmute);
@@ -444,6 +468,8 @@
         public System.Windows.Forms.Label AllTimeDur;
         private System.Windows.Forms.Label List;
         private System.Windows.Forms.Label Own;
+        private System.Windows.Forms.Label recom;
+        private System.Windows.Forms.Label Hot;
     }
 }
 

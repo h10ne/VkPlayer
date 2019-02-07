@@ -187,7 +187,7 @@ namespace VkPlayer
                     MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
                 }
             }
-            vkDatas.audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
+            vkDatas.Audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
             rnd = new Random();
             isAuth = true;
         }
@@ -386,6 +386,9 @@ namespace VkPlayer
                 repeat_radio.Image = Resource1.repeat_white;
                 random_radio.Image = Resource1.random_white;
                 List.Image = Resource1.list_white;
+                Hot.Image = Resource1.hot_white;
+                recom.Image = Resource1.recom_white;
+                Own.Image = Resource1.person_white;
                 currentTimeDur.ForeColor = Color.White;
                 AllTimeDur.ForeColor = Color.White;
             }
@@ -407,6 +410,9 @@ namespace VkPlayer
                 repeat_radio.Image = Resource1.repeat;
                 random_radio.Image = Resource1.random;
                 List.Image = Resource1.list;
+                Hot.Image = Resource1.hot;
+                recom.Image = Resource1.recom;
+                Own.Image = Resource1.person;
                 currentTimeDur.ForeColor = Color.Black;
                 AllTimeDur.ForeColor = Color.Black;
             }
@@ -605,6 +611,26 @@ namespace VkPlayer
             SetColors(main, add);
         }
 
+        private void SetBackColorForLists(string wich)
+        {
+            Own.BackColor = MainColor;
+            Hot.BackColor = MainColor;
+            recom.BackColor = MainColor;
+
+            wich = wich.ToUpper();
+            switch (wich)
+            {
+                case "OWN":
+                    Own.BackColor = addColor;
+                    break;
+                case "HOT":
+                    Hot.BackColor = addColor;
+                    break;
+                case "RECOM":
+                    recom.BackColor = addColor;
+                    break;
+            }
+        }
 
         public void AddAudioToList(VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> audios)
         {
@@ -617,12 +643,13 @@ namespace VkPlayer
         {
             if (e.KeyCode == Keys.Enter)
             {
+                SetBackColorForLists("find");
                 playlist = new Playlist(new SearchAudios());
                 AudioList.Items.Clear();
                 e.SuppressKeyPress = true;
                 try
                 {
-                    vkDatas.searchAudios = api.Audio.Search(new AudioSearchParams
+                    vkDatas.SearchAudios = api.Audio.Search(new AudioSearchParams
                     {
                         Query = searchAudio_box.Text,
                         Autocomplete = true,
@@ -630,7 +657,7 @@ namespace VkPlayer
                         Count = 20,
                         PerformerOnly = false
                     });
-                    AddAudioToList(vkDatas.searchAudios);
+                    AddAudioToList(vkDatas.SearchAudios);
                 }
                 catch { }
             }
@@ -686,8 +713,23 @@ namespace VkPlayer
         {
             AudioList.Items.Clear();
             playlist = new Playlist(new OwnAudios());
-            AddAudioToList(vkDatas.audio);
+            SetBackColorForLists("own");
+            AddAudioToList(vkDatas.Audio);
             AudioList.SelectedIndex = vkDatas._offset;
+        }
+
+        private void Hot_Click(object sender, EventArgs e)
+        {
+            SetBackColorForLists("hot");
+        }
+
+        private void recom_Click(object sender, EventArgs e)
+        {
+            SetBackColorForLists("recom");
+            playlist = new Playlist(new RecommendedAudio());
+            vkDatas.RecommendedAudio = api.Audio.GetRecommendations(null,null,50,null,true);
+            AddAudioToList(vkDatas.RecommendedAudio);
+
         }
     }
 }
