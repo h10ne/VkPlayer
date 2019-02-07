@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;artist_name.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="title_name.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Devanagari, 12pt, style=Bold</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;title_name.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="volume.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -214,7 +214,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;volume.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="duration_bar.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -241,7 +241,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;duration_bar.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <metadata name="duration_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -283,7 +283,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;currentTimeDur.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="AllTimeDur.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,29 +316,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AllTimeDur.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 17</value>
+    <value>417, 22</value>
   </metadata>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 26</value>
-  </data>
-  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 9.75pt</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
   <data name="redToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
   </data>
@@ -480,14 +462,44 @@
   <data name="blackToolStripMenuItem.Text" xml:space="preserve">
     <value>Dark</value>
   </data>
+  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 9.75pt</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="exitToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="exitToolStripMenuItem.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 48</value>
+  </data>
+  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="searchAudio_box.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
   </data>
   <data name="searchAudio_box.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 6</value>
+    <value>6, 132</value>
   </data>
   <data name="searchAudio_box.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 23</value>
+    <value>269, 23</value>
   </data>
   <data name="searchAudio_box.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -502,7 +514,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;searchAudio_box.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="AudioList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
@@ -511,10 +523,10 @@
     <value>15</value>
   </data>
   <data name="AudioList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 29</value>
+    <value>6, 161</value>
   </data>
   <data name="AudioList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 92</value>
+    <value>337, 212</value>
   </data>
   <data name="AudioList.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -529,55 +541,103 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AudioList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Hot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Hot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 132</value>
+  </data>
+  <data name="Hot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 26</value>
+  </data>
+  <data name="Hot.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Hot.Name" xml:space="preserve">
+    <value>Hot</value>
+  </data>
+  <data name="&gt;&gt;Hot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Hot.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Hot.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="find_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="List.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="find_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 33</value>
+  <data name="List.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 5</value>
   </data>
-  <data name="find_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
+  <data name="List.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 22</value>
   </data>
-  <data name="find_btn.TabIndex" type="System.Int32, mscorlib">
+  <data name="List.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;find_btn.Name" xml:space="preserve">
-    <value>find_btn</value>
+  <data name="&gt;&gt;List.Name" xml:space="preserve">
+    <value>List</value>
   </data>
-  <data name="&gt;&gt;find_btn.Type" xml:space="preserve">
+  <data name="&gt;&gt;List.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;find_btn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;List.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;find_btn.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Logout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Logout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 9</value>
-  </data>
-  <data name="Logout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
-  </data>
-  <data name="Logout.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Logout.Name" xml:space="preserve">
-    <value>Logout</value>
-  </data>
-  <data name="&gt;&gt;Logout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Logout.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Logout.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;List.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="recom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="recom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 132</value>
+  </data>
+  <data name="recom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="recom.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;recom.Name" xml:space="preserve">
+    <value>recom</value>
+  </data>
+  <data name="&gt;&gt;recom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;recom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;recom.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Own.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Own.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 30</value>
+  </data>
+  <data name="Own.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 22</value>
+  </data>
+  <data name="Own.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Own.Name" xml:space="preserve">
+    <value>Own</value>
+  </data>
+  <data name="&gt;&gt;Own.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Own.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Own.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="mute_unmute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -601,7 +661,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mute_unmute.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="random_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -625,7 +685,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;random_radio.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="repeat_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -649,13 +709,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;repeat_radio.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="next_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="next_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 56</value>
+    <value>202, 61</value>
   </data>
   <data name="next_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 27</value>
@@ -673,7 +733,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;next_btn.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="back_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -691,7 +751,7 @@
     <value>NoControl</value>
   </data>
   <data name="back_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 56</value>
+    <value>125, 61</value>
   </data>
   <data name="back_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 27</value>
@@ -709,13 +769,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="play_pause_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="play_pause_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 43</value>
+    <value>150, 48</value>
   </data>
   <data name="play_pause_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 55</value>
@@ -733,7 +793,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;play_pause_btn.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -745,7 +805,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>349, 131</value>
+    <value>349, 128</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1316,6 +1376,12 @@
     <value>blackToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;blackToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

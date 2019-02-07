@@ -1,6 +1,6 @@
 ﻿namespace VkPlayer
 {
-    partial class authorization_form
+    partial class AuthForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(authorization_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthForm));
             this.login = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
             this.auth_btn = new System.Windows.Forms.Button();
@@ -101,6 +101,8 @@
             this.Controls.Add(this.login);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "authorization_form";
             this.Text = "Authorization";
             this.ResumeLayout(false);

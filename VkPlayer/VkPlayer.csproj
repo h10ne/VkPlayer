@@ -107,23 +107,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="authorization_form.cs">
+    <Compile Include="AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="authorization_form.Designer.cs">
-      <DependentUpon>authorization_form.cs</DependentUpon>
+    <Compile Include="AuthForm.Designer.cs">
+      <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Classes.cs" />
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="CodeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="CodeForm.Designer.cs">
+      <DependentUpon>CodeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,14 +133,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="authorization_form.resx">
-      <DependentUpon>authorization_form.cs</DependentUpon>
+    <Compile Include="States.cs" />
+    <EmbeddedResource Include="AuthForm.resx">
+      <DependentUpon>AuthForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="CodeForm.resx">
+      <DependentUpon>CodeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -246,12 +248,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon1.ico" />
+    <None Include="Resources\recom_white.png" />
+    <None Include="Resources\recom.png" />
+    <None Include="Resources\person_white.png" />
+    <None Include="Resources\person.png" />
+    <None Include="Resources\hot_white.png" />
+    <None Include="Resources\hot.png" />
+    <None Include="Resources\list_white.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\ownList.png" />
+    <None Include="Resources\door.png" />
     <None Include="Resources\auth_back_2.png" />
     <None Include="Resources\auth_back.png" />
     <None Include="Resources\eye_click.png" />
     <None Include="Resources\eye.png" />
     <None Include="Resources\door_white.png" />
-    <None Include="Resources\door.png" />
     <None Include="Resources\find_white.png" />
     <None Include="Resources\find.png" />
     <None Include="Resources\colorOrange.png" />

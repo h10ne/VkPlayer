@@ -10,36 +10,33 @@ using System.IO;
 using WMPLib;
 using System.Drawing.Text;
 using System.Drawing;
+using System.Threading;
+
 namespace VkPlayer
 {
     public partial class Main : Form
     {
-        WMPLib.WindowsMediaPlayer player;
-        private long user_id;
+        public WMPLib.WindowsMediaPlayer player;
         public string Token = null;
-        private static IVkApi api;
-        private ServiceCollection service;
+        public IVkApi api;
         public Font Roboto_medium;
         public Font Roboto_thin;
         public Font Roboto_thin_10;
         private Color MainColor;
         private Color addColor;
         public string code = null;
-        Random rnd;
-        bool customSong = false;
-        private VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> searchAudios;
+        public Random rnd;
         private int clr;
-        private bool repeat = false;
-        private bool random = false;
-        private int _offset = 0;
-        private bool isPlay = false;
-        private bool mute = false;
-        private bool isBlack = false;
-        private bool isFind = false;
+        Playlist playlist;
+        public Switches VkBools;
+        public VkDatas vkDatas;
         public bool isAuth = false;
         public Main()
         {
             InitializeComponent();
+            VkBools = new Switches();
+            vkDatas = new VkDatas();
+            playlist = new Playlist(new OwnAudios());
             if (File.Exists("auth.dat"))
             {
                 Token = File.ReadAllText("auth.dat");
@@ -47,7 +44,7 @@ namespace VkPlayer
             }
             else
             {
-                authorization_form f = new authorization_form
+                AuthForm f = new AuthForm
                 {
                     Owner = this
                 };
@@ -55,24 +52,23 @@ namespace VkPlayer
             }
             player = new WindowsMediaPlayer();
             duration_timer.Stop();
-            SetAudioInfo();
+            playlist.SetAudioInfo(this);
             LoadText();
             play_pause_btn.Image = Resource1.play;
             artist_name.Font = Roboto_thin;
             title_name.Font = Roboto_medium;
             AudioList.Font = Roboto_thin_10;
             searchAudio_box.Font = Roboto_thin_10;
-            MainColor = Color.FromArgb(255, 63, 81, 181);
-            addColor = Color.FromArgb(255, 48, 63, 159);
+
             if (File.Exists("user_color.dat"))
             {
-                byte darkTheme = 20; 
+                byte darkTheme = 20;
                 string[] vs = File.ReadAllText("user_color.dat").Split(' ');
                 MainColor = Color.FromArgb(255, byte.Parse(vs[0]), byte.Parse(vs[1]), byte.Parse(vs[2]));
                 addColor = Color.FromArgb(255, byte.Parse(vs[3]), byte.Parse(vs[4]), byte.Parse(vs[5]));
                 if (byte.Parse(vs[0]) == darkTheme)
                 {
-                    isBlack = true;
+                    VkBools.isBlack = true;
                     SetColors(MainColor, addColor);
                 }
                 if (byte.Parse(vs[6]) == 0)
@@ -90,17 +86,23 @@ namespace VkPlayer
                     searchAudio_box.ForeColor = Color.White;
                 }
             }
+            else
+            {
+                MainColor = Color.FromArgb(255, 63, 81, 181);
+                addColor = Color.FromArgb(255, 48, 63, 159);
+            }
+            Own.BackColor = addColor;
             BackColor = MainColor;
             KeyPreview = true;
             this.ContextMenuStrip = Menu;
-            isPlay = false;
-            if (isBlack)
+            VkBools.isPlay = false;
+            if (VkBools.isBlack)
                 play_pause_btn.Image = Resource1.play_white;
             else
                 play_pause_btn.Image = Resource1.play;
             play_pause_btn.Focus();
         }
-        
+
         public void LoadText()
         {
             try
@@ -121,7 +123,7 @@ namespace VkPlayer
             {
                 AccessToken = Token
             });
-            user_id = long.Parse(File.ReadAllText("user_id.dat"));
+            vkDatas.user_id = long.Parse(File.ReadAllText("user_id.dat"));
         }
 
         private void Auth2Fact(string login, string password)
@@ -142,8 +144,8 @@ namespace VkPlayer
                     return code;
                 }
             });
-            user_id = api.UserId.GetHashCode();
-            File.WriteAllText("user_id.dat", user_id.ToString());
+            vkDatas.user_id = api.UserId.GetHashCode();
+            File.WriteAllText("user_id.dat", vkDatas.user_id.ToString());
             File.WriteAllText("auth.dat", api.Token);
             Show();
         }
@@ -155,18 +157,18 @@ namespace VkPlayer
                 Login = login,
                 Password = password,
             });
-            user_id = api.UserId.GetHashCode();
-            File.WriteAllText("user_id.dat", user_id.ToString());
+            vkDatas.user_id = api.UserId.GetHashCode();
+            File.WriteAllText("user_id.dat", vkDatas.user_id.ToString());
             File.WriteAllText("auth.dat", api.Token);
             Show();
         }
 
         public void GetAuth(string login = null, string password = null)
         {
-            service = new ServiceCollection();
-            service.AddAudioBypass();
-            api = new VkApi(service);
-            if (Token!=null)
+            vkDatas.service = new ServiceCollection();
+            vkDatas.service.AddAudioBypass();
+            api = new VkApi(vkDatas.service);
+            if (Token != null)
             {
                 AuthToken();
             }
@@ -188,54 +190,30 @@ namespace VkPlayer
                     MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
                 }
             }
+            vkDatas.Audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
             rnd = new Random();
             isAuth = true;
-        }        
-
-        private void SetAudioInfo()
-        {
-            var audio = api.Audio.Get(new AudioGetParams { Count = 1, Offset = _offset });
-            int tempOffset = _offset;
-            while (audio[0].Url == null) 
-            {
-                ++_offset;
-                if (tempOffset == _offset)
-                    _offset-=2;
-                tempOffset = _offset;
-                audio = api.Audio.Get(new AudioGetParams { Count = 1, Offset = _offset });
-            }
-            player.URL = audio[0].Url.ToString();
-            artist_name.Text = audio[0].Artist;
-            title_name.Text = audio[0].Title;
-            player.settings.volume = volume.Value;
-            duration_timer.Start();
-            duration_bar.Value = 0;
-            if (isBlack)
-                play_pause_btn.Image = Resource1.pause_white;
-            else
-                play_pause_btn.Image = Resource1.pause;
-            isPlay = true;
         }
-        
+
         private void play_pause()
         {
-            if (!isPlay)
+            if (!VkBools.isPlay)
             {
                 player.controls.play();
-                if (!isBlack)
+                if (!VkBools.isBlack)
                     play_pause_btn.Image = Resource1.pause;
                 else
                     play_pause_btn.Image = Resource1.pause_white;
-                isPlay = true;
+                VkBools.isPlay = true;
             }
             else
             {
                 player.controls.pause();
-                if (!isBlack)
+                if (!VkBools.isBlack)
                     play_pause_btn.Image = Resource1.play;
                 else
                     play_pause_btn.Image = Resource1.play_white;
-                isPlay = false;
+                VkBools.isPlay = false;
             }
         }
 
@@ -250,102 +228,23 @@ namespace VkPlayer
         }
         private void back_btn_Click(object sender, EventArgs e)
         {
-            PrevSong();
+            playlist.PrevSong(this);
         }
-
-        private void PrevSong()
-        {
-            if (!customSong)
-            {
-                if (_offset != 0)
-                {
-                    _offset--;
-                }
-                SetAudioInfo();
-            }
-            else
-            {
-                try
-                {
-
-                    AudioList.SelectedIndex -= 1;
-                    searchSetInfo();
-                }
-                catch
-                {
-                    AudioList.SelectedIndex = 19;
-                    searchSetInfo();
-                }
-            }
-        }
-        private void NextSong()
-        {
-            if (!customSong)
-            {
-                if (random)
-                {
-                    _offset = rnd.Next(0, (int)api.Audio.GetCount(user_id));
-                }
-                if (api.Audio.GetCount(user_id) > _offset)
-                {
-                    _offset++;
-                }
-                else
-                {
-                    _offset = 0;
-                }
-                SetAudioInfo();
-            }
-            else
-            {
-
-
-                if (random)
-                {
-                    Random rnds = new Random();
-                    int value = rnds.Next(0,19);
-                    AudioList.SelectedIndex = value; try
-                    {
-                        searchSetInfo();
-                    }
-                    catch
-                    {
-                        //AudioList.SelectedIndex = 0;
-                        //searchSetInfo();
-                    }
-                }
-                else
-                {
-                    try
-                    {
-                        AudioList.SelectedIndex += 1;
-                        searchSetInfo();
-                    }
-                    catch
-                    {
-                        AudioList.SelectedIndex = 0;
-                        searchSetInfo();
-                    }
-                }
-                
-            }
-
-        }        
+        
+        
 
         private void next_btn_Click(object sender, EventArgs e)
         {
-            NextSong();
-        }        
+            playlist.NextSong(this);
+        }
         private void duration_timer_Tick(object sender, EventArgs e)
         {
-            if (searchAudio_box.Text == "")
-                customSong = false;
+            AllTimeDur.Text = player.currentMedia.durationString;
             duration_bar.Maximum = (int)player.currentMedia.duration;
             duration_bar.Value = (int)player.controls.currentPosition;
             currentTimeDur.Text = player.controls.currentPositionString;
-            AllTimeDur.Text = player.currentMedia.durationString;
         }
-       
+
         private void duration_bar_Scroll(object sender, EventArgs e)
         {
             duration_bar.Maximum = (int)player.currentMedia.duration;
@@ -354,9 +253,9 @@ namespace VkPlayer
         }
         private void timerForRefresh_Tick(object sender, EventArgs e)
         {
-            if (Token!=null && artist_name.Text=="artist" && title_name.Text=="title")
+            if (Token != null && artist_name.Text == "artist" && title_name.Text == "title")
             {
-                SetAudioInfo();
+                playlist.SetAudioInfo(this);
             }
             if (artist_name.Text != "artist" && title_name.Text != "title")
             {
@@ -368,76 +267,43 @@ namespace VkPlayer
             }
         }
 
-        private void Logout_Click(object sender, EventArgs e)
-        {
-            System.IO.File.Delete("auth.dat");
-            System.IO.File.Delete("user_id.dat");
-            System.IO.File.Delete("user_color.dat");
-            System.Windows.Forms.Application.Restart();
-            Close();
-        }
-
         private void NextSongTimer_Tick(object sender, EventArgs e)
         {
             if (player.status == "Остановлено")
             {
-                if (!customSong)
-                {
-                    if (!repeat)
-                        NextSong();
-                    else
-                    {
-                        player.controls.play();
-                    }
-                }
-                else
-                {
-                    if (!repeat)
-                        try
-                        {
-                            AudioList.SelectedIndex += 1; ;
-                            searchSetInfo();
-                        }
-                        catch { }
-                    else
-                    {
-                        Random rnds = new Random();
-                        int value = rnds.Next(0, 19);
-                        AudioList.SelectedIndex = value;
-                        searchSetInfo();
-                    }
-                }
-
+                if (!VkBools.repeat)
+                    playlist.NextSong(this);
+                playlist.SetAudioInfo(this);
             }
         }
 
         private void repeat_radio_Click(object sender, EventArgs e)
         {
-            if (repeat == false)
+            if (VkBools.repeat == false)
             {
-                repeat = true;
+                VkBools.repeat = true;
                 repeat_radio.BackColor = addColor;
             }
             else
             {
-                repeat = false;
+                VkBools.repeat = false;
                 repeat_radio.BackColor = MainColor;
             }
         }
 
         private void random_radio_Click(object sender, EventArgs e)
         {
-            if (random == false)
+            if (VkBools.random == false)
             {
-                random = true;
+                VkBools.random = true;
                 random_radio.BackColor = addColor;
             }
             else
             {
-                random = false;
+                VkBools.random = false;
                 random_radio.BackColor = MainColor;
             }
-            
+
         }
 
         private void Main_KeyDown(object sender, KeyEventArgs e)
@@ -450,42 +316,58 @@ namespace VkPlayer
                 }
                 else if (e.KeyCode == Keys.Up)
                 {
-                    if (volume.Value + 5 < volume.Maximum)
+                    if (volume.Value + 1 <= volume.Maximum)
                     {
-                        player.settings.volume += 5;
-                        volume.Value += 5;
+                        player.settings.volume += 1;
+                        volume.Value += 1;
                     }
                 }
                 else if (e.KeyCode == Keys.Down)
                 {
-                    if (volume.Value - 5 > volume.Minimum)
+                    if (volume.Value - 1 >= volume.Minimum)
                     {
-                        player.settings.volume -= 5;
-                        volume.Value -= 5;
+                        player.settings.volume -= 1;
+                        volume.Value -= 1;
                     }
                 }
                 else if (e.KeyCode == Keys.Left)
                 {
-                    PrevSong();
+                    playlist.PrevSong(this);
                 }
                 else if (e.KeyCode == Keys.Right)
                 {
-                    NextSong();
+                    playlist.NextSong(this);
                 }
                 else if (e.KeyCode == Keys.M)
                 {
                     SetMute_Unmute();
+                }
+                else if (e.KeyCode == Keys.O)
+                {
+                    SetOwn();
+                }
+                else if (e.KeyCode == Keys.H)
+                {
+                    SetHot();
+                }
+                else if (e.KeyCode == Keys.R)
+                {
+                    SetRecom();
+                }
+                else if (e.KeyCode == Keys.L)
+                {
+                    Hide_Unhide();
                 }
             }
         }
 
         private void SetMute_Unmute()
         {
-            if (mute)
+            if (VkBools.mute)
             {
                 player.settings.mute = false;
-                mute = false;
-                if (!isBlack)
+                VkBools.mute = false;
+                if (!VkBools.isBlack)
                     mute_unmute.Image = Resource1.unmute;
                 else
                     mute_unmute.Image = Resource1.unmute_white;
@@ -493,8 +375,8 @@ namespace VkPlayer
             else
             {
                 player.settings.mute = true;
-                mute = true;
-                if (!isBlack)
+                VkBools.mute = true;
+                if (!VkBools.isBlack)
                     mute_unmute.Image = Resource1.mute;
                 else
                     mute_unmute.Image = Resource1.mute_white;
@@ -507,45 +389,49 @@ namespace VkPlayer
         }
 
         private void SetColors(Color mainColor, Color addColor, bool black = true)
-        {   
-            if (isBlack)
+        {
+            if (VkBools.isBlack)
             {
-                if (isPlay)
+                if (VkBools.isPlay)
                     play_pause_btn.Image = Resource1.pause_white;
                 else
                     play_pause_btn.Image = Resource1.play_white;
                 next_btn.Image = Resource1.next_white;
                 back_btn.Image = Resource1.prev_white;
-                Logout.Image = Resource1.door_white;
-                find_btn.Image = Resource1.find_white;
-                if (mute)
+                if (VkBools.mute)
                     mute_unmute.Image = Resource1.mute_white;
                 else
                     mute_unmute.Image = Resource1.unmute_white;
                 repeat_radio.Image = Resource1.repeat_white;
                 random_radio.Image = Resource1.random_white;
+                List.Image = Resource1.list_white;
+                Hot.Image = Resource1.hot_white;
+                recom.Image = Resource1.recom_white;
+                Own.Image = Resource1.person_white;
                 currentTimeDur.ForeColor = Color.White;
                 AllTimeDur.ForeColor = Color.White;
             }
 
-            if (!black && isBlack)
+            if (!black && VkBools.isBlack)
             {
-                isBlack = false;
+                VkBools.isBlack = false;
 
-                if (isPlay)
+                if (VkBools.isPlay)
                     play_pause_btn.Image = Resource1.pause;
                 else
                     play_pause_btn.Image = Resource1.play;
                 next_btn.Image = Resource1.next;
                 back_btn.Image = Resource1.prev;
-                Logout.Image = Resource1.door;
-                find_btn.Image = Resource1.find;
-                if (mute)
+                if (VkBools.mute)
                     mute_unmute.Image = Resource1.mute;
                 else
                     mute_unmute.Image = Resource1.unmute;
                 repeat_radio.Image = Resource1.repeat;
                 random_radio.Image = Resource1.random;
+                List.Image = Resource1.list;
+                Hot.Image = Resource1.hot;
+                recom.Image = Resource1.recom;
+                Own.Image = Resource1.person;
                 currentTimeDur.ForeColor = Color.Black;
                 AllTimeDur.ForeColor = Color.Black;
             }
@@ -553,9 +439,10 @@ namespace VkPlayer
             this.BackColor = mainColor;
             this.MainColor = mainColor;
             this.addColor = addColor;
+            SetBackColorForLists("none");
             AudioList.BackColor = addColor;
             searchAudio_box.BackColor = addColor;
-            if (repeat)
+            if (VkBools.repeat)
             {
                 repeat_radio.BackColor = addColor;
             }
@@ -563,7 +450,7 @@ namespace VkPlayer
             {
                 repeat_radio.BackColor = mainColor;
             }
-            if (random)
+            if (VkBools.random)
             {
                 random_radio.BackColor = addColor;
             }
@@ -592,7 +479,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 171, 71, 188);
@@ -603,7 +489,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void deepPurpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 103, 58, 183);
@@ -614,7 +499,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void indigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 63, 81, 181);
@@ -625,7 +509,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void blueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 33, 150, 243);
@@ -636,7 +519,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void cyanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 38, 198, 218);
@@ -647,7 +529,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
-
         private void tealToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 38, 166, 154);
@@ -658,7 +539,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
-
         private void greenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 76, 175, 80);
@@ -669,7 +549,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void limeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 205, 220, 57);
@@ -680,7 +559,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
-
         private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 238, 88);
@@ -691,7 +569,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
-
         private void amberToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 202, 40);
@@ -702,7 +579,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
-
         private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 152, 0);
@@ -713,7 +589,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
-
         private void deepOrangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 87, 34);
@@ -724,7 +599,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void brownToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 121, 85, 72);
@@ -735,7 +609,6 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void blueGrayToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 120, 144, 156);
@@ -746,10 +619,9 @@ namespace VkPlayer
             searchAudio_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
-
         private void blackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            isBlack = true;            
+            VkBools.isBlack = true;
             artist_name.ForeColor = Color.White;
             title_name.ForeColor = Color.White;
             AudioList.ForeColor = Color.White;
@@ -759,15 +631,47 @@ namespace VkPlayer
             SetColors(main, add);
         }
 
-        private void searchAudio_KeyDown(object sender, KeyEventArgs e)
+        private void SetBackColorForLists(string wich)
         {
-            AudioList.Items.Clear();            
+            wich = wich.ToUpper();
+            switch (wich)
+            {
+                case "OWN":
+                    Hot.BackColor = MainColor;
+                    recom.BackColor = MainColor;
+                    Own.BackColor = addColor;
+                    break;
+                case "HOT":
+                    Own.BackColor = MainColor;
+                    recom.BackColor = MainColor;
+                    Hot.BackColor = addColor;
+                    break;
+                case "RECOM":
+                    Own.BackColor = MainColor;
+                    Hot.BackColor = MainColor;
+                    recom.BackColor = addColor;
+                    break;
+            }
+        }
+
+        public void AddAudioToList(VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> audios)
+        {
+            AudioList.Items.Clear();
+            foreach (var audio in audios)
+                AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
+        }
+
+        private void SearchAudio_KeyDown(object sender, KeyEventArgs e)
+        {
             if (e.KeyCode == Keys.Enter)
             {
+                SetBackColorForLists("find");
+                playlist = new Playlist(new SearchAudios());
+                AudioList.Items.Clear();
                 e.SuppressKeyPress = true;
                 try
                 {
-                    searchAudios = api.Audio.Search(new AudioSearchParams
+                    vkDatas.SearchAudios = api.Audio.Search(new AudioSearchParams
                     {
                         Query = searchAudio_box.Text,
                         Autocomplete = true,
@@ -775,50 +679,18 @@ namespace VkPlayer
                         Count = 20,
                         PerformerOnly = false
                     });
-
-                    foreach (var audio in searchAudios)
-                        AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
+                    AddAudioToList(vkDatas.SearchAudios);
                 }
                 catch { }
             }
         }
 
-        void searchSetInfo()
-        {            
-            string selectItem = AudioList.SelectedItem.ToString();
-            int index = 0;
-            for (int i = 0; i < selectItem.Length; i++)
-            {
-                if (selectItem[i] == ' ' && selectItem[i + 1] == '-' && selectItem[i + 2] == ' ')
-                {
-                    index = i;
-                    break;
-                }
-
-            }
-            string artist = selectItem.Substring(0, index);
-            string title = selectItem.Substring(index + 3);
-            foreach (var audio in searchAudios)
-                if (audio.Artist == artist && audio.Title == title)
-                {
-                    player.URL = audio.Url.ToString();
-                    artist_name.Text = artist;
-                    title_name.Text = title;
-                    player.controls.play();
-                }
-            if (isBlack)
-                play_pause_btn.Image = Resource1.pause_white;
-            else
-                play_pause_btn.Image = Resource1.pause;
-            isPlay = true;
-        }
 
         private void AudioList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             try
             {
-                customSong = true;
-                searchSetInfo();
+                playlist.SetAudioInfo(this);
             }
             catch { }
             next_btn.Focus();
@@ -834,19 +706,78 @@ namespace VkPlayer
             next_btn.Focus();
         }
 
-        private void find_btn_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (isFind)
+            System.IO.File.Delete("auth.dat");
+            System.IO.File.Delete("user_id.dat");
+            System.IO.File.Delete("user_color.dat");
+            System.Windows.Forms.Application.Restart();
+            Close();
+        }
+
+        private void Hide_Unhide()
+        {
+            if (VkBools.isFind)
             {
-                Width = 365;
-                isFind = false;
+                //Width = 365;
+                Height = 167;
+                VkBools.isFind = false;
             }
             else
             {
-                Width = 601;
-                isFind = true;
+                //Width = 601;
+                Height = 405;
+                VkBools.isFind = true;
             }
             play_pause_btn.Focus();
+        }
+        private void List_Click(object sender, EventArgs e)
+        {
+            Hide_Unhide();
+        }
+
+        private void SetOwn()
+        {
+            AudioList.Items.Clear();
+            playlist = new Playlist(new OwnAudios());
+            SetBackColorForLists("own");
+            AddAudioToList(vkDatas.Audio);
+            AudioList.SelectedIndex = vkDatas._offset;
+            playlist.NextSong(this);
+        }
+
+        private void SetHot()
+        {
+            SetBackColorForLists("hot");
+            playlist = new Playlist(new HotAudio());
+            vkDatas.HotAudios = api.Audio.GetPopular(onlyEng: false, genre: null, count: 35, offset: null);
+            AudioList.Items.Clear();
+            foreach (var audio in vkDatas.HotAudios)
+                AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
+            playlist.NextSong(this);
+        }
+
+        private void Own_Click(object sender, EventArgs e)
+        {
+            SetOwn();
+        }
+
+        private void Hot_Click(object sender, EventArgs e)
+        {
+            SetHot();
+        }
+
+        private void SetRecom()
+        {
+            SetBackColorForLists("recom");
+            playlist = new Playlist(new RecommendedAudio());
+            vkDatas.RecommendedAudio = api.Audio.GetRecommendations(null, null, 50, null, true);
+            AddAudioToList(vkDatas.RecommendedAudio);
+            playlist.NextSong(this);
+        }
+        private void recom_Click(object sender, EventArgs e)
+        {
+            SetRecom();
         }
     }
 }

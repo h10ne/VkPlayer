@@ -57,10 +57,13 @@
             this.brownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueGrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchAudio_box = new System.Windows.Forms.TextBox();
             this.AudioList = new System.Windows.Forms.ListBox();
-            this.find_btn = new System.Windows.Forms.Label();
-            this.Logout = new System.Windows.Forms.Label();
+            this.Hot = new System.Windows.Forms.Label();
+            this.List = new System.Windows.Forms.Label();
+            this.recom = new System.Windows.Forms.Label();
+            this.Own = new System.Windows.Forms.Label();
             this.mute_unmute = new System.Windows.Forms.Label();
             this.random_radio = new System.Windows.Forms.Label();
             this.repeat_radio = new System.Windows.Forms.Label();
@@ -95,7 +98,7 @@
             this.volume.SmallChange = 0;
             this.volume.TabStop = false;
             this.volume.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.volume.Value = 50;
+            this.volume.Value = 25;
             this.volume.Scroll += new System.EventHandler(this.volume_Scroll);
             // 
             // duration_bar
@@ -139,7 +142,8 @@
             // Menu
             // 
             this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chooseColorToolStripMenuItem});
+            this.chooseColorToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.Menu.Name = "Menu";
             resources.ApplyResources(this.Menu, "Menu");
             // 
@@ -274,12 +278,19 @@
             this.blackToolStripMenuItem.Name = "blackToolStripMenuItem";
             this.blackToolStripMenuItem.Click += new System.EventHandler(this.blackToolStripMenuItem_Click);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Image = global::VkPlayer.Resource1.door;
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // searchAudio_box
             // 
             this.searchAudio_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.searchAudio_box, "searchAudio_box");
             this.searchAudio_box.Name = "searchAudio_box";
-            this.searchAudio_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchAudio_KeyDown);
+            this.searchAudio_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchAudio_KeyDown);
             // 
             // AudioList
             // 
@@ -291,23 +302,45 @@
             this.AudioList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseClick);
             this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
             // 
-            // find_btn
+            // Hot
             // 
-            this.find_btn.BackColor = System.Drawing.Color.Transparent;
-            this.find_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.find_btn.Image = global::VkPlayer.Resource1.find;
-            resources.ApplyResources(this.find_btn, "find_btn");
-            this.find_btn.Name = "find_btn";
-            this.find_btn.Click += new System.EventHandler(this.find_btn_Click);
+            this.Hot.BackColor = System.Drawing.Color.Transparent;
+            this.Hot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Hot.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Hot.Image = global::VkPlayer.Resource1.hot;
+            resources.ApplyResources(this.Hot, "Hot");
+            this.Hot.Name = "Hot";
+            this.Hot.Click += new System.EventHandler(this.Hot_Click);
             // 
-            // Logout
+            // List
             // 
-            this.Logout.BackColor = System.Drawing.Color.Transparent;
-            this.Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Logout.Image = global::VkPlayer.Resource1.door;
-            resources.ApplyResources(this.Logout, "Logout");
-            this.Logout.Name = "Logout";
-            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            this.List.BackColor = System.Drawing.Color.Transparent;
+            this.List.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.List.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.List.Image = global::VkPlayer.Resource1.list;
+            resources.ApplyResources(this.List, "List");
+            this.List.Name = "List";
+            this.List.Click += new System.EventHandler(this.List_Click);
+            // 
+            // recom
+            // 
+            this.recom.BackColor = System.Drawing.Color.Transparent;
+            this.recom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recom.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.recom.Image = global::VkPlayer.Resource1.recom;
+            resources.ApplyResources(this.recom, "recom");
+            this.recom.Name = "recom";
+            this.recom.Click += new System.EventHandler(this.recom_Click);
+            // 
+            // Own
+            // 
+            this.Own.BackColor = System.Drawing.Color.Transparent;
+            this.Own.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Own.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Own.Image = global::VkPlayer.Resource1.person;
+            resources.ApplyResources(this.Own, "Own");
+            this.Own.Name = "Own";
+            this.Own.Click += new System.EventHandler(this.Own_Click);
             // 
             // mute_unmute
             // 
@@ -363,12 +396,14 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
+            this.Controls.Add(this.Hot);
             this.Controls.Add(this.AudioList);
             this.Controls.Add(this.searchAudio_box);
             this.Controls.Add(this.AllTimeDur);
             this.Controls.Add(this.currentTimeDur);
-            this.Controls.Add(this.find_btn);
-            this.Controls.Add(this.Logout);
+            this.Controls.Add(this.List);
+            this.Controls.Add(this.recom);
+            this.Controls.Add(this.Own);
             this.Controls.Add(this.title_name);
             this.Controls.Add(this.mute_unmute);
             this.Controls.Add(this.random_radio);
@@ -395,22 +430,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label play_pause_btn;
         private System.Windows.Forms.Label back_btn;
         private System.Windows.Forms.Label next_btn;
-        private System.Windows.Forms.Label artist_name;
-        private System.Windows.Forms.Label title_name;
-        private System.Windows.Forms.TrackBar volume;
-        private System.Windows.Forms.TrackBar duration_bar;
-        private System.Windows.Forms.Timer duration_timer;
         private System.Windows.Forms.Timer timerForRefresh;
-        private System.Windows.Forms.Label Logout;
         private System.Windows.Forms.Timer NextSongTimer;
         private System.Windows.Forms.Label repeat_radio;
         private System.Windows.Forms.Label random_radio;
         private System.Windows.Forms.Label mute_unmute;
         private System.Windows.Forms.Label currentTimeDur;
-        private System.Windows.Forms.Label AllTimeDur;
         private System.Windows.Forms.ContextMenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem chooseColorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem;
@@ -429,9 +456,20 @@
         private System.Windows.Forms.ToolStripMenuItem brownToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blueGrayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blackToolStripMenuItem;
-        private System.Windows.Forms.TextBox searchAudio_box;
-        private System.Windows.Forms.ListBox AudioList;
-        private System.Windows.Forms.Label find_btn;
+        public System.Windows.Forms.Label play_pause_btn;
+        public System.Windows.Forms.Label artist_name;
+        public System.Windows.Forms.Label title_name;
+        public System.Windows.Forms.TrackBar volume;
+        public System.Windows.Forms.TrackBar duration_bar;
+        public System.Windows.Forms.Timer duration_timer;
+        internal System.Windows.Forms.TextBox searchAudio_box;
+        internal System.Windows.Forms.ListBox AudioList;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.Label AllTimeDur;
+        private System.Windows.Forms.Label List;
+        private System.Windows.Forms.Label Own;
+        private System.Windows.Forms.Label recom;
+        private System.Windows.Forms.Label Hot;
     }
 }
 

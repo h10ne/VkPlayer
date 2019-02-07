@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using System.IO;
 namespace VkPlayer
 {
-    public partial class authorization_form : Form
+    public partial class AuthForm : Form
     {
-        public authorization_form()
+        public AuthForm()
         {
             InitializeComponent();
             if (this.Owner is Main main)
