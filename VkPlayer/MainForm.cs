@@ -69,8 +69,8 @@ namespace VkPlayer
                 if (byte.Parse(vs[0]) == darkTheme)
                 {
                     VkBools.isBlack = true;
-                    SetColors(MainColor, addColor);
                 }
+                SetColors(MainColor, addColor);
                 if (byte.Parse(vs[6]) == 0)
                 {
                     artist_name.ForeColor = Color.Black;
