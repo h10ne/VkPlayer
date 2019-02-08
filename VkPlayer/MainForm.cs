@@ -70,7 +70,6 @@ namespace VkPlayer
                 {
                     VkBools.isBlack = true;
                 }
-                SetColors(MainColor, addColor);
                 if (byte.Parse(vs[6]) == 0)
                 {
                     artist_name.ForeColor = Color.Black;
@@ -91,6 +90,7 @@ namespace VkPlayer
                 MainColor = Color.FromArgb(255, 63, 81, 181);
                 addColor = Color.FromArgb(255, 48, 63, 159);
             }
+            SetColors(MainColor, addColor);
             Own.BackColor = addColor;
             BackColor = MainColor;
             KeyPreview = true;
