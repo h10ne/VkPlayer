@@ -101,4 +101,4 @@
 <li>Добавить воспроизведение аудиозаписей групп</li>
 </ul>
 <hr>
-<h2><a href ="https://yadi.sk/d/X2PGbH7l2dyhjQ" target="_blank">Скачать</a> с Яндекс.Диска</h2>
+<h2><a href ="https://yadi.sk/d/u3fCpiS-Sua6zA" target="_blank">Скачать</a> с Яндекс.Диска</h2>
