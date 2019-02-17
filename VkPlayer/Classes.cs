@@ -5,8 +5,12 @@ public class Switches
     public bool isPlay { get; set; } = false;
     public bool mute { get; set; } = false;
     public bool isBlack { get; set; } = false;
-    public bool isFind { get; set; } = false;
+    public bool IsMaximize { get; set; } = false;
     public bool repeat { get; set; } = false;
+    public bool IsSearch { get; set; } = false;
+    public bool IsHot { get; set; } = false;
+    public bool IsRecommend { get; set; } = false;
+    public bool IsOwn { get; set; } = true;
     public bool random { get; set; } = false;
 }
 

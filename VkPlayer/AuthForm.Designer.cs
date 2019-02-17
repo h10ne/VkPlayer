@@ -82,12 +82,12 @@
             this.passwordVisible.Image = global::VkPlayer.Resource1.eye;
             this.passwordVisible.Location = new System.Drawing.Point(151, 46);
             this.passwordVisible.Name = "passwordVisible";
-            this.passwordVisible.Size = new System.Drawing.Size(31, 25);
+            this.passwordVisible.Size = new System.Drawing.Size(30, 24);
             this.passwordVisible.TabIndex = 4;
             this.passwordVisible.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passwordVisible_MouseDown);
             this.passwordVisible.MouseUp += new System.Windows.Forms.MouseEventHandler(this.passwordVisible_MouseUp);
             // 
-            // authorization_form
+            // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +103,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "authorization_form";
+            this.Name = "AuthForm";
             this.Text = "Authorization";
             this.ResumeLayout(false);
             this.PerformLayout();
