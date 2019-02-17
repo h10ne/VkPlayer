@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 namespace VkPlayer
 {
     public partial class AuthForm : Form
@@ -24,7 +17,8 @@ namespace VkPlayer
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
         }
 
-        private void auth_btn_Click(object sender, EventArgs e)
+        
+        private void TryAuth()
         {
             if (this.Owner is Main main)
             {
@@ -37,6 +31,10 @@ namespace VkPlayer
                 if (main.isAuth == true)
                     Close();
             }
+        }
+        private void auth_btn_Click(object sender, EventArgs e)
+        {
+            TryAuth();
         }
 
         private void login_Enter(object sender, EventArgs e)
@@ -69,6 +67,14 @@ namespace VkPlayer
             if (password.Text!="Password")
                 password.PasswordChar = '•';
             passwordVisible.Image = Resource1.eye;
+        }
+
+        private void password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TryAuth();
+            }
         }
     }
 }
