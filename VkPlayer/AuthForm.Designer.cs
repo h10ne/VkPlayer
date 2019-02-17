@@ -58,6 +58,7 @@
             this.password.TabIndex = 2;
             this.password.Text = "Password";
             this.password.Enter += new System.EventHandler(this.password_Enter);
+            this.password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_KeyDown);
             // 
             // auth_btn
             // 

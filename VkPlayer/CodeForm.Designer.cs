@@ -76,6 +76,7 @@
             this.MinimizeBox = false;
             this.Name = "AuthForm2";
             this.Text = "Authorization";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AuthForm2_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

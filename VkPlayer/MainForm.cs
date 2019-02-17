@@ -175,19 +175,15 @@ namespace VkPlayer
             {
                 try
                 {
-                    try
-                    {
-                        AuthLogPass(login, password);
-                    }
-                    catch
-                    {
-                        Auth2Fact(login, password);
-                    }
+                    Auth2Fact(login, password);
+                    if (!api.IsAuthorized)
+                        AuthLogPass(login, password);                        
                 }
                 catch
                 {
                     MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButtons.OK);
                 }
+                
             }
             vkDatas.Audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
             rnd = new Random();
@@ -732,39 +728,16 @@ namespace VkPlayer
             VkBools.IsOwn = false;
             VkBools.IsRecommend = false;
             VkBools.IsSearch = false;
-        }
-
-        //private void SetOwn()
-        //{
-        //    AudioList.Items.Clear();
-        //    playlist = new Playlist(new OwnAudios());
-        //    SetBackColorForLists("own");
-        //    AddAudioToList(vkDatas.Audio);
-        //    AudioList.SelectedIndex = vkDatas._offset;
-        //    playlist.NextSong(this);
-        //}
-
-        //private void SetHot()
-        //{
-        //    SetBackColorForLists("hot");
-        //    playlist = new Playlist(new HotAudio());
-        //    vkDatas.HotAudios = api.Audio.GetPopular(onlyEng: false, genre: null, count: 35, offset: null);
-        //    AudioList.Items.Clear();
-        //    foreach (var audio in vkDatas.HotAudios)
-        //        AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
-        //    playlist.NextSong(this);
-        //}
+        }        
 
         private void Own_Click(object sender, EventArgs e)
         {
             SetState("own");
-            //   SetOwn();
         }
 
         private void Hot_Click(object sender, EventArgs e)
         {
             SetState("hot");
-            //SetHot();
         }
 
         private void SetState(string state)
@@ -833,7 +806,6 @@ namespace VkPlayer
         private void recom_Click(object sender, EventArgs e)
         {
             SetState("recom");
-            //SetRecom();
         }
     }
 }

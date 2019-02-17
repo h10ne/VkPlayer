@@ -24,5 +24,11 @@ namespace VkPlayer
             CodeBox.Text = "";
             CodeBox.ForeColor = Color.Black;
         }
+
+        private void AuthForm2_KeyDown(object sender, KeyEventArgs e)
+        {
+            File.WriteAllText("someFile.tempdat", CodeBox.Text);
+            Close();
+        }
     }
 }
