@@ -164,6 +164,7 @@ namespace VkPlayer
 
         public void GetAuth(string login = null, string password = null)
         {
+            
             vkDatas.service = new ServiceCollection();
             vkDatas.service.AddAudioBypass();
             api = new VkApi(vkDatas.service);
