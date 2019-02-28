@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="artist_name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Devanagari, 12pt</value>
+    <value>Roboto Light, 12pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="artist_name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -154,7 +154,7 @@
     <value>9</value>
   </data>
   <data name="title_name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Devanagari, 12pt, style=Bold</value>
+    <value>Roboto, 12pt, style=Bold</value>
   </data>
   <data name="title_name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -321,24 +321,6 @@
   <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>417, 22</value>
   </metadata>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 48</value>
-  </data>
-  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 9.75pt</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
   <data name="redToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
   </data>
@@ -480,6 +462,15 @@
   <data name="blackToolStripMenuItem.Text" xml:space="preserve">
     <value>Dark</value>
   </data>
+  <data name="chooseColorToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 9.75pt</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="chooseColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
   <data name="exitToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -491,6 +482,15 @@
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 48</value>
+  </data>
+  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="searchAudio_box.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
@@ -546,6 +546,12 @@
   <metadata name="AddAudioMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>500, 22</value>
   </metadata>
+  <data name="добавитьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 22</value>
+  </data>
+  <data name="добавитьToolStripMenuItem.Text" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
   <data name="AddAudioMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 26</value>
   </data>
@@ -554,12 +560,6 @@
   </data>
   <data name="&gt;&gt;AddAudioMenu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="добавитьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="добавитьToolStripMenuItem.Text" xml:space="preserve">
-    <value>Добавить</value>
   </data>
   <data name="Hot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -865,13 +865,13 @@
     <value>638, 22</value>
   </metadata>
   <data name="удалитьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="удалитьToolStripMenuItem.Text" xml:space="preserve">
     <value>Удалить</value>
   </data>
   <data name="DeleteAudioMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 48</value>
+    <value>119, 26</value>
   </data>
   <data name="&gt;&gt;DeleteAudioMenu.Name" xml:space="preserve">
     <value>DeleteAudioMenu</value>
@@ -889,7 +889,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>349, 379</value>
+    <value>349, 128</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
