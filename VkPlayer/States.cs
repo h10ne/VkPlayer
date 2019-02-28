@@ -23,6 +23,12 @@ class Playlist
     {
         State.SetAudioInfo(main);
     }
+
+    public void AudioMenuClick(VkPlayer.Main main)
+    {
+        State.AudioMenuClick(main);
+    }
+
 }
 
 interface IState
@@ -30,12 +36,22 @@ interface IState
     void NextSong(VkPlayer.Main main);
     void PrevSong(VkPlayer.Main main);
     void SetAudioInfo(VkPlayer.Main main, bool isback = false);
+    void AudioMenuClick(VkPlayer.Main main);
 }
 
 class OwnAudios:IState
 {
+    public void AudioMenuClick(VkPlayer.Main main)
+    {
+        foreach (var audio in main.vkDatas.Audio)
+            if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
+            {
+                main.api.Audio.Delete(audio.Id.GetValueOrDefault(), audio.OwnerId.GetValueOrDefault());
+            }
+    }
+
     public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
-    {      
+    {
         try
         {
             if (main.vkDatas._offset == -1)
@@ -129,6 +145,14 @@ class OwnAudios:IState
 
 class SearchAudios:IState
 {
+    public void AudioMenuClick(VkPlayer.Main main)
+    {
+        foreach (var audio in main.vkDatas.SearchAudios)
+            if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
+            {
+                main.api.Audio.Add(audio.Id.GetValueOrDefault(), audio.OwnerId.GetValueOrDefault());
+            }
+    }
     public void PrevSong(VkPlayer.Main main)
     {
         try
@@ -205,6 +229,14 @@ class SearchAudios:IState
 
 class RecommendedAudio : IState
 {
+    public void AudioMenuClick(VkPlayer.Main main)
+    {
+        foreach (var audio in main.vkDatas.RecommendedAudio)
+            if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
+            {
+                main.api.Audio.Add(audio.Id.GetValueOrDefault(), audio.OwnerId.GetValueOrDefault());
+            }
+    }
     public void PrevSong(VkPlayer.Main main)
     {
         try
@@ -245,6 +277,8 @@ class RecommendedAudio : IState
     }
     public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
     {
+        if (main.AudioList.SelectedIndex == -1) 
+            main.AudioList.SelectedIndex = 0;
         foreach (var audio in main.vkDatas.RecommendedAudio)
             if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
             {
@@ -278,6 +312,14 @@ class RecommendedAudio : IState
 
 class HotAudio : IState
 {
+    public void AudioMenuClick(VkPlayer.Main main)
+    {
+        foreach (var audio in main.vkDatas.HotAudios)
+            if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
+            {
+                main.api.Audio.Add(audio.Id.GetValueOrDefault(), audio.OwnerId.GetValueOrDefault());
+            }
+    }
     public void PrevSong(VkPlayer.Main main)
     {
         try

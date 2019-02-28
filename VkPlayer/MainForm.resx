@@ -126,7 +126,7 @@
     <value>NoControl</value>
   </data>
   <data name="artist_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 8</value>
+    <value>44, 27</value>
   </data>
   <data name="artist_name.Size" type="System.Drawing.Size, System.Drawing">
     <value>285, 19</value>
@@ -148,10 +148,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;artist_name.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;artist_name.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>9</value>
   </data>
   <data name="title_name.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Devanagari, 12pt, style=Bold</value>
@@ -160,7 +160,7 @@
     <value>NoControl</value>
   </data>
   <data name="title_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 29</value>
+    <value>44, 48</value>
   </data>
   <data name="title_name.Size" type="System.Drawing.Size, System.Drawing">
     <value>285, 19</value>
@@ -181,10 +181,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;title_name.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;title_name.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>16</value>
   </data>
   <data name="volume.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -193,7 +193,7 @@
     <value>NoControl</value>
   </data>
   <data name="volume.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 0</value>
+    <value>19, 17</value>
   </data>
   <data name="volume.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Vertical</value>
@@ -211,10 +211,10 @@
     <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;volume.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;volume.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>3</value>
   </data>
   <data name="duration_bar.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -223,7 +223,7 @@
     <value>NoControl</value>
   </data>
   <data name="duration_bar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 103</value>
+    <value>36, 122</value>
   </data>
   <data name="duration_bar.Size" type="System.Drawing.Size, System.Drawing">
     <value>278, 23</value>
@@ -238,10 +238,10 @@
     <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;duration_bar.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;duration_bar.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <metadata name="duration_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -262,7 +262,7 @@
     <value>NoControl</value>
   </data>
   <data name="currentTimeDur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 85</value>
+    <value>64, 104</value>
   </data>
   <data name="currentTimeDur.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 15</value>
@@ -280,10 +280,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;currentTimeDur.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;currentTimeDur.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>13</value>
   </data>
   <data name="AllTimeDur.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -295,7 +295,7 @@
     <value>NoControl</value>
   </data>
   <data name="AllTimeDur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 85</value>
+    <value>261, 104</value>
   </data>
   <data name="AllTimeDur.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 15</value>
@@ -313,10 +313,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AllTimeDur.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;AllTimeDur.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>12</value>
   </data>
   <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>417, 22</value>
@@ -496,7 +496,7 @@
     <value>Roboto Light, 9.75pt</value>
   </data>
   <data name="searchAudio_box.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 132</value>
+    <value>13, 151</value>
   </data>
   <data name="searchAudio_box.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 23</value>
@@ -511,10 +511,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;searchAudio_box.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;searchAudio_box.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>10</value>
   </data>
   <data name="AudioList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
@@ -541,13 +541,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AudioList.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <metadata name="AddAudioMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>500, 22</value>
+  </metadata>
+  <data name="AddAudioMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 26</value>
+  </data>
+  <data name="&gt;&gt;AddAudioMenu.Name" xml:space="preserve">
+    <value>AddAudioMenu</value>
+  </data>
+  <data name="&gt;&gt;AddAudioMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="добавитьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 22</value>
+  </data>
+  <data name="добавитьToolStripMenuItem.Text" xml:space="preserve">
+    <value>Добавить</value>
   </data>
   <data name="Hot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Hot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 132</value>
+    <value>288, 151</value>
   </data>
   <data name="Hot.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 26</value>
@@ -562,16 +580,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Hot.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;Hot.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="List.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="List.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 5</value>
+    <value>325, 24</value>
   </data>
   <data name="List.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 22</value>
@@ -586,16 +604,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;List.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;List.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>14</value>
   </data>
   <data name="recom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="recom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 132</value>
+    <value>319, 151</value>
   </data>
   <data name="recom.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -610,16 +628,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;recom.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;recom.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>15</value>
   </data>
   <data name="Own.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Own.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 30</value>
+    <value>325, 49</value>
   </data>
   <data name="Own.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 22</value>
@@ -634,16 +652,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Own.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;Own.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="mute_unmute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="mute_unmute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 103</value>
+    <value>16, 122</value>
   </data>
   <data name="mute_unmute.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 23</value>
@@ -658,16 +676,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mute_unmute.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;mute_unmute.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>2</value>
   </data>
   <data name="random_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="random_radio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 103</value>
+    <value>309, 122</value>
   </data>
   <data name="random_radio.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -682,16 +700,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;random_radio.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;random_radio.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>1</value>
   </data>
   <data name="repeat_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="repeat_radio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 103</value>
+    <value>330, 122</value>
   </data>
   <data name="repeat_radio.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -706,16 +724,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;repeat_radio.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;repeat_radio.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>0</value>
   </data>
   <data name="next_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="next_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 61</value>
+    <value>209, 80</value>
   </data>
   <data name="next_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 27</value>
@@ -730,10 +748,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;next_btn.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;next_btn.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>8</value>
   </data>
   <data name="back_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -751,7 +769,7 @@
     <value>NoControl</value>
   </data>
   <data name="back_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 61</value>
+    <value>132, 80</value>
   </data>
   <data name="back_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 27</value>
@@ -766,16 +784,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;back_btn.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>6</value>
   </data>
   <data name="play_pause_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="play_pause_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 48</value>
+    <value>157, 67</value>
   </data>
   <data name="play_pause_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 55</value>
@@ -790,10 +808,76 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;play_pause_btn.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBox</value>
   </data>
   <data name="&gt;&gt;play_pause_btn.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>4</value>
+  </data>
+  <data name="groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-10, -20</value>
+  </data>
+  <data name="groupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="groupBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>378, 181</value>
+  </data>
+  <data name="groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;groupBox.Name" xml:space="preserve">
+    <value>groupBox</value>
+  </data>
+  <data name="&gt;&gt;groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 158</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="DeleteAudioMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>638, 22</value>
+  </metadata>
+  <data name="удалитьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="удалитьToolStripMenuItem.Text" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DeleteAudioMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 48</value>
+  </data>
+  <data name="&gt;&gt;DeleteAudioMenu.Name" xml:space="preserve">
+    <value>DeleteAudioMenu</value>
+  </data>
+  <data name="&gt;&gt;DeleteAudioMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -805,7 +889,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>349, 128</value>
+    <value>349, 379</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1382,6 +1466,18 @@
     <value>exitToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;добавитьToolStripMenuItem.Name" xml:space="preserve">
+    <value>добавитьToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;добавитьToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;удалитьToolStripMenuItem.Name" xml:space="preserve">
+    <value>удалитьToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;удалитьToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

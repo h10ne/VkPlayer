@@ -60,6 +60,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchAudio_box = new System.Windows.Forms.TextBox();
             this.AudioList = new System.Windows.Forms.ListBox();
+            this.AddAudioMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Hot = new System.Windows.Forms.Label();
             this.List = new System.Windows.Forms.Label();
             this.recom = new System.Windows.Forms.Label();
@@ -70,9 +72,17 @@
             this.next_btn = new System.Windows.Forms.Label();
             this.back_btn = new System.Windows.Forms.Label();
             this.play_pause_btn = new System.Windows.Forms.Label();
+            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.DeleteAudioMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duration_bar)).BeginInit();
             this.Menu.SuspendLayout();
+            this.AddAudioMenu.SuspendLayout();
+            this.groupBox.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.DeleteAudioMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // artist_name
@@ -302,6 +312,19 @@
             this.AudioList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseClick);
             this.AudioList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AudioList_MouseDoubleClick);
             // 
+            // AddAudioMenu
+            // 
+            this.AddAudioMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьToolStripMenuItem});
+            this.AddAudioMenu.Name = "AudioMenu";
+            resources.ApplyResources(this.AddAudioMenu, "AddAudioMenu");
+            // 
+            // добавитьToolStripMenuItem
+            // 
+            this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
+            resources.ApplyResources(this.добавитьToolStripMenuItem, "добавитьToolStripMenuItem");
+            this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
+            // 
             // Hot
             // 
             this.Hot.BackColor = System.Drawing.Color.Transparent;
@@ -391,29 +414,56 @@
             this.play_pause_btn.Name = "play_pause_btn";
             this.play_pause_btn.Click += new System.EventHandler(this.play_pause_btn_Click);
             // 
+            // groupBox
+            // 
+            this.groupBox.ContextMenuStrip = this.Menu;
+            this.groupBox.Controls.Add(this.repeat_radio);
+            this.groupBox.Controls.Add(this.random_radio);
+            this.groupBox.Controls.Add(this.mute_unmute);
+            this.groupBox.Controls.Add(this.volume);
+            this.groupBox.Controls.Add(this.play_pause_btn);
+            this.groupBox.Controls.Add(this.Own);
+            this.groupBox.Controls.Add(this.back_btn);
+            this.groupBox.Controls.Add(this.Hot);
+            this.groupBox.Controls.Add(this.next_btn);
+            this.groupBox.Controls.Add(this.artist_name);
+            this.groupBox.Controls.Add(this.searchAudio_box);
+            this.groupBox.Controls.Add(this.duration_bar);
+            this.groupBox.Controls.Add(this.AllTimeDur);
+            this.groupBox.Controls.Add(this.currentTimeDur);
+            this.groupBox.Controls.Add(this.List);
+            this.groupBox.Controls.Add(this.recom);
+            this.groupBox.Controls.Add(this.title_name);
+            resources.ApplyResources(this.groupBox, "groupBox");
+            this.groupBox.Name = "groupBox";
+            this.groupBox.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // DeleteAudioMenu
+            // 
+            this.DeleteAudioMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.удалитьToolStripMenuItem});
+            this.DeleteAudioMenu.Name = "DeleteAudioMenu";
+            resources.ApplyResources(this.DeleteAudioMenu, "DeleteAudioMenu");
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            resources.ApplyResources(this.удалитьToolStripMenuItem, "удалитьToolStripMenuItem");
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
-            this.Controls.Add(this.Hot);
             this.Controls.Add(this.AudioList);
-            this.Controls.Add(this.searchAudio_box);
-            this.Controls.Add(this.AllTimeDur);
-            this.Controls.Add(this.currentTimeDur);
-            this.Controls.Add(this.List);
-            this.Controls.Add(this.recom);
-            this.Controls.Add(this.Own);
-            this.Controls.Add(this.title_name);
-            this.Controls.Add(this.mute_unmute);
-            this.Controls.Add(this.random_radio);
-            this.Controls.Add(this.repeat_radio);
-            this.Controls.Add(this.duration_bar);
-            this.Controls.Add(this.volume);
-            this.Controls.Add(this.artist_name);
-            this.Controls.Add(this.next_btn);
-            this.Controls.Add(this.back_btn);
-            this.Controls.Add(this.play_pause_btn);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -424,8 +474,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.duration_bar)).EndInit();
             this.Menu.ResumeLayout(false);
+            this.AddAudioMenu.ResumeLayout(false);
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.DeleteAudioMenu.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -438,7 +492,7 @@
         private System.Windows.Forms.Label random_radio;
         private System.Windows.Forms.Label mute_unmute;
         private System.Windows.Forms.Label currentTimeDur;
-        private System.Windows.Forms.ContextMenuStrip Menu;
+        private new System.Windows.Forms.ContextMenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem chooseColorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purpleToolStripMenuItem;
@@ -470,6 +524,12 @@
         private System.Windows.Forms.Label Own;
         private System.Windows.Forms.Label recom;
         private System.Windows.Forms.Label Hot;
+        private System.Windows.Forms.GroupBox groupBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
+        public System.Windows.Forms.ContextMenuStrip DeleteAudioMenu;
+        public System.Windows.Forms.ContextMenuStrip AddAudioMenu;
+        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
     }
 }
 

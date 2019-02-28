@@ -51,6 +51,7 @@ namespace VkPlayer
             }
             player = new WindowsMediaPlayer();
             duration_timer.Stop();
+            vkDatas.Audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
             playlist.SetAudioInfo(this);
             LoadText();
             play_pause_btn.Image = Resource1.play;
@@ -92,8 +93,8 @@ namespace VkPlayer
             SetColors(MainColor, addColor);
             Own.BackColor = addColor;
             BackColor = MainColor;
+            AudioList.ContextMenuStrip = DeleteAudioMenu;
             KeyPreview = true;
-            this.ContextMenuStrip = Menu;
             VkBools.isPlay = false;
             if (VkBools.isBlack)
                 play_pause_btn.Image = Resource1.play_white;
@@ -186,7 +187,6 @@ namespace VkPlayer
                 }
                 
             }
-            vkDatas.Audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
             rnd = new Random();
             isAuth = true;
         }
@@ -269,7 +269,7 @@ namespace VkPlayer
             {
                 if (!VkBools.repeat)
                     playlist.NextSong(this);
-                playlist.SetAudioInfo(this);
+                player.controls.play();
             }
         }
 
@@ -657,7 +657,7 @@ namespace VkPlayer
         }
 
         public void AddAudioToList(VkNet.Utils.VkCollection<VkNet.Model.Attachments.Audio> audios)
-        {
+        {            
             AudioList.Items.Clear();
             foreach (var audio in audios)
                 AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
@@ -669,6 +669,7 @@ namespace VkPlayer
             {
                 e.SuppressKeyPress = true;
                 SetState("search");
+                AudioList.ContextMenuStrip = AddAudioMenu;
             }
         }
 
@@ -690,7 +691,7 @@ namespace VkPlayer
 
         private void AudioList_MouseClick(object sender, MouseEventArgs e)
         {
-            next_btn.Focus();
+            next_btn.Focus();            
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -733,12 +734,15 @@ namespace VkPlayer
 
         private void Own_Click(object sender, EventArgs e)
         {
+            vkDatas.Audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
             SetState("own");
+            AudioList.ContextMenuStrip = DeleteAudioMenu;
         }
 
         private void Hot_Click(object sender, EventArgs e)
         {
             SetState("hot");
+            AudioList.ContextMenuStrip = AddAudioMenu;
         }
 
         private void SetState(string state)
@@ -754,7 +758,6 @@ namespace VkPlayer
                     SetBackColorForLists();
                     AddAudioToList(vkDatas.Audio);
                     AudioList.SelectedIndex = vkDatas._offset;
-                    playlist.NextSong(this);
                     break;
                 case "HOT":
                     VkBools.IsHot = true;
@@ -763,7 +766,6 @@ namespace VkPlayer
                     vkDatas.HotAudios = api.Audio.GetPopular(false, null, 35, null);
                     foreach (var audio in vkDatas.HotAudios)
                         AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
-                    playlist.NextSong(this);
                     break;
                 case "SEARCH":
                     VkBools.IsSearch = true;
@@ -790,7 +792,6 @@ namespace VkPlayer
                     playlist = new Playlist(new RecommendedAudio());
                     vkDatas.RecommendedAudio = api.Audio.GetRecommendations(null, null, 50, null, true);
                     AddAudioToList(vkDatas.RecommendedAudio);
-                    playlist.NextSong(this);
                     break;
 
             }
@@ -807,6 +808,23 @@ namespace VkPlayer
         private void recom_Click(object sender, EventArgs e)
         {
             SetState("recom");
+            AudioList.ContextMenuStrip = AddAudioMenu;
+        }
+
+        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                playlist.AudioMenuClick(this);
+            }
+            catch { }
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            playlist.AudioMenuClick(this);
+            vkDatas.Audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
+            AddAudioToList(vkDatas.Audio);
         }
     }
 }
