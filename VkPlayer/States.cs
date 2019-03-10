@@ -39,6 +39,100 @@ interface IState
     void AudioMenuClick(VkPlayer.Main main);
 }
 
+class IdAudios:IState
+{
+    public void AudioMenuClick(VkPlayer.Main main)
+    {
+        foreach (var audio in main.vkDatas.IdAudios)
+            if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
+            {
+                main.api.Audio.Add(audio.Id.GetValueOrDefault(), audio.OwnerId.GetValueOrDefault());
+            }
+    }
+
+    public void SetAudioInfo(VkPlayer.Main main, bool isback = false)
+    {
+        if (main.AudioList.SelectedIndex == -1)
+            main.AudioList.SelectedItem = 0;
+        foreach (var audio in main.vkDatas.IdAudios)
+            if (audio.Artist + " - " + audio.Title == main.AudioList.SelectedItem.ToString())
+            {
+                if (audio.Url != null)
+                {
+                    main.player.URL = audio.Url.ToString();
+                    main.artist_name.Text = audio.Artist;
+                    main.title_name.Text = audio.Title;
+                    main.player.controls.play();
+                    break;
+                }
+                else if (isback)
+                {
+                    main.AudioList.SelectedIndex -= 1;
+                    SetAudioInfo(main, true);
+                }
+                else
+                {
+                    main.AudioList.SelectedIndex += 1;
+                    SetAudioInfo(main, false);
+                }
+            }
+        if (main.VkBools.isBlack)
+            main.play_pause_btn.Image = Resource1.pause_white;
+        else
+            main.play_pause_btn.Image = Resource1.pause;
+        main.VkBools.isPlay = true;
+    }
+
+    public void NextSong(VkPlayer.Main main)
+    {
+        if (main.VkBools.random)
+        {
+            Random rnds = new Random();
+            int rnd_max = int.Parse(main.api.Audio.GetCount(long.Parse(main.IdSongs_box.Text)).ToString());
+            if (rnd_max > 1800)
+                rnd_max = 1800;
+            int value = rnds.Next(0, rnd_max - 1);
+            main.AudioList.SelectedIndex = value;
+            Thread.Sleep(270);
+            SetAudioInfo(main);
+        }
+        else
+        {
+            try
+            {
+                main.AudioList.SelectedIndex += 1;
+                SetAudioInfo(main);
+            }
+            catch
+            {
+                main.AudioList.SelectedIndex = 0;
+                SetAudioInfo(main);
+            }
+        }
+    }
+
+    public void PrevSong(VkPlayer.Main main)
+    {
+        try
+        {
+
+
+            if (main.AudioList.SelectedIndex <= -1)
+            {
+                main.AudioList.SelectedIndex = main.AudioList.Items.Count;
+            }
+            else
+                main.AudioList.SelectedIndex -= 1;
+            SetAudioInfo(main, true);
+        }
+        catch (Exception ex)
+        {
+            main.AudioList.SelectedIndex = 4998;
+            SetAudioInfo(main, true);
+        }
+    }
+}
+
 class OwnAudios:IState
 {
     public void AudioMenuClick(VkPlayer.Main main)

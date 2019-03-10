@@ -151,7 +151,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;artist_name.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="title_name.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 12pt, style=Bold</value>
@@ -184,7 +184,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;title_name.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="volume.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -214,7 +214,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;volume.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="duration_bar.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -241,7 +241,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;duration_bar.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <metadata name="duration_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -283,7 +283,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;currentTimeDur.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="AllTimeDur.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,7 +316,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;AllTimeDur.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <metadata name="Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>417, 22</value>
@@ -499,10 +499,13 @@
     <value>13, 151</value>
   </data>
   <data name="searchAudio_box.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 23</value>
+    <value>200, 23</value>
   </data>
   <data name="searchAudio_box.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
+  </data>
+  <data name="searchAudio_box.Text" xml:space="preserve">
+    <value>Поиск</value>
   </data>
   <data name="&gt;&gt;searchAudio_box.Name" xml:space="preserve">
     <value>searchAudio_box</value>
@@ -514,7 +517,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;searchAudio_box.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="AudioList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto Light, 9.75pt</value>
@@ -565,7 +568,7 @@
     <value>NoControl</value>
   </data>
   <data name="Hot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 151</value>
+    <value>304, 148</value>
   </data>
   <data name="Hot.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 26</value>
@@ -583,7 +586,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;Hot.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="List.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -607,13 +610,13 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;List.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="recom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="recom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>319, 151</value>
+    <value>330, 148</value>
   </data>
   <data name="recom.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -631,7 +634,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;recom.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="Own.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -655,7 +658,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;Own.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="mute_unmute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -679,7 +682,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;mute_unmute.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="random_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -703,7 +706,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;random_radio.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="repeat_radio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -727,7 +730,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;repeat_radio.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="next_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -751,7 +754,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;next_btn.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="back_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -787,7 +790,7 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="play_pause_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -811,7 +814,34 @@
     <value>groupBox</value>
   </data>
   <data name="&gt;&gt;play_pause_btn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="IdSongs_box.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto Light, 9.75pt</value>
+  </data>
+  <data name="IdSongs_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 151</value>
+  </data>
+  <data name="IdSongs_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 23</value>
+  </data>
+  <data name="IdSongs_box.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="IdSongs_box.Text" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="&gt;&gt;IdSongs_box.Name" xml:space="preserve">
+    <value>IdSongs_box</value>
+  </data>
+  <data name="&gt;&gt;IdSongs_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IdSongs_box.Parent" xml:space="preserve">
+    <value>groupBox</value>
+  </data>
+  <data name="&gt;&gt;IdSongs_box.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="groupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>-10, -20</value>

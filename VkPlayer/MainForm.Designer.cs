@@ -73,6 +73,7 @@
             this.back_btn = new System.Windows.Forms.Label();
             this.play_pause_btn = new System.Windows.Forms.Label();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.IdSongs_box = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DeleteAudioMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -299,8 +300,10 @@
             // 
             this.searchAudio_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.searchAudio_box, "searchAudio_box");
+            this.searchAudio_box.ForeColor = System.Drawing.Color.LightGray;
             this.searchAudio_box.Name = "searchAudio_box";
             this.searchAudio_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchAudio_KeyDown);
+            this.searchAudio_box.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchAudio_box_KeyUp);
             // 
             // AudioList
             // 
@@ -417,6 +420,7 @@
             // groupBox
             // 
             this.groupBox.ContextMenuStrip = this.Menu;
+            this.groupBox.Controls.Add(this.IdSongs_box);
             this.groupBox.Controls.Add(this.repeat_radio);
             this.groupBox.Controls.Add(this.random_radio);
             this.groupBox.Controls.Add(this.mute_unmute);
@@ -437,6 +441,15 @@
             resources.ApplyResources(this.groupBox, "groupBox");
             this.groupBox.Name = "groupBox";
             this.groupBox.TabStop = false;
+            // 
+            // IdSongs_box
+            // 
+            this.IdSongs_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.IdSongs_box, "IdSongs_box");
+            this.IdSongs_box.ForeColor = System.Drawing.Color.LightGray;
+            this.IdSongs_box.Name = "IdSongs_box";
+            this.IdSongs_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IdSongs_box_KeyDown);
+            this.IdSongs_box.KeyUp += new System.Windows.Forms.KeyEventHandler(this.IdSongs_box_KeyUp);
             // 
             // panel1
             // 
@@ -469,6 +482,7 @@
             this.MaximizeBox = false;
             this.Name = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Main_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.volume)).EndInit();
@@ -530,6 +544,7 @@
         public System.Windows.Forms.ContextMenuStrip DeleteAudioMenu;
         public System.Windows.Forms.ContextMenuStrip AddAudioMenu;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
+        internal System.Windows.Forms.TextBox IdSongs_box;
     }
 }
 

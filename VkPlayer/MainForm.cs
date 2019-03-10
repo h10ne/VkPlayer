@@ -10,6 +10,7 @@ using System.IO;
 using WMPLib;
 using System.Drawing.Text;
 using System.Drawing;
+using VkNet.Enums.Filters;
 
 namespace VkPlayer
 {
@@ -58,6 +59,7 @@ namespace VkPlayer
             artist_name.Font = Roboto_thin;
             title_name.Font = Roboto_medium;
             AudioList.Font = Roboto_thin_10;
+            IdSongs_box.Font = Roboto_thin_10;
             searchAudio_box.Font = Roboto_thin_10;
 
             if (File.Exists("user_color.dat"))
@@ -121,7 +123,8 @@ namespace VkPlayer
         {
             api.Authorize(new ApiAuthParams
             {
-                AccessToken = Token
+                AccessToken = Token,
+                Settings = Settings.Offline
             });
             vkDatas.user_id = long.Parse(File.ReadAllText("user_id.dat"));
         }
@@ -132,6 +135,7 @@ namespace VkPlayer
             {
                 Login = login,
                 Password = password,
+                Settings = Settings.Offline,
                 TwoFactorAuthorization = () =>
                 {
                     AuthForm2 f = new AuthForm2();
@@ -156,6 +160,7 @@ namespace VkPlayer
             {
                 Login = login,
                 Password = password,
+                Settings = Settings.Offline
             });
             vkDatas.user_id = api.UserId.GetHashCode();
             File.WriteAllText("user_id.dat", vkDatas.user_id.ToString());
@@ -439,6 +444,7 @@ namespace VkPlayer
             SetBackColorForLists();
             AudioList.BackColor = addColor;
             searchAudio_box.BackColor = addColor;
+            IdSongs_box.BackColor = addColor;
             if (VkBools.repeat)
             {
                 repeat_radio.BackColor = addColor;
@@ -470,159 +476,127 @@ namespace VkPlayer
         {
             Color main = Color.FromArgb(255, 229, 57, 53);
             Color add = Color.FromArgb(255, 183, 28, 28);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor = 
+                searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 171, 71, 188);
             Color add = Color.FromArgb(255, 123, 31, 162);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void deepPurpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 103, 58, 183);
             Color add = Color.FromArgb(255, 69, 39, 160);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void indigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 63, 81, 181);
             Color add = Color.FromArgb(255, 40, 53, 147);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void blueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 33, 150, 243);
             Color add = Color.FromArgb(255, 21, 101, 192);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void cyanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 38, 198, 218);
             Color add = Color.FromArgb(255, 0, 151, 167);
-            artist_name.ForeColor = Color.Black;
-            title_name.ForeColor = Color.Black;
-            AudioList.ForeColor = Color.Black;
-            searchAudio_box.ForeColor = Color.Black;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
         private void tealToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 38, 166, 154);
             Color add = Color.FromArgb(255, 0, 121, 107);
-            artist_name.ForeColor = Color.Black;
-            title_name.ForeColor = Color.Black;
-            AudioList.ForeColor = Color.Black;
-            searchAudio_box.ForeColor = Color.Black;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
         private void greenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 76, 175, 80);
             Color add = Color.FromArgb(255, 46, 125, 50);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void limeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 205, 220, 57);
             Color add = Color.FromArgb(255, 175, 180, 43);
-            artist_name.ForeColor = Color.Black;
-            title_name.ForeColor = Color.Black;
-            AudioList.ForeColor = Color.Black;
-            searchAudio_box.ForeColor = Color.Black;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
         private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 238, 88);
             Color add = Color.FromArgb(255, 253, 216, 53);
-            artist_name.ForeColor = Color.Black;
-            title_name.ForeColor = Color.Black;
-            AudioList.ForeColor = Color.Black;
-            searchAudio_box.ForeColor = Color.Black;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor 
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
         private void amberToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 202, 40);
             Color add = Color.FromArgb(255, 255, 179, 0);
-            artist_name.ForeColor = Color.Black;
-            title_name.ForeColor = Color.Black;
-            AudioList.ForeColor = Color.Black;
-            searchAudio_box.ForeColor = Color.Black;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor 
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
         private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 152, 0);
             Color add = Color.FromArgb(255, 245, 124, 0);
-            artist_name.ForeColor = Color.Black;
-            title_name.ForeColor = Color.Black;
-            AudioList.ForeColor = Color.Black;
-            searchAudio_box.ForeColor = Color.Black;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor 
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.Black;
             SetColors(main, add, false);
         }
         private void deepOrangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 255, 87, 34);
             Color add = Color.FromArgb(255, 216, 67, 21);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor 
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void brownToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 121, 85, 72);
             Color add = Color.FromArgb(255, 93, 64, 55);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor 
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void blueGrayToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Color main = Color.FromArgb(255, 120, 144, 156);
             Color add = Color.FromArgb(255, 69, 90, 100);
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor = AudioList.ForeColor
+                = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             SetColors(main, add, false);
         }
         private void blackToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VkBools.isBlack = true;
-            artist_name.ForeColor = Color.White;
-            title_name.ForeColor = Color.White;
-            AudioList.ForeColor = Color.White;
-            searchAudio_box.ForeColor = Color.White;
+            artist_name.ForeColor = title_name.ForeColor
+                = AudioList.ForeColor = searchAudio_box.ForeColor = IdSongs_box.ForeColor = Color.White;
             Color main = Color.FromArgb(255, 20, 20, 20);
             Color add = Color.FromArgb(255, 50, 50, 50);
             SetColors(main, add);
@@ -670,6 +644,14 @@ namespace VkPlayer
                 e.SuppressKeyPress = true;
                 SetState("search");
                 AudioList.ContextMenuStrip = AddAudioMenu;
+            }
+            else
+            {                
+            if (searchAudio_box.Text == "Поиск")
+                {
+                    searchAudio_box.Text = "";
+                    searchAudio_box.ForeColor = Color.White;
+                }
             }
         }
 
@@ -746,13 +728,13 @@ namespace VkPlayer
         }
 
         private void SetState(string state)
-        {
-            SwitchStatesOff();
-            AudioList.Items.Clear();
+        {            
             state = state.ToUpper();
             switch (state)
             {
                 case "OWN":
+                    SwitchStatesOff();
+                    AudioList.Items.Clear();
                     VkBools.IsOwn = true;
                     playlist = new Playlist(new OwnAudios());
                     SetBackColorForLists();
@@ -760,6 +742,8 @@ namespace VkPlayer
                     AudioList.SelectedIndex = vkDatas._offset;
                     break;
                 case "HOT":
+                    SwitchStatesOff();
+                    AudioList.Items.Clear();
                     VkBools.IsHot = true;
                     SetBackColorForLists();
                     playlist = new Playlist(new HotAudio());
@@ -768,6 +752,8 @@ namespace VkPlayer
                         AudioList.Items.Add($"{audio.Artist} - {audio.Title}");
                     break;
                 case "SEARCH":
+                    SwitchStatesOff();
+                    AudioList.Items.Clear();
                     VkBools.IsSearch = true;
                     SetBackColorForLists();
                     playlist = new Playlist(new SearchAudios());
@@ -787,11 +773,32 @@ namespace VkPlayer
                     catch { }
                     break;
                 case "RECOM":
+                    SwitchStatesOff();
+                    AudioList.Items.Clear();
                     VkBools.IsRecommend = true;
                     SetBackColorForLists();
                     playlist = new Playlist(new RecommendedAudio());
                     vkDatas.RecommendedAudio = api.Audio.GetRecommendations(null, null, 50, null, true);
                     AddAudioToList(vkDatas.RecommendedAudio);
+                    break;
+                case "ID":
+                    try
+                    {
+                        vkDatas.IdAudios = api.Audio.Get
+                            (new AudioGetParams { OwnerId = long.Parse(IdSongs_box.Text), Count = api.Audio.GetCount(long.Parse(IdSongs_box.Text)) });
+                        SwitchStatesOff();
+                        AudioList.Items.Clear();
+                        VkBools.isId = true;
+                        SetBackColorForLists();
+                        playlist = new Playlist(new IdAudios());
+                        AddAudioToList(vkDatas.IdAudios);
+                    }
+                    catch
+                    {
+                        IdSongs_box.Text = "id";
+                        IdSongs_box.ForeColor = Color.LightGray;
+                        MessageBox.Show(this, "У пользователя закрыты аудиозаписи!", "Ошибка", MessageBoxButtons.OK);
+                    }
                     break;
 
             }
@@ -825,6 +832,51 @@ namespace VkPlayer
             playlist.AudioMenuClick(this);
             vkDatas.Audio = api.Audio.Get(new AudioGetParams { Count = api.Audio.GetCount(vkDatas.user_id) });
             AddAudioToList(vkDatas.Audio);
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            ToolTip t = new ToolTip();
+            t.SetToolTip(Own, "Свои аудиозаписи");
+            t.SetToolTip(Hot, "Популярное");
+            t.SetToolTip(recom, "Рекомендации");
+            t.SetToolTip(searchAudio_box, "Поиск");
+        }
+
+        private void searchAudio_box_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (searchAudio_box.Text == "")
+            {
+                searchAudio_box.Text = "Поиск";
+                searchAudio_box.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void IdSongs_box_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                SetState("id");
+                AudioList.ContextMenuStrip = AddAudioMenu;
+            }
+            else
+            {
+                if (IdSongs_box.Text == "Id")
+                {
+                    IdSongs_box.Text = "";
+                    IdSongs_box.ForeColor = Color.White;
+                }
+            }
+        }
+
+        private void IdSongs_box_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (IdSongs_box.Text == "")
+            {
+                IdSongs_box.Text = "Id";
+                IdSongs_box.ForeColor = Color.LightGray;
+            }
         }
     }
 }
